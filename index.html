@@ -326,6 +326,85 @@
             font-size: 13px;
             color: #90caf9;
         }
+
+        .personal-notes-section {
+            background: linear-gradient(135deg, #2d2d44 0%, #3d3d5c 100%);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border: 2px solid #667eea;
+        }
+
+        .personal-notes-section h3 {
+            color: #b8c6ff;
+            margin-bottom: 10px;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .personal-notes-textarea {
+            width: 100%;
+            min-height: 150px;
+            background: #1a1a2e;
+            color: #e0e0e0;
+            border: 2px solid #4a5a7a;
+            border-radius: 8px;
+            padding: 12px;
+            font-size: 14px;
+            font-family: inherit;
+            resize: vertical;
+            line-height: 1.6;
+        }
+
+        .personal-notes-textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 10px rgba(102, 126, 234, 0.3);
+        }
+
+        .personal-notes-textarea::placeholder {
+            color: #6a6a8a;
+        }
+
+        .save-indicator {
+            text-align: center;
+            font-size: 12px;
+            color: #66bb6a;
+            margin-top: 8px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .save-indicator.show {
+            opacity: 1;
+        }
+
+        .notes-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .notes-button {
+            flex: 1;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            touch-action: manipulation;
+        }
+
+        .notes-button.clear {
+            background: linear-gradient(135deg, #ef5350 0%, #e53935 100%);
+        }
+
+        .notes-button:active {
+            transform: scale(0.98);
+        }
     </style>
 </head>
 <body>
@@ -336,6 +415,70 @@
         </div>
 
         <div class="content">
+            <!-- DUA UPON SEEING THE KA'BAH -->
+            <div class="section-group">
+                <div class="section-title" style="background: linear-gradient(135deg, #ffd700 0%, #ffa500 100%);">🕋 Upon Seeing the Ka'bah</div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggle(this)">
+                        <span class="accordion-title">First Sight of the Ka'bah - Essential Dua</span>
+                        <span class="accordion-icon">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <div class="theme">A Blessed Moment - Dua is Answered</div>
+                            <ul class="dua-list">
+                                <li>When you first see the Ka'bah, raise your hands and make dua</li>
+                                <li>This is a special moment when dua is accepted</li>
+                                <li>Recite the following dua and make your heartfelt requests</li>
+                            </ul>
+                            <div class="dhikr-box">
+                                <div class="dhikr-label">⭐ Recommended Dua Upon Seeing the Ka'bah:</div>
+                                <div class="arabic-text">اللَّهُمَّ زِدْ هَذَا الْبَيْتَ تَشْرِيفًا وَتَعْظِيمًا وَتَكْرِيمًا وَمَهَابَةً، وَزِدْ مَن شَرَّفَهُ وَكَرَّمَهُ مِمَّنْ حَجَّهُ أَوِ اعْتَمَرَهُ تَشْرِيفًا وَتَكْرِيمًا وَتَعْظِيمًا وَبِرًّا</div>
+                                <div class="dhikr-text">"Allahumma zid hadha al-bayta tashrīfan wa ta'dhīman wa takrīman wa mahābatan, wa zid man sharrafahu wa karramahu mimman hajjahu awi'tamarahu tashrīfan wa takrīman wa ta'dhīman wa birra"</div>
+                                <div class="translation">(O Allah, increase this House in honor, esteem, reverence and awe. And increase those who honor and venerate it - those who perform Hajj or Umrah to it - in honor, esteem, greatness and piety) - Narrated by Al-Bayhaqi and Al-Shafi'i</div>
+                            </div>
+                            <div class="dhikr-box" style="margin-top: 12px;">
+                                <div class="dhikr-label">Alternative - Simple and Powerful:</div>
+                                <div class="arabic-text">اللَّهُمَّ أَنْتَ السَّلَامُ وَمِنْكَ السَّلَامُ فَحَيِّنَا رَبَّنَا بِالسَّلَامِ</div>
+                                <div class="dhikr-text">"Allahumma anta as-salamu wa minka as-salam, fa hayyina rabbana bis-salam"</div>
+                                <div class="translation">(O Allah, You are Peace, and from You comes peace. So greet us, our Lord, with peace)</div>
+                            </div>
+                            <div class="dhikr-box" style="margin-top: 12px; background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border-color: #ff9800;">
+                                <div class="dhikr-label" style="color: #e65100;">💡 Important Reminder:</div>
+                                <div class="dhikr-text" style="color: #e65100;">The Prophet ﷺ said that dua is answered when one first sees the Ka'bah. So raise your hands, make these duas, and pour out your heart with your most important requests. This is a precious moment - don't let it pass without making sincere dua!</div>
+                            </div>
+                            <div class="note" style="margin-top: 15px;">
+                                <strong>When to say this:</strong> The moment you first see the Ka'bah with your eyes, whether entering Masjid al-Haram for the first time or when it comes into view. Raise your hands and make this dua with full presence of heart.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PERSONAL DUA NOTES -->
+            <div class="section-group">
+                <div class="section-title" style="background: linear-gradient(135deg, #9c27b0 0%, #673ab7 100%);">📝 My Personal Duas</div>
+
+                <div class="personal-notes-section">
+                    <h3>✍️ Write Your Personal Duas Here</h3>
+                    <textarea 
+                        id="personal-notes" 
+                        class="personal-notes-textarea" 
+                        placeholder="Write your personal duas, intentions, and requests here...&#10;&#10;Examples:&#10;• Specific health issues you want to ask Allah about&#10;• Names of people you want to pray for&#10;• Personal goals and dreams&#10;• Things you're grateful for&#10;• Sins you want to repent from&#10;&#10;Your notes are automatically saved in your browser and will be here when you return."
+                        oninput="saveNotes()"
+                    ></textarea>
+                    <div class="save-indicator" id="save-indicator">✓ Saved automatically</div>
+                    <div class="notes-buttons">
+                        <button class="notes-button" onclick="copyNotes()">📋 Copy Notes</button>
+                        <button class="notes-button clear" onclick="clearNotes()">🗑️ Clear All</button>
+                    </div>
+                    <div class="note" style="margin-top: 15px; font-size: 12px;">
+                        <strong>💾 Auto-Save:</strong> Your notes are automatically saved in your browser's local storage. They will persist even if you close the app or restart your phone. However, they are stored locally on this device only and will be lost if you clear your browser data.
+                    </div>
+                </div>
+            </div>
+
             <!-- TAWAF SECTION -->
             <div class="section-group">
                 <div class="section-title">TAWAF - 7 Circuits Around the Ka'bah</div>
@@ -977,6 +1120,73 @@
         // Track completed rounds
         let completedTawaf = new Set();
         let completedSai = new Set();
+        let saveTimeout;
+
+        // Load personal notes on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            loadNotes();
+        });
+
+        // Personal Notes Functions
+        function loadNotes() {
+            const notes = localStorage.getItem('umrah_personal_notes');
+            if (notes) {
+                document.getElementById('personal-notes').value = notes;
+            }
+        }
+
+        function saveNotes() {
+            const notes = document.getElementById('personal-notes').value;
+            localStorage.setItem('umrah_personal_notes', notes);
+            
+            // Show save indicator
+            const indicator = document.getElementById('save-indicator');
+            indicator.classList.add('show');
+            
+            // Clear existing timeout
+            clearTimeout(saveTimeout);
+            
+            // Hide after 2 seconds
+            saveTimeout = setTimeout(() => {
+                indicator.classList.remove('show');
+            }, 2000);
+        }
+
+        function copyNotes() {
+            const textarea = document.getElementById('personal-notes');
+            textarea.select();
+            textarea.setSelectionRange(0, 99999); // For mobile devices
+            
+            try {
+                document.execCommand('copy');
+                const indicator = document.getElementById('save-indicator');
+                indicator.textContent = '✓ Copied to clipboard!';
+                indicator.classList.add('show');
+                
+                setTimeout(() => {
+                    indicator.classList.remove('show');
+                    indicator.textContent = '✓ Saved automatically';
+                }, 2000);
+            } catch (err) {
+                alert('Unable to copy. Please manually select and copy the text.');
+            }
+        }
+
+        function clearNotes() {
+            if (confirm('Are you sure you want to clear all your personal notes? This cannot be undone.')) {
+                document.getElementById('personal-notes').value = '';
+                localStorage.removeItem('umrah_personal_notes');
+                
+                const indicator = document.getElementById('save-indicator');
+                indicator.textContent = '✓ Notes cleared';
+                indicator.classList.add('show');
+                
+                setTimeout(() => {
+                    indicator.classList.remove('show');
+                    indicator.textContent = '✓ Saved automatically';
+                }, 2000);
+            }
+        }
 
         function toggle(header) {
             const content = header.nextElementSibling;
