@@ -30,12 +30,13 @@ A comprehensive, mobile-optimized interactive guide for duas and adhkar during T
 - **Comprehensive duas** for parents, children, guidance, and Jannah
 - Clearly marked with ⭐ **HIGH-VALUE** labels
 
-### 💚 Duas the Prophet ﷺ Loved Most
-A dedicated section featuring:
-- The Prophet's favorite dua for Laylatul Qadr
-- "O Turner of Hearts" - his most frequent dua
-- Comprehensive duas for well-being in both worlds
-- The most comprehensive dua from the Quran
+### 💚 Duas the Prophet ﷺ Loved Most - Integrated Throughout
+The Prophet's ﷺ most beloved duas are integrated into the appropriate thematic sections:
+- **Forgiveness dua for Laylatul Qadr** - in Tawaf Round 2 (Seeking Forgiveness)
+- **"O Turner of Hearts"** (his most frequent dua) - in Tawaf Round 3 (Strengthening Faith)
+- **Mercy and Guidance** - in Tawaf Round 3 (Strengthening Faith)
+- **Well-being in both worlds** - highlighted in Sa'i Lap 3 (Health and Well-being)
+- **Most comprehensive dua** - appears in multiple sections including Sa'i Lap 7
 
 ## 📖 Content Structure
 
@@ -58,7 +59,8 @@ A dedicated section featuring:
 7. **Comprehensive Final Dua** - Bringing It All Together
 
 ### Additional Sections
-- **Duas the Prophet ﷺ Loved Most** - 5 beloved supplications
+- **Dua Upon Seeing the Ka'bah** - Special moment when dua is answered
+- **Personal Notes Section** - Write and save your own duas and intentions
 - **Special Positions for Dua** - When and where to make specific duas
 - **General Tips** - Practical advice for maximum spiritual benefit
 - **Quick Reference** - Essential duas with Arabic text
