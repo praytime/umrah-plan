@@ -59,11 +59,11 @@ The Prophet's ﷺ most beloved duas are integrated into the appropriate thematic
 7. **Comprehensive Final Dua** - Bringing It All Together
 
 ### Additional Sections
-- **Dua Upon Seeing the Ka'bah** - Special moment when dua is answered
 - **Personal Notes Section** - Write and save your own duas and intentions
 - **Special Positions for Dua** - When and where to make specific duas
 - **General Tips** - Practical advice for maximum spiritual benefit
 - **Quick Reference** - Essential duas with Arabic text
+- **How to Pray Janaza in the Haram** - Complete step-by-step funeral prayer guide
 
 ## 🚀 How to Use
 
