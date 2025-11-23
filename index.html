@@ -158,6 +158,7 @@
             height: 30px;
             overflow: hidden;
             margin-bottom: 8px;
+            position: relative;
         }
 
         .progress-bar {
@@ -165,12 +166,24 @@
             height: 100%;
             width: 0%;
             transition: width 0.5s ease;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .progress-count {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
             font-weight: 600;
             font-size: 13px;
+            z-index: 1;
         }
 
         .progress-text {
@@ -486,7 +499,8 @@
                 <div class="progress-tracker">
                     <h3>Tawaf Progress</h3>
                     <div class="progress-bar-container">
-                        <div class="progress-bar" id="tawaf-progress">0/7</div>
+                        <div class="progress-bar" id="tawaf-progress"></div>
+                        <div class="progress-count" id="tawaf-count">0/7</div>
                     </div>
                     <div class="progress-text" id="tawaf-text">Start your first round</div>
                     <button class="complete-button" onclick="resetProgress('tawaf')" style="background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%); margin-top: 10px; padding: 8px 16px; font-size: 12px;">Reset Tawaf Progress</button>
@@ -745,7 +759,8 @@
                 <div class="progress-tracker">
                     <h3>Sa'i Progress</h3>
                     <div class="progress-bar-container">
-                        <div class="progress-bar" id="sai-progress">0/7</div>
+                        <div class="progress-bar" id="sai-progress"></div>
+                        <div class="progress-count" id="sai-count">0/7</div>
                     </div>
                     <div class="progress-text" id="sai-text">Start your first lap</div>
                     <button class="complete-button" onclick="resetProgress('sai')" style="background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%); margin-top: 10px; padding: 8px 16px; font-size: 12px;">Reset Sa'i Progress</button>
@@ -1255,11 +1270,12 @@
             const total = 7;
             const percentage = (completed / total) * 100;
             const progressBar = document.getElementById(`${type}-progress`);
+            const progressCount = document.getElementById(`${type}-count`);
             const progressText = document.getElementById(`${type}-text`);
-            
+
             progressBar.style.width = percentage + '%';
-            progressBar.textContent = `${completed}/${total}`;
-            
+            progressCount.textContent = `${completed}/${total}`;
+
             if (completed === 0) {
                 progressText.textContent = `Start your first ${type === 'tawaf' ? 'round' : 'lap'}`;
             } else if (completed < total) {
