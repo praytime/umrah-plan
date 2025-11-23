@@ -418,13 +418,219 @@
         .notes-button:active {
             transform: scale(0.98);
         }
+
+        /* Configuration Modal */
+        .config-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+            padding: 20px;
+        }
+
+        .config-overlay.hidden {
+            display: none;
+        }
+
+        .config-modal {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            border: 2px solid #667eea;
+        }
+
+        .config-modal h2 {
+            color: #b8c6ff;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+
+        .config-modal .subtitle {
+            color: #a0a0a0;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+
+        .config-section {
+            margin-bottom: 25px;
+        }
+
+        .config-section h3 {
+            color: #66bb6a;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .config-option {
+            background: linear-gradient(135deg, #2d2d44 0%, #3d3d5c 100%);
+            border: 2px solid transparent;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .config-option:hover {
+            border-color: #667eea;
+            transform: translateY(-2px);
+        }
+
+        .config-option.selected {
+            border-color: #66bb6a;
+            background: linear-gradient(135deg, #1a3a1a 0%, #2d4a2d 100%);
+        }
+
+        .config-option input[type="radio"] {
+            margin-top: 3px;
+            width: 20px;
+            height: 20px;
+            accent-color: #66bb6a;
+        }
+
+        .config-option-content {
+            flex: 1;
+        }
+
+        .config-option-title {
+            color: #b8c6ff;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .config-option-desc {
+            color: #a0a0a0;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .config-submit {
+            width: 100%;
+            background: linear-gradient(135deg, #66bb6a 0%, #4caf50 100%);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 10px;
+            touch-action: manipulation;
+        }
+
+        .config-submit:active {
+            transform: scale(0.98);
+        }
+
+        /* Settings Button */
+        .settings-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            touch-action: manipulation;
+        }
+
+        .settings-btn:active {
+            transform: scale(0.98);
+        }
+
+        .mode-badge {
+            background: linear-gradient(135deg, #ffd700 0%, #ffa500 100%);
+            color: #1a1a2e;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            display: inline-block;
+            margin-top: 8px;
+        }
+
+        /* Utility Classes */
+        .hidden {
+            display: none !important;
+        }
+
+        @media (max-width: 600px) {
+            .settings-btn {
+                top: 10px;
+                right: 10px;
+                padding: 8px 12px;
+                font-size: 12px;
+            }
+
+            .config-modal {
+                padding: 20px;
+            }
+
+            .config-modal h2 {
+                font-size: 20px;
+            }
+        }
     </style>
 </head>
 <body>
+    <!-- Configuration Modal -->
+    <div class="config-overlay" id="configOverlay">
+        <div class="config-modal">
+            <h2>🕋 Configure Your Guide</h2>
+            <p class="subtitle">Select what you'll be performing</p>
+
+            <div class="config-section">
+                <h3>What are you performing?</h3>
+
+                <label class="config-option" onclick="selectRitualType('umrah')">
+                    <input type="radio" name="ritualType" value="umrah" id="ritual-umrah">
+                    <div class="config-option-content">
+                        <div class="config-option-title">🕋 Umrah (Complete)</div>
+                        <div class="config-option-desc">Full Umrah with Tawaf (7 rounds) + Sa'i (7 laps). Includes duas for both rituals.</div>
+                    </div>
+                </label>
+
+                <label class="config-option" onclick="selectRitualType('nafil')">
+                    <input type="radio" name="ritualType" value="nafil" id="ritual-nafil">
+                    <div class="config-option-content">
+                        <div class="config-option-title">🌙 Nafil Tawaf (Voluntary)</div>
+                        <div class="config-option-desc">Voluntary Tawaf only (7 rounds). Perfect for extra worship when visiting the Haram.</div>
+                    </div>
+                </label>
+            </div>
+
+            <button class="config-submit" onclick="saveConfiguration()">Start Guide ✓</button>
+        </div>
+    </div>
+
     <div class="container">
         <div class="header">
-            <h1>🕋 Umrah Dua Guide</h1>
-            <p>A Comprehensive Strategy for Tawaf and Sa'i</p>
+            <button class="settings-btn" onclick="showConfigModal()">⚙️ Settings</button>
+            <h1 id="pageTitle">🕋 Umrah Dua Guide</h1>
+            <p id="pageSubtitle">A Comprehensive Strategy for Tawaf and Sa'i</p>
+            <div class="mode-badge" id="modeBadge">Umrah Mode</div>
         </div>
 
         <div class="content">
@@ -730,7 +936,7 @@
             </div>
 
             <!-- SA'I SECTION -->
-            <div class="section-group">
+            <div class="section-group" id="saiSection">
                 <div class="section-title">SA'I - 7 Laps Between Safa and Marwah</div>
 
                 <div class="progress-tracker">
@@ -1114,8 +1320,106 @@
         let completedSai = new Set();
         let saveTimeout;
 
-        // Load personal notes on page load
+        // Configuration Management
+        let userConfig = {
+            ritualType: 'umrah' // 'umrah' or 'nafil'
+        };
+
+        // Load configuration from localStorage
+        function loadConfig() {
+            const saved = localStorage.getItem('umrah_user_config');
+            if (saved) {
+                userConfig = JSON.parse(saved);
+                applyConfig();
+            } else {
+                // First time - show modal
+                showConfigModal();
+            }
+        }
+
+        // Save configuration to localStorage
+        function saveConfig() {
+            localStorage.setItem('umrah_user_config', JSON.stringify(userConfig));
+        }
+
+        // Show configuration modal
+        function showConfigModal() {
+            document.getElementById('configOverlay').classList.remove('hidden');
+
+            // Pre-select current option
+            if (userConfig.ritualType === 'umrah') {
+                document.getElementById('ritual-umrah').checked = true;
+                selectRitualType('umrah');
+            } else {
+                document.getElementById('ritual-nafil').checked = true;
+                selectRitualType('nafil');
+            }
+        }
+
+        // Select ritual type and update UI
+        function selectRitualType(type) {
+            // Update visual selection
+            document.querySelectorAll('.config-option').forEach(opt => {
+                opt.classList.remove('selected');
+            });
+
+            if (type === 'umrah') {
+                document.getElementById('ritual-umrah').checked = true;
+                document.getElementById('ritual-umrah').parentElement.classList.add('selected');
+            } else {
+                document.getElementById('ritual-nafil').checked = true;
+                document.getElementById('ritual-nafil').parentElement.classList.add('selected');
+            }
+        }
+
+        // Save configuration and apply
+        function saveConfiguration() {
+            // Get selected ritual type
+            const selected = document.querySelector('input[name="ritualType"]:checked');
+            if (!selected) {
+                alert('Please select a ritual type');
+                return;
+            }
+
+            userConfig.ritualType = selected.value;
+            saveConfig();
+            applyConfig();
+
+            // Hide modal
+            document.getElementById('configOverlay').classList.add('hidden');
+        }
+
+        // Apply configuration to page
+        function applyConfig() {
+            const isNafil = userConfig.ritualType === 'nafil';
+
+            // Update page title and subtitle
+            const title = document.getElementById('pageTitle');
+            const subtitle = document.getElementById('pageSubtitle');
+            const badge = document.getElementById('modeBadge');
+
+            if (isNafil) {
+                title.textContent = '🌙 Nafil Tawaf Guide';
+                subtitle.textContent = 'Voluntary Tawaf - 7 Rounds of Worship';
+                badge.textContent = 'Nafil Tawaf Mode';
+            } else {
+                title.textContent = '🕋 Umrah Dua Guide';
+                subtitle.textContent = 'A Comprehensive Strategy for Tawaf and Sa\'i';
+                badge.textContent = 'Umrah Mode';
+            }
+
+            // Show/hide Sa'i section
+            const saiSection = document.getElementById('saiSection');
+            if (isNafil) {
+                saiSection.classList.add('hidden');
+            } else {
+                saiSection.classList.remove('hidden');
+            }
+        }
+
+        // Load personal notes and config on page load
         window.addEventListener('DOMContentLoaded', function() {
+            loadConfig();
             loadNotes();
         });
 
