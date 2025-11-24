@@ -6,12 +6,13 @@
     "suggestions": [
       "Thank Allah for granting you the opportunity to reach His House",
       "Express gratitude for safe travel and good health",
-      "Reflect on the immense blessing of standing in this sacred place"
+      "Reflect on the immense blessing of standing in this sacred place",
+      "Recite abundant Alhamdulillah with a sincere heart"
     ],
     "duas": {
-      "required": ["subhan-allah-alhamdulillah", "alhamdulillah-bi-nimatihi"],
-      "pool": [],
-      "count": 0
+      "required": ["shukr-nimah-kaaba", "rabbana-atina-hasanah", "dua-safe-arrival", "alhamdulillah-kathira"],
+      "pool": ["subhan-allah-alhamdulillah", "alhamdulillah-bi-nimatihi", "alhamdulillah-alaa-kulli-hal", "alhamdulillah-rabb-alamin", "dua-namah-blessing", "dua-after-eating"],
+      "count": 4
     },
     "tags": ["gratitude", "arrival", "shukr"]
   },
