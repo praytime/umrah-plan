@@ -65,6 +65,78 @@ The Prophet's ﷺ most beloved duas are integrated into the appropriate thematic
 - **Quick Reference** - Essential duas with Arabic text
 - **How to Pray Janaza in the Haram** - Complete step-by-step funeral prayer guide
 
+## 🛠️ Development & Build Process
+
+This project uses a **data-driven architecture** with a simple build process:
+
+### Project Structure
+```
+umrah-plan/
+├── src/
+│   ├── data/
+│   │   ├── duas.json         # 28+ duas with translations
+│   │   ├── themes.json        # Theme configurations
+│   │   └── rounds.json        # Round/lap configurations
+│   └── templates/
+│       └── index.html         # HTML template
+├── build.js                   # Build script
+├── index.html                 # Generated output (deployed)
+└── package.json
+```
+
+### Build Commands
+```bash
+# Install dependencies (optional - for watch mode)
+npm install
+
+# Build the site (generates index.html)
+npm run build
+
+# Watch for changes and auto-rebuild
+npm run watch
+
+# Serve locally for testing
+npm run serve
+```
+
+### How It Works
+1. JSON files contain all duas, themes, and configurations
+2. `build.js` embeds the JSON data into the HTML template
+3. Result: Single self-contained `index.html` file
+4. Perfect for GitHub Pages deployment
+
+### Adding New Duas
+1. Add dua to `src/data/duas.json`:
+```json
+{
+  "my-new-dua": {
+    "id": "my-new-dua",
+    "category": ["gratitude"],
+    "type": "full",
+    "arabic": "...",
+    "transliteration": "...",
+    "translation": "...",
+    "source": "Quran 2:201",
+    "tags": ["gratitude", "dunya"]
+  }
+}
+```
+
+2. Reference in `src/data/themes.json`:
+```json
+{
+  "gratitude-arrival": {
+    "duas": {
+      "required": ["my-new-dua"],
+      "pool": [...],
+      "count": 2
+    }
+  }
+}
+```
+
+3. Run `npm run build`
+
 ## 🚀 How to Use
 
 1. **Online:** Visit the live site at [YOUR-GITHUB-USERNAME.github.io/umrah-dua-guide](https://YOUR-GITHUB-USERNAME.github.io/umrah-dua-guide)

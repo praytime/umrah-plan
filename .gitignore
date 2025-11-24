@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Build artifacts (index.html is generated, but we commit it for GitHub Pages)
+# Uncomment if you want to exclude the generated file:
+# index.html
+
+# Editor directories
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*

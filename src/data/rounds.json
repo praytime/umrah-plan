@@ -1,0 +1,110 @@
+{
+  "tawaf": {
+    "umrah": [
+      {
+        "number": 1,
+        "theme": "gratitude-arrival"
+      },
+      {
+        "number": 2,
+        "theme": "forgiveness"
+      },
+      {
+        "number": 3,
+        "theme": "salawat-prophet"
+      },
+      {
+        "number": 4,
+        "theme": "family-loved-ones"
+      },
+      {
+        "number": 5,
+        "theme": "worldly-needs"
+      },
+      {
+        "number": 6,
+        "theme": "muslim-ummah"
+      },
+      {
+        "number": 7,
+        "theme": "jannah-protection"
+      }
+    ],
+    "nafil": [
+      {
+        "number": 1,
+        "theme": "forgiveness"
+      },
+      {
+        "number": 2,
+        "theme": "faith-guidance"
+      },
+      {
+        "number": 3,
+        "theme": "salawat-prophet"
+      },
+      {
+        "number": 4,
+        "theme": "knowledge-deeds"
+      },
+      {
+        "number": 5,
+        "theme": "health-provision"
+      },
+      {
+        "number": 6,
+        "theme": "muslim-ummah"
+      },
+      {
+        "number": 7,
+        "theme": "jannah-protection"
+      }
+    ]
+  },
+  "sai": {
+    "umrah": [
+      {
+        "number": 1,
+        "theme": "tawakkul",
+        "title": "Trust in Allah (Tawakkul)",
+        "description": "Remember the story of Hajar's trust in Allah as she ran between these mountains"
+      },
+      {
+        "number": 2,
+        "theme": "patience",
+        "title": "Patience and Perseverance (Sabr)",
+        "description": "Reflect on the patience of Hajar and her complete reliance on Allah"
+      },
+      {
+        "number": 3,
+        "theme": "health-wellbeing",
+        "title": "Health and Well-being",
+        "description": "Ask for physical and spiritual health"
+      },
+      {
+        "number": 4,
+        "theme": "knowledge-wisdom",
+        "title": "Knowledge and Wisdom",
+        "description": "Seek beneficial knowledge and understanding"
+      },
+      {
+        "number": 5,
+        "theme": "righteous-deeds",
+        "title": "Righteous Deeds",
+        "description": "Ask for ability to perform consistent good deeds"
+      },
+      {
+        "number": 6,
+        "theme": "protection-safety",
+        "title": "Protection and Safety",
+        "description": "Seek Allah's protection in all matters"
+      },
+      {
+        "number": 7,
+        "theme": "comprehensive-final",
+        "title": "Comprehensive Final Dua",
+        "description": "Make dua for everything - this life and the next"
+      }
+    ]
+  }
+}
