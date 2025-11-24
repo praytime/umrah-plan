@@ -633,6 +633,12 @@
             <div class="mode-badge" id="modeBadge">Umrah Mode</div>
         </div>
 
+        <div style="max-width: 800px; margin: 20px auto; padding: 15px 20px; background: linear-gradient(135deg, #2d2d44 0%, #3d3d5c 100%); border-radius: 15px; border-left: 4px solid #66bb6a;">
+            <p style="margin: 0; color: #e0e0e0; font-size: 14px; line-height: 1.6;">
+                <strong>Note:</strong> This guide helps organize your thoughts. The most important thing is sincerity and presence of heart. Use it as a framework for meaningful duas throughout your Umrah.
+            </p>
+        </div>
+
         <div class="content">
             <!-- PERSONAL DUA NOTES -->
             <div class="section-group">
@@ -646,13 +652,10 @@
                         placeholder="Write your personal duas, intentions, and requests here...&#10;&#10;Examples:&#10;• Specific health issues you want to ask Allah about&#10;• Names of people you want to pray for&#10;• Personal goals and dreams&#10;• Things you're grateful for&#10;• Sins you want to repent from&#10;&#10;Your notes are automatically saved in your browser and will be here when you return."
                         oninput="saveNotes()"
                     ></textarea>
-                    <div class="save-indicator" id="save-indicator">✓ Saved automatically</div>
+                    <div class="save-indicator" id="save-indicator">✓ Saved</div>
                     <div class="notes-buttons">
                         <button class="notes-button" onclick="copyNotes()">📋 Copy Notes</button>
                         <button class="notes-button clear" onclick="clearNotes()">🗑️ Clear All</button>
-                    </div>
-                    <div class="note" style="margin-top: 15px; font-size: 12px;">
-                        <strong>💾 Auto-Save:</strong> Your notes are automatically saved in your browser's local storage. They will persist even if you close the app or restart your phone. However, they are stored locally on this device only and will be lost if you clear your browser data.
                     </div>
                 </div>
             </div>
@@ -1522,10 +1525,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="note">
-                <strong>Note:</strong> This guide helps organize your thoughts. The most important thing is sincerity and presence of heart. Use it as a framework for meaningful duas throughout your Umrah.
             </div>
         </div>
 
@@ -2821,7 +2820,7 @@
                 
                 setTimeout(() => {
                     indicator.classList.remove('show');
-                    indicator.textContent = '✓ Saved automatically';
+                    indicator.textContent = '✓ Saved';
                 }, 2000);
             } catch (err) {
                 alert('Unable to copy. Please manually select and copy the text.');
@@ -2839,7 +2838,7 @@
                 
                 setTimeout(() => {
                     indicator.classList.remove('show');
-                    indicator.textContent = '✓ Saved automatically';
+                    indicator.textContent = '✓ Saved';
                 }, 2000);
             }
         }
