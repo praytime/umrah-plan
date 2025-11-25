@@ -655,6 +655,56 @@
             border-left: 4px solid var(--accent-primary);
         }
 
+        /* Utility spacing & typography */
+        .fs-18 { font-size: 18px; }
+        .fs-16 { font-size: 16px; }
+        .fs-15 { font-size: 15px; }
+        .fs-14 { font-size: 14px; }
+        .fs-13 { font-size: 13px; }
+        .fs-12 { font-size: 12px; }
+        .lh-17 { line-height: 1.7; }
+        .lh-16 { line-height: 1.6; }
+        .lh-18 { line-height: 1.8; }
+        .mb-20 { margin-bottom: 20px; }
+        .mb-15 { margin-bottom: 15px; }
+        .mb-12 { margin-bottom: 12px; }
+        .mb-10 { margin-bottom: 10px; }
+        .mb-8 { margin-bottom: 8px; }
+        .mb-6 { margin-bottom: 6px; }
+        .mt-20 { margin-top: 20px; }
+        .mt-15 { margin-top: 15px; }
+        .mt-12 { margin-top: 12px; }
+        .mt-10 { margin-top: 10px; }
+        .mt-8 { margin-top: 8px; }
+        .mt-6 { margin-top: 6px; }
+        .mt-4 { margin-top: 4px; }
+        .ml-20 { margin-left: 20px; }
+        .text-center { text-align: center; }
+        .text-accent { color: #b8c6ff; }
+        .text-warm { color: #ffb74d; }
+        .text-green { color: #66bb6a; }
+        .text-rose { color: #ce93d8; }
+        .fw-700 { font-weight: 700; }
+        .fw-600 { font-weight: 600; }
+        .m-0 { margin: 0; }
+        .mx-auto { margin-left: auto; margin-right: auto; }
+        .my-20 { margin-top: 20px; margin-bottom: 20px; }
+        .border-left-green { border-left: 4px solid var(--accent-green); }
+        .border-left-primary { border-left: 4px solid var(--accent-primary); }
+        .bg-purple-soft { background: linear-gradient(135deg, #2a1a3a 0%, #3a2a4a 100%); }
+        .dhikr-highlight { background: linear-gradient(135deg, #1a3a1a 0%, #2d4a2d 100%); border-color: #4caf50; }
+        .text-soft-green { color: #a5d6a7; }
+        .note-rose { border-left-color: #9c27b0; }
+        .pill-green { background: rgba(76, 175, 80, 0.1); padding: 10px; border-radius: 6px; }
+        .pl-20 { padding-left: 20px; }
+        .text-rose-soft { color: #e1bee7; }
+        .opacity-80 { opacity: 0.8; }
+        .max-800 { max-width: 800px; }
+
+        .section-title.personal {
+            background: linear-gradient(135deg, #9c27b0 0%, #673ab7 100%);
+        }
+
         @media (max-width: 600px) {
             .settings-btn {
                 top: 10px;
@@ -680,21 +730,21 @@
             <h2>🕋 Plan Your Tawaf, Focus Your Heart</h2>
 
             <div class="card card-surface card-accent">
-                <p class="text-muted" style="font-size: 14px; line-height: 1.7; margin-bottom: 15px;">
+                <p class="text-muted fs-14 lh-17 mb-15">
                     Tawaf is an opportunity for deep remembrance of Allah. While no specific dhikr is required, <strong>having a plan transforms scattered thoughts into focused worship.</strong>
                 </p>
 
-                <p class="text-muted" style="font-size: 13px; line-height: 1.6; margin-bottom: 8px;">
+                <p class="text-muted fs-13 lh-16 mb-8">
                     <strong>This guide provides:</strong>
                 </p>
-                <ul class="text-muted" style="font-size: 13px; line-height: 1.8; margin-left: 20px; margin-bottom: 15px;">
+                <ul class="text-muted fs-13 lh-18 ml-20 mb-15">
                     <li><strong>7 themed rounds</strong> covering gratitude, forgiveness, family, and more</li>
                     <li><strong>Authentic duas</strong> from the Quran and Sunnah</li>
                     <li><strong>Progress tracking</strong> to keep you focused</li>
                     <li><strong>Variety and depth</strong> in your supplications</li>
                 </ul>
 
-                <p class="text-muted" style="font-size: 14px; line-height: 1.7; margin: 0;">
+                <p class="text-muted fs-14 lh-17 m-0">
                     Don't let this blessed moment pass in uncertainty. Start with a plan, and let your heart focus on what truly matters: <strong>connecting with Allah.</strong>
                 </p>
             </div>
@@ -733,9 +783,9 @@
             <div class="mode-badge" id="modeBadge">Umrah Mode</div>
         </div>
 
-        <div style="max-width: 800px; margin: 20px auto;">
-            <div class="card card-surface card-accent" style="border-left-color: var(--accent-green);">
-                <p class="text-muted" style="margin: 0; font-size: 14px; line-height: 1.6;">
+        <div class="max-800 mx-auto my-20">
+            <div class="card card-surface card-accent border-left-green">
+                <p class="text-muted fs-14 lh-16 m-0">
                     <strong>Note:</strong> This guide helps organize your thoughts. The most important thing is sincerity and presence of heart. Use it as a framework for meaningful duas throughout your Umrah.
                 </p>
             </div>
@@ -744,7 +794,7 @@
         <div class="content">
             <!-- PERSONAL DUA NOTES -->
             <div class="section-group">
-                <div class="section-title" style="background: linear-gradient(135deg, #9c27b0 0%, #673ab7 100%);">📝 My Personal Duas</div>
+                <div class="section-title personal">📝 My Personal Duas</div>
 
                 <div class="personal-notes-section">
                     <h3>✍️ Write Your Personal Duas Here</h3>
@@ -856,11 +906,11 @@
                     </div>
                     <div class="accordion-content">
                         <div class="accordion-body">
-                            <div style="font-weight: 700; color: #b8c6ff; margin-bottom: 10px;">Between Rukn Yamani and Hajar Aswad:</div>
+                            <div class="text-accent fw-700 mb-10">Between Rukn Yamani and Hajar Aswad:</div>
                             <div class="arabic-text">رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ</div>
-                            <div style="text-align: center; font-style: italic; margin-bottom: 10px; color: #9e9e9e;">"Rabbana atina fid-dunya hasanatan wa fil-akhirati hasanatan wa qina adhaban-nar"</div>
+                            <div class="translation mb-10">"Rabbana atina fid-dunya hasanatan wa fil-akhirati hasanatan wa qina adhaban-nar"</div>
 
-                            <div style="font-weight: 700; color: #b8c6ff; margin: 20px 0 10px;">At Safa and Marwah:</div>
+                            <div class="text-accent fw-700 mt-20 mb-10">At Safa and Marwah:</div>
                             <div class="arabic-text">اللَّهُ أَكْبَرُ، اللَّهُ أَكْبَرُ، اللَّهُ أَكْبَرُ<br><br>
                             لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ<br><br>
                             لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ، أَنْجَزَ وَعْدَهُ، وَنَصَرَ عَبْدَهُ، وَهَزَمَ الْأَحْزَابَ وَحْدَهُ</div>
@@ -876,84 +926,85 @@
                     </div>
                     <div class="accordion-content">
                         <div class="accordion-body">
-                            <div class="dhikr-box" style="background: linear-gradient(135deg, #1a3a1a 0%, #2d4a2d 100%); border-color: #4caf50;">
-                                <div class="dhikr-label" style="color: #66bb6a;">⭐ IMMENSE REWARD:</div>
-                                <div class="dhikr-text" style="color: #a5d6a7;">The Prophet ﷺ said: "Whoever attends the funeral prayer will have a reward equal to one Qirat, and whoever attends until the burial will have a reward equal to two Qirats." When asked what the two Qirats were, he said: "Like two huge mountains" - Bukhari & Muslim</div>
+                            <div class="dhikr-box dhikr-highlight">
+                                <div class="dhikr-label text-green">⭐ IMMENSE REWARD:</div>
+                                <div class="dhikr-text text-soft-green">The Prophet ﷺ said: "Whoever attends the funeral prayer will have a reward equal to one Qirat, and whoever attends until the burial will have a reward equal to two Qirats." When asked what the two Qirats were, he said: "Like two huge mountains" - Bukhari & Muslim</div>
                             </div>
 
-                            <div style="margin-top: 20px; font-weight: 700; color: #b8c6ff; font-size: 15px;">📋 The Janaza Prayer Structure (4 Takbirs):</div>
+                            <div class="mt-20 fw-700 text-accent fs-15">📋 The Janaza Prayer Structure (4 Takbirs):</div>
 
-                            <div class="note" style="margin-top: 12px; background: linear-gradient(135deg, #2a1a3a 0%, #3a2a4a 100%); border-color: #9c27b0;">
+                            <div class="note bg-purple-soft note-rose mt-12">
                                 <strong>Important:</strong> The Janaza prayer is performed standing only - there is no ruku (bowing) or sujood (prostration). You may raise hands for each takbir or only the first (both are valid opinions).
                             </div>
 
-                            <div style="margin-top: 20px;">
+                            <div class="mt-20">
                                 <div class="takbir-card">
-                                    <div style="font-weight: 700; color: #b8c6ff; margin-bottom: 8px;">1️⃣ FIRST TAKBIR</div>
-                                    <div style="color: #e0e0e0; font-size: 14px; margin-bottom: 8px;">Say "Allahu Akbar" and raise your hands, then fold them (right over left)</div>
-                                    <div style="font-weight: 600; color: #ffb74d; margin-top: 10px;">First, seek refuge from Shaytan:</div>
-                                    <div class="arabic-text" style="margin-top: 8px;">أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ</div>
+                                    <div class="fw-700 text-accent mb-8">1️⃣ FIRST TAKBIR</div>
+                                    <div class="text-muted fs-14 mb-8">Say "Allahu Akbar" and raise your hands, then fold them (right over left)</div>
+                                    <div class="fw-600 text-warm mt-10">First, seek refuge from Shaytan:</div>
+                                    <div class="arabic-text mt-8">أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ</div>
                                     <div class="translation">"A'udhu billahi min ash-shaytan ir-rajeem"</div>
-                                    <div style="font-weight: 600; color: #ffb74d; margin-top: 12px;">Then recite Bismillah and Surah Al-Fatihah:</div>
-                                    <div class="arabic-text" style="margin-top: 8px;">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ<br>الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ<br>الرَّحْمَٰنِ الرَّحِيمِ<br>مَالِكِ يَوْمِ الدِّينِ<br>إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ<br>اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ<br>صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ</div>
+                                    <div class="fw-600 text-warm mt-12">Then recite Bismillah and Surah Al-Fatihah:</div>
+                                    <div class="arabic-text mt-8">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ<br>الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ<br>الرَّحْمَٰنِ الرَّحِيمِ<br>مَالِكِ يَوْمِ الدِّينِ<br>إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ<br>اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ<br>صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ</div>
                                 </div>
 
                                 <div class="takbir-card">
-                                    <div style="font-weight: 700; color: #b8c6ff; margin-bottom: 8px;">2️⃣ SECOND TAKBIR</div>
-                                    <div style="color: #e0e0e0; font-size: 14px; margin-bottom: 8px;">Say "Allahu Akbar" (you may raise hands or keep them folded)</div>
-                                    <div style="font-weight: 600; color: #ffb74d; margin-top: 10px;">Recite Salawat upon the Prophet ﷺ (as in regular prayer):</div>
-                                    <div class="arabic-text" style="margin-top: 8px;">اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ<br><br>اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ</div>
+                                    <div class="fw-700 text-accent mb-8">2️⃣ SECOND TAKBIR</div>
+                                    <div class="text-muted fs-14 mb-8">Say "Allahu Akbar" (you may raise hands or keep them folded)</div>
+                                    <div class="fw-600 text-warm mt-10">Recite Salawat upon the Prophet ﷺ (as in regular prayer):</div>
+                                    <div class="arabic-text mt-8">اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ<br><br>اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ</div>
                                     <div class="translation">"Allahumma salli 'ala Muhammad... Allahumma barik 'ala Muhammad..."</div>
                                 </div>
 
                                 <div class="takbir-card">
-                                    <div style="font-weight: 700; color: #b8c6ff; margin-bottom: 8px;">3️⃣ THIRD TAKBIR</div>
-                                    <div style="color: #e0e0e0; font-size: 14px; margin-bottom: 8px;">Say "Allahu Akbar" (hands remain folded)</div>
-                                    <div style="font-weight: 600; color: #ffb74d; margin-top: 10px;">⭐ Comprehensive Dua (narrated from the Prophet ﷺ):</div>
-                                    <div class="arabic-text" style="margin-top: 8px;">اللَّهُمَّ اغْفِرْ لِحَيِّنَا وَمَيِّتِنَا وَشَاهِدِنَا وَغَائِبِنَا وَصَغِيرِنَا وَكَبِيرِنَا وَذَكَرِنَا وَأُنْثَانَا، اللَّهُمَّ مَنْ أَحْيَيْتَهُ مِنَّا فَأَحْيِهِ عَلَى الْإِسْلَامِ، وَمَنْ تَوَفَّيْتَهُ مِنَّا فَتَوَفَّهُ عَلَى الْإِيمَانِ</div>
-                                    <div class="translation" style="margin-top: 8px;">"Allahumma-ghfir lihayyina wa mayyitina wa shahidina wa ghaibina wa saghirina wa kabirina wa dhakarina wa unthana, Allahumma man ahyaytahu minna fa-ahyihi 'alal-Islam, wa man tawaffaytahu minna fa-tawaffahu 'alal-iman"<br>(O Allah, forgive our living and our dead, those who are present among us and those who are absent, our young and our old, our males and our females. O Allah, whoever You keep alive from among us, keep him alive in Islam, and whoever You cause to die from among us, cause him to die in faith)</div>
-                                    <div class="note" style="margin-top: 12px; font-size: 13px;">
+                                    <div class="fw-700 text-accent mb-8">3️⃣ THIRD TAKBIR</div>
+                                    <div class="text-muted fs-14 mb-8">Say "Allahu Akbar" (hands remain folded)</div>
+                                    <div class="fw-600 text-warm mt-10">⭐ Comprehensive Dua (narrated from the Prophet ﷺ):</div>
+                                    <div class="arabic-text mt-8">اللَّهُمَّ اغْفِرْ لِحَيِّنَا وَمَيِّتِنَا وَشَاهِدِنَا وَغَائِبِنَا وَصَغِيرِنَا وَكَبِيرِنَا وَذَكَرِنَا وَأُنْثَانَا، اللَّهُمَّ مَنْ أَحْيَيْتَهُ مِنَّا فَأَحْيِهِ عَلَى الْإِسْلَامِ، وَمَنْ تَوَفَّيْتَهُ مِنَّا فَتَوَفَّهُ عَلَى الْإِيمَانِ</div>
+                                    <div class="translation mt-8">"Allahumma-ghfir lihayyina wa mayyitina wa shahidina wa ghaibina wa saghirina wa kabirina wa dhakarina wa unthana, Allahumma man ahyaytahu minna fa-ahyihi 'alal-Islam, wa man tawaffaytahu minna fa-tawaffahu 'alal-iman"<br>(O Allah, forgive our living and our dead, those who are present among us and those who are absent, our young and our old, our males and our females. O Allah, whoever You keep alive from among us, keep him alive in Islam, and whoever You cause to die from among us, cause him to die in faith)</div>
+                                    <div class="note mt-12 fs-13">
                                         <strong>Alternative shorter dua:</strong><br>
-                                        <div class="arabic-text" style="margin-top: 6px;">اللَّهُمَّ إِنْ كَانَ مُحْسِنًا فَزِدْ فِي إِحْسَانِهِ، وَإِنْ كَانَ مُسِيئًا فَتَجَاوَزْ عَنْ سَيِّئَاتِهِ</div>
-                                        <div class="translation" style="margin-top: 4px;">"Allahumma in kana muhsinan fa-zid fi ihsanihi, wa in kana musiyan fa-tajawaz 'an sayyi'atihi" (O Allah, if he was a doer of good, then increase his good deeds, and if he was a wrongdoer, then overlook his bad deeds)</div>
+                                        <div class="arabic-text mt-6">اللَّهُمَّ إِنْ كَانَ مُحْسِنًا فَزِدْ فِي إِحْسَانِهِ، وَإِنْ كَانَ مُسِيئًا فَتَجَاوَزْ عَنْ سَيِّئَاتِهِ</div>
+                                        <div class="translation mt-4">"Allahumma in kana muhsinan fa-zid fi ihsanihi, wa in kana musiyan fa-tajawaz 'an sayyi'atihi" (O Allah, if he was a doer of good, then increase his good deeds, and if he was a wrongdoer, then overlook his bad deeds)</div>
                                     </div>
-                                    <div class="note" style="margin-top: 10px; font-size: 13px;">
+                                    <div class="note mt-10 fs-13">
                                         <strong>Note:</strong> You may make dua with other words - the key is to sincerely ask Allah's mercy for the deceased. Change pronouns as needed for female deceased (muhsinatan/musiatun).
                                     </div>
                                 </div>
 
                                 <div class="takbir-card">
-                                    <div style="font-weight: 700; color: #b8c6ff; margin-bottom: 8px;">4️⃣ FOURTH TAKBIR</div>
-                                    <div style="color: #e0e0e0; font-size: 14px; margin-bottom: 8px;">Say "Allahu Akbar" (hands remain folded)</div>
-                                    <div style="font-weight: 600; color: #ffb74d; margin-top: 10px;">Pause briefly, then conclude:</div>
-                                    <div style="margin-top: 10px; color: #e0e0e0; font-size: 14px;">You may make a brief dua such as:</div>
-                                    <div class="arabic-text" style="margin-top: 8px;">اللَّهُمَّ لَا تَحْرِمْنَا أَجْرَهُ وَلَا تَفْتِنَّا بَعْدَهُ وَاغْفِرْ لَنَا وَلَهُ</div>
+                                    <div class="fw-700 text-accent mb-8">4️⃣ FOURTH TAKBIR</div>
+                                    <div class="text-muted fs-14 mb-8">Say "Allahu Akbar" (hands remain folded)</div>
+                                    <div class="fw-600 text-warm mt-10">Pause briefly, then conclude:</div>
+                                    <div class="text-muted fs-14 mt-10">You may make a brief dua such as:</div>
+                                    <div class="arabic-text mt-8">اللَّهُمَّ لَا تَحْرِمْنَا أَجْرَهُ وَلَا تَفْتِنَّا بَعْدَهُ وَاغْفِرْ لَنَا وَلَهُ</div>
                                     <div class="translation">"Allahumma la tahrimna ajrahu wa la taftinna ba'dahu waghfir lana wa lahu" (O Allah, do not deprive us of the reward and do not test us after him, and forgive us and him)</div>
-                                    <div style="margin-top: 12px; font-weight: 600; color: #e0e0e0; font-size: 14px;">...or simply remain silent for a moment.</div>
-                                    <div style="margin-top: 15px; font-weight: 700; color: #66bb6a; background: rgba(76, 175, 80, 0.1); padding: 10px; border-radius: 6px;">Then make ONE Tasleem to the right saying: "Assalamu 'alaykum wa rahmatullah"</div>
+                                    <div class="text-muted fs-14 fw-600 mt-12">...or simply remain silent for a moment.</div>
+                                    <div class="fw-700 text-green mt-15 pill-green">Then make ONE Tasleem to the right saying: "Assalamu 'alaykum wa rahmatullah"</div>
                                 </div>
                             </div>
 
-                            <div class="dhikr-box" style="margin-top: 20px; background: linear-gradient(135deg, #2a1a3a 0%, #3a2a4a 100%); border-color: #9c27b0;">
-                                <div class="dhikr-label" style="color: #ce93d8;">💡 Special Notes for Praying in the Haram:</div>
-                                <ul style="margin-top: 10px; padding-left: 20px; color: #e1bee7;">
-                                    <li style="margin-bottom: 8px;">Janaza prayers are announced regularly in Masjid al-Haram and Masjid an-Nabawi</li>
-                                    <li style="margin-bottom: 8px;">Join immediately when you hear the announcement - it's a great opportunity</li>
-                                    <li style="margin-bottom: 8px;">The Imam will lead you through the four takbirs with pauses between each</li>
-                                    <li style="margin-bottom: 8px;">If you're unsure, just follow the Imam and say "Allahu Akbar" when he does</li>
-                                    <li style="margin-bottom: 8px;">Even if you don't know all the duas, your presence and intention counts</li>
-                                    <li style="margin-bottom: 8px;">Multiple bodies may be prayed over at once - the reward multiplies</li>
-                                    <li style="margin-bottom: 8px;">Make sincere dua for the deceased - they need it more than anything now</li>
+                            <div class="dhikr-box bg-purple-soft border-left-primary mt-20 note-rose">
+                                <div class="dhikr-label text-rose">💡 Special Notes for Praying in the Haram:</div>
+                                <ul class="mt-10 pl-20 text-rose-soft">
+                                    <li class="mb-8">Janaza prayers are announced regularly in Masjid al-Haram and Masjid an-Nabawi</li>
+                                    <li class="mb-8">Join immediately when you hear the announcement - it's a great opportunity</li>
+                                    <li class="mb-8">The Imam will lead you through the four takbirs with pauses between each</li>
+                                    <li class="mb-8">If you're unsure, just follow the Imam and say "Allahu Akbar" when he does</li>
+                                    <li class="mb-8">Even if you don't know all the duas, your presence and intention counts</li>
+                                    <li class="mb-8">Multiple bodies may be prayed over at once - the reward multiplies</li>
+                                    <li class="mb-8">Make sincere dua for the deceased - they need it more than anything now</li>
                                 </ul>
                             </div>
 
-                            <div class="note" style="margin-top: 15px;">
+                            <div class="note mt-15">
                                 <strong>Bonus Tip:</strong> Some scholars recommend that if you pray Janaza for 40 Muslims with sincerity, Allah will accept your intercession for them. This is a tremendous opportunity in the Haramain where Janaza prayers are frequent.
                             </div>
 
-                            <div class="note" style="margin-top: 12px; font-size: 12px; background: linear-gradient(135deg, #1a2a3a 0%, #2a3a4a 100%);">
+                            <div class="note bg-purple-soft mt-12 fs-12">
                                 <strong>Reference:</strong> Based on authentic hadith and scholarly guidance from IslamQA (islamqa.info/en/answers/12363)
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -961,10 +1012,10 @@
         </div>
 
         <div class="footer">
-            <p style="font-size: 16px; font-weight: 700;">May Allah accept your Umrah and grant you all that you ask for.</p>
-            <p style="font-size: 18px; margin-top: 12px;">تَقَبَّلَ اللهُ مِنَّا وَمِنْكُم</p>
-            <p style="font-size: 13px;">(Taqabbal Allahu minna wa minkum)</p>
-            <p style="font-size: 12px; margin-top: 20px; opacity: 0.8;">
+            <p class="fs-16 fw-700">May Allah accept your Umrah and grant you all that you ask for.</p>
+            <p class="fs-18 mt-12">تَقَبَّلَ اللهُ مِنَّا وَمِنْكُم</p>
+            <p class="fs-13">(Taqabbal Allahu minna wa minkum)</p>
+            <p class="fs-12 mt-20 opacity-80">
                 <a href="https://github.com/praytime/umrah-plan" target="_blank" rel="noopener noreferrer">⭐ View on GitHub: praytime/umrah-plan</a>
             </p>
         </div>
@@ -2157,11 +2208,11 @@
 
         // Render a single dua item
         function renderDuaItem(item, index) {
-            const marginTop = index > 0 ? ' style="margin-top: 12px;"' : '';
+            const marginClass = index > 0 ? ' mt-12' : '';
 
             if (item.type === 'simple') {
                 return `
-                    <div class="dhikr-box"${marginTop}>
+                    <div class="dhikr-box${marginClass}">
                         <div class="dhikr-label">${item.label}</div>
                         <div class="dhikr-text">${item.text}</div>
                     </div>
@@ -2169,10 +2220,10 @@
             } else if (item.type === 'info') {
                 const lines = item.text.split('\n\n');
                 const content = lines.map(line =>
-                    `<div class="translation" style="font-style: italic; color: #b8c6ff; margin-bottom: 10px;">${line}</div>`
+                    `<div class="translation text-accent mb-10">${line}</div>`
                 ).join('');
                 return `
-                    <div class="dhikr-box"${marginTop}>
+                    <div class="dhikr-box${marginClass}">
                         <div class="dhikr-label">${item.label}</div>
                         ${content}
                     </div>
@@ -2184,7 +2235,7 @@
                 const translation = item.translation ? `<div class="translation">${item.translation}</div>` : '';
 
                 return `
-                    <div class="dhikr-box"${marginTop}>
+                    <div class="dhikr-box${marginClass}">
                         ${label}
                         ${arabic}
                         ${transliteration}
