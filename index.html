@@ -2258,11 +2258,16 @@
         // Render round/lap content from JSON + selection engine
         function renderRoundContent(roundConfig, type, mode) {
             const themeId = roundConfig.theme;
-            const theme = THEMES[themeId];
-            if (!theme) return '';
+            const fallbackTheme = {
+                title: roundConfig.title || 'Theme',
+                description: roundConfig.description || '',
+                suggestions: roundConfig.suggestions || [],
+                duas: { required: [], pool: [], count: 0 }
+            };
+            const theme = THEMES[themeId] || fallbackTheme;
 
             const roundKey = `${mode}-${type}-${roundConfig.number}`;
-            const duaIds = selectDuasForTheme(themeId, roundKey);
+            const duaIds = (THEMES[themeId] && selectDuasForTheme(themeId, roundKey)) || [];
             const suggestions = (theme.suggestions || []).map(s => `<li>${s}</li>`).join('');
             const labelType = type === 'sai' ? 'Lap' : 'Round';
 
