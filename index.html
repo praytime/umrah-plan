@@ -14,6 +14,18 @@
             -webkit-tap-highlight-color: transparent;
         }
 
+        :root {
+            --grad-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --grad-surface: linear-gradient(135deg, #2d2d44 0%, #3d3d5c 100%);
+            --grad-card: linear-gradient(135deg, #1a2a3a 0%, #2a3a4a 100%);
+            --grad-success: linear-gradient(135deg, #4caf50 0%, #66bb6a 100%);
+            --grad-warning: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+            --panel: #1a1a2e;
+            --accent-primary: #667eea;
+            --accent-green: #66bb6a;
+            --text-muted: #e0e0e0;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
@@ -32,7 +44,7 @@
         }
 
         .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: var(--grad-primary);
             color: white;
             padding: 20px;
             text-align: center;
@@ -51,7 +63,7 @@
 
         .content {
             padding: 15px;
-            background: #1a1a2e;
+            background: var(--panel);
         }
 
         .section-group {
@@ -59,7 +71,7 @@
         }
 
         .section-title {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: var(--grad-primary);
             color: white;
             padding: 15px;
             font-size: 18px;
@@ -79,7 +91,7 @@
         }
 
         .accordion-header {
-            background: linear-gradient(135deg, #2d2d44 0%, #3d3d5c 100%);
+            background: var(--grad-surface);
             padding: 15px;
             cursor: pointer;
             display: flex;
@@ -91,12 +103,12 @@
         }
 
         .accordion-header.active {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: var(--grad-primary);
             color: white;
         }
 
         .accordion-header.completed {
-            background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);
+            background: var(--grad-success);
             color: white;
         }
 
@@ -138,7 +150,7 @@
         }
 
         .progress-tracker {
-            background: linear-gradient(135deg, #2d2d44 0%, #3d3d5c 100%);
+            background: var(--grad-surface);
             padding: 15px;
             border-radius: 10px;
             margin-bottom: 20px;
@@ -162,7 +174,7 @@
         }
 
         .progress-bar {
-            background: linear-gradient(135deg, #4caf50 0%, #66bb6a 100%);
+            background: var(--grad-success);
             height: 100%;
             width: 0%;
             transition: width 0.5s ease;
@@ -233,6 +245,17 @@
             color: #ffb74d;
             border-radius: 4px;
             font-size: 14px;
+        }
+
+        .theme-title {
+            font-weight: 700;
+            color: #ffcc80;
+            margin-bottom: 4px;
+        }
+
+        .theme-desc {
+            color: #e0e0e0;
+            font-size: 13px;
         }
 
         .dua-list {
@@ -319,7 +342,7 @@
         }
 
         .footer {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: var(--grad-primary);
             color: white;
             padding: 20px;
             text-align: center;
@@ -345,7 +368,7 @@
         }
 
         .note {
-            background: linear-gradient(135deg, #1a2a3a 0%, #2a3a4a 100%);
+            background: var(--grad-card);
             border-left: 4px solid #42a5f5;
             padding: 12px;
             margin: 15px 0;
@@ -355,7 +378,7 @@
         }
 
         .personal-notes-section {
-            background: linear-gradient(135deg, #2d2d44 0%, #3d3d5c 100%);
+            background: var(--grad-surface);
             padding: 15px;
             border-radius: 10px;
             margin-bottom: 20px;
@@ -537,7 +560,7 @@
 
         .config-submit {
             width: 100%;
-            background: linear-gradient(135deg, #66bb6a 0%, #4caf50 100%);
+            background: var(--grad-success);
             color: white;
             border: none;
             padding: 15px;
@@ -558,7 +581,7 @@
             position: absolute;
             top: 20px;
             right: 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: var(--grad-primary);
             color: white;
             border: none;
             padding: 10px 15px;
@@ -592,6 +615,46 @@
             display: none !important;
         }
 
+        .card {
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .card-surface {
+            background: var(--grad-surface);
+        }
+
+        .card-soft {
+            background: var(--grad-card);
+        }
+
+        .card-accent {
+            border-left: 4px solid var(--accent-primary);
+        }
+
+        .btn-warning {
+            background: var(--grad-warning);
+        }
+
+        .btn-compact {
+            margin-top: 10px;
+            padding: 8px 16px;
+            font-size: 12px;
+        }
+
+        .text-muted {
+            color: var(--text-muted);
+        }
+
+        .takbir-card {
+            background: var(--grad-surface);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border-left: 4px solid var(--accent-primary);
+        }
+
         @media (max-width: 600px) {
             .settings-btn {
                 top: 10px;
@@ -616,22 +679,22 @@
         <div class="config-modal">
             <h2>🕋 Plan Your Tawaf, Focus Your Heart</h2>
 
-            <div style="background: linear-gradient(135deg, #2d2d44 0%, #3d3d5c 100%); padding: 20px; border-radius: 10px; margin: 20px 0; border-left: 4px solid #667eea;">
-                <p style="color: #e0e0e0; font-size: 14px; line-height: 1.7; margin-bottom: 15px;">
+            <div class="card card-surface card-accent">
+                <p class="text-muted" style="font-size: 14px; line-height: 1.7; margin-bottom: 15px;">
                     Tawaf is an opportunity for deep remembrance of Allah. While no specific dhikr is required, <strong>having a plan transforms scattered thoughts into focused worship.</strong>
                 </p>
 
-                <p style="color: #e0e0e0; font-size: 13px; line-height: 1.6; margin-bottom: 8px;">
+                <p class="text-muted" style="font-size: 13px; line-height: 1.6; margin-bottom: 8px;">
                     <strong>This guide provides:</strong>
                 </p>
-                <ul style="color: #e0e0e0; font-size: 13px; line-height: 1.8; margin-left: 20px; margin-bottom: 15px;">
+                <ul class="text-muted" style="font-size: 13px; line-height: 1.8; margin-left: 20px; margin-bottom: 15px;">
                     <li><strong>7 themed rounds</strong> covering gratitude, forgiveness, family, and more</li>
                     <li><strong>Authentic duas</strong> from the Quran and Sunnah</li>
                     <li><strong>Progress tracking</strong> to keep you focused</li>
                     <li><strong>Variety and depth</strong> in your supplications</li>
                 </ul>
 
-                <p style="color: #e0e0e0; font-size: 14px; line-height: 1.7; margin: 0;">
+                <p class="text-muted" style="font-size: 14px; line-height: 1.7; margin: 0;">
                     Don't let this blessed moment pass in uncertainty. Start with a plan, and let your heart focus on what truly matters: <strong>connecting with Allah.</strong>
                 </p>
             </div>
@@ -670,10 +733,12 @@
             <div class="mode-badge" id="modeBadge">Umrah Mode</div>
         </div>
 
-        <div style="max-width: 800px; margin: 20px auto; padding: 15px 20px; background: linear-gradient(135deg, #2d2d44 0%, #3d3d5c 100%); border-radius: 15px; border-left: 4px solid #66bb6a;">
-            <p style="margin: 0; color: #e0e0e0; font-size: 14px; line-height: 1.6;">
-                <strong>Note:</strong> This guide helps organize your thoughts. The most important thing is sincerity and presence of heart. Use it as a framework for meaningful duas throughout your Umrah.
-            </p>
+        <div style="max-width: 800px; margin: 20px auto;">
+            <div class="card card-surface card-accent" style="border-left-color: var(--accent-green);">
+                <p class="text-muted" style="margin: 0; font-size: 14px; line-height: 1.6;">
+                    <strong>Note:</strong> This guide helps organize your thoughts. The most important thing is sincerity and presence of heart. Use it as a framework for meaningful duas throughout your Umrah.
+                </p>
+            </div>
         </div>
 
         <div class="content">
@@ -708,241 +773,10 @@
                         <div class="progress-count" id="tawaf-count">0/7</div>
                     </div>
                     <div class="progress-text" id="tawaf-text">Start your first round</div>
-                    <button class="complete-button" onclick="resetProgress('tawaf')" style="background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%); margin-top: 10px; padding: 8px 16px; font-size: 12px;">Reset Tawaf Progress</button>
+                    <button class="complete-button btn-warning btn-compact" onclick="resetProgress('tawaf')">Reset Tawaf Progress</button>
                 </div>
 
-                <div class="accordion-item">
-                    <div class="accordion-header" onclick="toggle(this)" data-round="tawaf" data-number="1">
-                        <span class="accordion-title"><span class="checkmark">✓</span>Round 1: Gratitude and Arrival</span>
-                        <span class="accordion-icon">▼</span>
-                    </div>
-                    <div class="accordion-content">
-                        <div class="accordion-body">
-                            <div class="theme">Theme: Shukr (Thankfulness)</div>
-                            <ul class="dua-list">
-                                <li>Thank Allah for granting you the opportunity to reach His House</li>
-                                <li>Express gratitude for safe travel and good health</li>
-                                <li>Reflect on the immense blessing of standing in this sacred place</li>
-                            </ul>
-                            <div class="dhikr-box">
-                                <div class="dhikr-label">Dhikr to recite:</div>
-                                <div class="dhikr-text">"Subhan Allah, Alhamdulillah, Allahu Akbar"</div>
-                            </div>
-                            <div class="dhikr-box" style="margin-top: 12px;">
-                                <div class="dhikr-label">Authentic Duas:</div>
-                                <div class="arabic-text">الْحَمْدُ لِلَّهِ الَّذِي بِنِعْمَتِهِ تَتِمُّ الصَّالِحَاتُ</div>
-                                <div class="dhikr-text">"Alhamdulillahi-lladhi bi ni'matihi tatimmu as-salihat"</div>
-                                <div class="translation">(All praise is due to Allah by Whose favor good works are accomplished) - Sunnah</div>
-                            </div>
-                            <button class="complete-button" onclick="completeRound(this, 'tawaf', 1)">✓ Complete Round 1</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <div class="accordion-header" onclick="toggle(this)" data-round="tawaf" data-number="2">
-                        <span class="accordion-title"><span class="checkmark">✓</span>Round 2: Seeking Forgiveness</span>
-                        <span class="accordion-icon">▼</span>
-                    </div>
-                    <div class="accordion-content">
-                        <div class="accordion-body">
-                            <div class="theme">Theme: Istighfar (Repentance)</div>
-                            <ul class="dua-list">
-                                <li>Ask Allah to forgive all your sins, major and minor</li>
-                                <li>Repent from specific sins you remember</li>
-                                <li>Seek forgiveness for your parents, family, and the Muslim Ummah</li>
-                            </ul>
-                            <div class="dhikr-box">
-                                <div class="dhikr-label">Dhikr to recite abundantly:</div>
-                                <div class="dhikr-text">"Astaghfirullah al-adheem"</div>
-                            </div>
-                            <div class="dhikr-box" style="margin-top: 12px;">
-                                <div class="dhikr-label">⭐ HIGH-VALUE: Sayyid al-Istighfar (Master of Seeking Forgiveness)</div>
-                                <div class="arabic-text">اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ بِذَنْبِي فَاغْفِرْ لِي، فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ</div>
-                                <div class="dhikr-text">"Allahumma anta rabbi la ilaha illa ant, khalaqtani wa ana 'abduk, wa ana 'ala 'ahdika wa wa'dika mastata't, a'udhu bika min sharri ma sana't, abu'u laka bi ni'matika 'alayy, wa abu'u bi dhanbi faghfir li, fa innahu la yaghfiru adh-dhunuba illa ant"</div>
-                                <div class="translation">(O Allah, You are my Lord, there is no god but You. You created me and I am Your servant. I am keeping my covenant to You as much as I can. I seek refuge in You from the evil I have done. I acknowledge Your blessings upon me, and I acknowledge my sins. So forgive me, for none can forgive sins except You) - Bukhari. The Prophet ﷺ said whoever says this with conviction and dies that day will enter Paradise.</div>
-                            </div>
-                            <div class="dhikr-box" style="margin-top: 12px;">
-                                <div class="dhikr-label">Authentic Duas:</div>
-                                <div class="arabic-text">رَبَّنَا ظَلَمْنَا أَنفُسَنَا وَإِن لَّمْ تَغْفِرْ لَنَا وَتَرْحَمْنَا لَنَكُونَنَّ مِنَ الْخَاسِرِينَ</div>
-                                <div class="dhikr-text">"Rabbana dhalamna anfusana wa il-lam taghfir lana wa tarhamna lanakūnanna minal-khasireen"</div>
-                                <div class="translation">(Our Lord, we have wronged ourselves, and if You do not forgive us and have mercy upon us, we will surely be among the losers) - Quran 7:23</div>
-                            </div>
-                            <div class="dhikr-box" style="margin-top: 12px;">
-                                <div class="arabic-text">رَبِّ اغْفِرْ وَارْحَمْ وَأَنتَ خَيْرُ الرَّاحِمِينَ</div>
-                                <div class="dhikr-text">"Rabbi-ghfir warham wa anta khayru ar-rahimeen"</div>
-                                <div class="translation">(My Lord, forgive and have mercy, and You are the best of the merciful) - Quran 23:118</div>
-                            </div>
-                            <div class="dhikr-box" style="margin-top: 12px;">
-                                <div class="dhikr-label">⭐ The Prophet's ﷺ Favorite Dua for Laylatul Qadr:</div>
-                                <div class="arabic-text">اللَّهُمَّ إِنَّكَ عَفُوٌّ كَرِيمٌ تُحِبُّ الْعَفْوَ فَاعْفُ عَنِّي</div>
-                                <div class="dhikr-text">"Allahumma innaka 'afuwwun kareemun tuhibbul-'afwa fa'fu 'anni"</div>
-                                <div class="translation">(O Allah, You are Most Forgiving, and You love forgiveness, so forgive me) - Tirmidhi. When Aisha asked what dua she should say on Laylatul Qadr, the Prophet ﷺ taught her this.</div>
-                            </div>
-                            <button class="complete-button" onclick="completeRound(this, 'tawaf', 2)">✓ Complete Round 2</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <div class="accordion-header" onclick="toggle(this)" data-round="tawaf" data-number="3">
-                        <span class="accordion-title"><span class="checkmark">✓</span>Round 3: Sending Blessings Upon the Prophet ﷺ</span>
-                        <span class="accordion-icon">▼</span>
-                    </div>
-                    <div class="accordion-content">
-                        <div class="accordion-body" id="tawaf-umrah-round-3-body">
-                            <!-- Content populated dynamically by JavaScript -->
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <div class="accordion-header" onclick="toggle(this)" data-round="tawaf" data-number="4">
-                        <span class="accordion-title"><span class="checkmark">✓</span>Round 4: Family and Loved Ones</span>
-                        <span class="accordion-icon">▼</span>
-                    </div>
-                    <div class="accordion-content">
-                        <div class="accordion-body">
-                            <div class="theme">Theme: Family Bonds</div>
-                            <ul class="dua-list">
-                                <li>Make dua for your parents, spouse, and children</li>
-                                <li>Ask for their guidance, protection, and well-being</li>
-                                <li>Pray for reconciliation if there are family issues</li>
-                                <li>Include deceased family members in your supplications</li>
-                            </ul>
-                            <div class="dhikr-box">
-                                <div class="dhikr-label">⭐ HIGH-VALUE: Comprehensive Dua for Parents</div>
-                                <div class="arabic-text">اللَّهُمَّ اغْفِرْ لَهُمَا وَارْحَمْهُمَا وَعَافِهِمَا وَاعْفُ عَنْهُمَا، وَأَكْرِمْ نُزُلَهُمَا، وَوَسِّعْ مُدْخَلَهُمَا، وَاغْسِلْهُمَا بِالْمَاءِ وَالثَّلْجِ وَالْبَرَدِ</div>
-                                <div class="dhikr-text">"Allahumma-ghfir lahuma warhamhuma wa 'afihima wa'fu 'anhuma, wa akrim nuzulahuma, wa wassi' mudkhalahuma, waghsilhuma bil-ma'i wath-thalji wal-barad"</div>
-                                <div class="translation">(O Allah, forgive them, have mercy on them, grant them well-being and pardon them, honor their residence, widen their entrance, and wash them with water, snow and hail) - Adapted from the funeral prayer in Muslim. A comprehensive dua covering all needs.</div>
-                            </div>
-                            <div class="dhikr-box" style="margin-top: 12px;">
-                                <div class="dhikr-label">Authentic Duas:</div>
-                                <div class="arabic-text">رَبِّ ارْحَمْهُمَا كَمَا رَبَّيَانِي صَغِيرًا</div>
-                                <div class="dhikr-text">"Rabbi-rhamhuma kama rabbayani sagheera"</div>
-                                <div class="translation">(My Lord, have mercy upon them as they brought me up when I was small) - Quran 17:24</div>
-                            </div>
-                            <div class="dhikr-box" style="margin-top: 12px;">
-                                <div class="arabic-text">رَبَّنَا هَبْ لَنَا مِنْ أَزْوَاجِنَا وَذُرِّيَّاتِنَا قُرَّةَ أَعْيُنٍ وَاجْعَلْنَا لِلْمُتَّقِينَ إِمَامًا</div>
-                                <div class="dhikr-text">"Rabbana hab lana min azwajina wa dhurriyyatina qurrata a'yun waj'alna lil-muttaqeena imama"</div>
-                                <div class="translation">(Our Lord, grant us from among our spouses and offspring comfort to our eyes and make us an example for the righteous) - Quran 25:74</div>
-                            </div>
-                            <div class="dhikr-box" style="margin-top: 12px;">
-                                <div class="arabic-text">رَبَّنَا اغْفِرْ لِي وَلِوَالِدَيَّ وَلِلْمُؤْمِنِينَ يَوْمَ يَقُومُ الْحِسَابُ</div>
-                                <div class="dhikr-text">"Rabbana-ghfir li wa li-walidayya wa lil-mu'mineena yawma yaqoumu al-hisab"</div>
-                                <div class="translation">(Our Lord, forgive me and my parents and the believers the Day the account is established) - Quran 14:41</div>
-                            </div>
-                            <button class="complete-button" onclick="completeRound(this, 'tawaf', 4)">✓ Complete Round 4</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <div class="accordion-header" onclick="toggle(this)" data-round="tawaf" data-number="5">
-                        <span class="accordion-title"><span class="checkmark">✓</span>Round 5: Worldly Needs and Livelihood</span>
-                        <span class="accordion-icon">▼</span>
-                    </div>
-                    <div class="accordion-content">
-                        <div class="accordion-body">
-                            <div class="theme">Theme: Sustenance and Success</div>
-                            <ul class="dua-list">
-                                <li>Ask for halal sustenance and barakah in your wealth</li>
-                                <li>Make dua for success in work, studies, or business</li>
-                                <li>Request ease in your affairs</li>
-                                <li>Remember to recite the essential dua between Rukn Yamani and Hajar Aswad (see Quick Reference section)</li>
-                            </ul>
-                            <div class="dhikr-box">
-                                <div class="dhikr-label">Authentic Duas:</div>
-                                <div class="arabic-text">اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْمًا نَافِعًا، وَرِزْقًا طَيِّبًا، وَعَمَلًا مُتَقَبَّلًا</div>
-                                <div class="dhikr-text">"Allahumma inni as'aluka 'ilman nafi'a, wa rizqan tayyiba, wa 'amalan mutaqabbala"</div>
-                                <div class="translation">(O Allah, I ask You for beneficial knowledge, goodly provision, and accepted deeds) - Sunnah, Ibn Majah</div>
-                            </div>
-                            <div class="dhikr-box" style="margin-top: 12px;">
-                                <div class="arabic-text">رَبِّ إِنِّي لِمَا أَنزَلْتَ إِلَيَّ مِنْ خَيْرٍ فَقِيرٌ</div>
-                                <div class="dhikr-text">"Rabbi inni lima anzalta ilayya min khayrin faqeer"</div>
-                                <div class="translation">(My Lord, indeed I am, for whatever good You would send down to me, in need) - Quran 28:24</div>
-                            </div>
-                            <button class="complete-button" onclick="completeRound(this, 'tawaf', 5)">✓ Complete Round 5</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <div class="accordion-header" onclick="toggle(this)" data-round="tawaf" data-number="6">
-                        <span class="accordion-title"><span class="checkmark">✓</span>Round 6: The Muslim Ummah</span>
-                        <span class="accordion-icon">▼</span>
-                    </div>
-                    <div class="accordion-content">
-                        <div class="accordion-body">
-                            <div class="theme">Theme: Unity and Global Concerns</div>
-                            <ul class="dua-list">
-                                <li>Pray for oppressed Muslims worldwide</li>
-                                <li>Ask for unity among Muslims</li>
-                                <li>Make dua for those suffering in conflict zones</li>
-                                <li>Request guidance for Muslim leaders and scholars</li>
-                            </ul>
-                            <div class="dhikr-box">
-                                <div class="dhikr-label">Authentic Duas:</div>
-                                <div class="arabic-text">رَبَّنَا اغْفِرْ لَنَا وَلِإِخْوَانِنَا الَّذِينَ سَبَقُونَا بِالْإِيمَانِ وَلَا تَجْعَلْ فِي قُلُوبِنَا غِلًّا لِّلَّذِينَ آمَنُوا رَبَّنَا إِنَّكَ رَءُوفٌ رَّحِيمٌ</div>
-                                <div class="dhikr-text">"Rabbana-ghfir lana wa li-ikhwanina alladheena sabaqoona bil-iman wa la taj'al fi quloobina ghillan lilladheena amanu rabbana innaka ra'oofun raheem"</div>
-                                <div class="translation">(Our Lord, forgive us and our brothers who preceded us in faith and put not in our hearts resentment toward those who have believed. Our Lord, indeed You are Kind and Merciful) - Quran 59:10</div>
-                            </div>
-                            <div class="dhikr-box" style="margin-top: 12px;">
-                                <div class="arabic-text">اللَّهُمَّ أَصْلِحْ أُمَّةَ مُحَمَّدٍ، اللَّهُمَّ فَرِّجْ عَنْ أُمَّةِ مُحَمَّدٍ، اللَّهُمَّ ارْحَمْ أُمَّةَ مُحَمَّدٍ</div>
-                                <div class="dhikr-text">"Allahumma aslih ummata Muhammad, Allahumma farrij 'an ummati Muhammad, Allahumma-rham ummata Muhammad"</div>
-                                <div class="translation">(O Allah, rectify the Ummah of Muhammad, O Allah, relieve the Ummah of Muhammad, O Allah, have mercy on the Ummah of Muhammad) - Sunnah, Ahmad</div>
-                            </div>
-                            <button class="complete-button" onclick="completeRound(this, 'tawaf', 6)">✓ Complete Round 6</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <div class="accordion-header" onclick="toggle(this)" data-round="tawaf" data-number="7">
-                        <span class="accordion-title"><span class="checkmark">✓</span>Round 7: Jannah and Protection from Jahannam</span>
-                        <span class="accordion-icon">▼</span>
-                    </div>
-                    <div class="accordion-content">
-                        <div class="accordion-body">
-                            <div class="theme">Theme: The Hereafter</div>
-                            <ul class="dua-list">
-                                <li>Ask Allah for entrance into Jannah without reckoning</li>
-                                <li>Seek refuge from the punishment of the grave and hellfire</li>
-                                <li>Make dua to be among the righteous servants of Allah</li>
-                                <li>End with abundant praise and gratitude</li>
-                            </ul>
-                            <div class="dhikr-box">
-                                <div class="dhikr-label">⭐ HIGH-VALUE: Protection from Four Great Harms</div>
-                                <div class="arabic-text">اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ عَذَابِ جَهَنَّمَ، وَمِنْ عَذَابِ الْقَبْرِ، وَمِنْ فِتْنَةِ الْمَحْيَا وَالْمَمَاتِ، وَمِنْ شَرِّ فِتْنَةِ الْمَسِيحِ الدَّجَّالِ</div>
-                                <div class="dhikr-text">"Allahumma inni a'udhu bika min 'adhabi jahannam, wa min 'adhabil-qabr, wa min fitnatil-mahya wal-mamat, wa min sharri fitnatil-masihid-dajjal"</div>
-                                <div class="translation">(O Allah, I seek refuge in You from the punishment of Hell, from the punishment of the grave, from the trials of life and death, and from the evil of the trial of the False Messiah) - Muslim. The Prophet ﷺ used to seek refuge in these four after every prayer.</div>
-                            </div>
-                            <div class="dhikr-box" style="margin-top: 12px;">
-                                <div class="dhikr-label">⭐ HIGH-VALUE: Dua for Jannah Without Account</div>
-                                <div class="arabic-text">اللَّهُمَّ إِنِّي أَسْأَلُكَ الْجَنَّةَ وَمَا قَرَّبَ إِلَيْهَا مِنْ قَوْلٍ أَوْ عَمَلٍ، وَأَعُوذُ بِكَ مِنَ النَّارِ وَمَا قَرَّبَ إِلَيْهَا مِنْ قَوْلٍ أَوْ عَمَلٍ</div>
-                                <div class="dhikr-text">"Allahumma inni as'alukal-jannata wa ma qarraba ilayha min qawlin aw 'amal, wa a'udhu bika min an-nari wa ma qarraba ilayha min qawlin aw 'amal"</div>
-                                <div class="translation">(O Allah, I ask You for Paradise and whatever brings one closer to it of word or deed, and I seek refuge in You from the Fire and whatever brings one closer to it of word or deed) - Ibn Majah. Comprehensive dua covering this life and the next.</div>
-                            </div>
-                            <div class="dhikr-box" style="margin-top: 12px;">
-                                <div class="dhikr-label">Authentic Duas:</div>
-                                <div class="arabic-text">اللَّهُمَّ إِنِّي أَسْأَلُكَ الْجَنَّةَ وَأَعُوذُ بِكَ مِنَ النَّارِ</div>
-                                <div class="dhikr-text">"Allahumma inni as'aluka al-jannah wa a'udhu bika min an-nar"</div>
-                                <div class="translation">(O Allah, I ask You for Paradise and seek refuge in You from the Fire) - Sunnah, Abu Dawud</div>
-                            </div>
-                            <div class="dhikr-box" style="margin-top: 12px;">
-                                <div class="arabic-text">اللَّهُمَّ أَجِرْنِي مِنَ النَّارِ</div>
-                                <div class="dhikr-text">"Allahumma ajirni min an-nar"</div>
-                                <div class="translation">(O Allah, protect me from the Fire) - Authentic hadith (Abu Dawud), traditionally recited 7 times after Fajr and Maghrib, but can be said anytime</div>
-                            </div>
-                            <div class="dhikr-box" style="margin-top: 12px;">
-                                <div class="arabic-text">رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ</div>
-                                <div class="dhikr-text">"Rabbana atina fid-dunya hasanatan wa fil-akhirati hasanatan wa qina adhaban-nar"</div>
-                                <div class="translation">(Our Lord, give us good in this world and good in the Hereafter, and protect us from the punishment of the Fire) - Quran 2:201</div>
-                            </div>
-                            <button class="complete-button" onclick="completeRound(this, 'tawaf', 7)">✓ Complete Round 7</button>
-                        </div>
-                    </div>
-                </div>
+                <div id="tawaf-umrah-accordion"></div>
             </div>
 
             <!-- TAWAF SECTION - NAFIL MODE (Comprehensive Themes) -->
@@ -956,245 +790,10 @@
                         <div class="progress-count" id="tawaf-count-nafil">0/7</div>
                     </div>
                     <div class="progress-text" id="tawaf-text-nafil">Start your first round</div>
-                    <button class="complete-button" onclick="resetProgressNafil('tawaf')" style="background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%); margin-top: 10px; padding: 8px 16px; font-size: 12px;">Reset Tawaf Progress</button>
+                    <button class="complete-button btn-warning btn-compact" onclick="resetProgressNafil('tawaf')">Reset Tawaf Progress</button>
                 </div>
 
-                <div class="accordion-item">
-                    <div class="accordion-header" onclick="toggle(this)" data-round="tawaf-nafil" data-number="1">
-                        <span class="accordion-title"><span class="checkmark">✓</span>Round 1: Forgiveness and Repentance</span>
-                        <span class="accordion-icon">▼</span>
-                    </div>
-                    <div class="accordion-content">
-                        <div class="accordion-body">
-                            <div class="theme">Theme: Comprehensive Istighfar (Seeking Forgiveness)</div>
-                            <ul class="dua-list">
-                                <li>Ask Allah to forgive all your sins, major and minor, known and unknown</li>
-                                <li>Repent from specific sins you remember</li>
-                                <li>Seek forgiveness for your parents, family, and the entire Muslim Ummah</li>
-                                <li>Ask for protection from returning to sin</li>
-                            </ul>
-                            <div class="dhikr-box">
-                                <div class="dhikr-label">Dhikr to recite abundantly:</div>
-                                <div class="dhikr-text">"Astaghfirullah al-adheem wa atubu ilayh"</div>
-                                <div class="translation">(I seek forgiveness from Allah the Almighty and I repent to Him)</div>
-                            </div>
-                            <div class="dhikr-box" style="margin-top: 12px;">
-                                <div class="dhikr-label">⭐ HIGH-VALUE: Sayyid al-Istighfar (Master of Seeking Forgiveness)</div>
-                                <div class="arabic-text">اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ بِذَنْبِي فَاغْفِرْ لِي، فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ</div>
-                                <div class="dhikr-text">"Allahumma anta rabbi la ilaha illa ant, khalaqtani wa ana 'abduk, wa ana 'ala 'ahdika wa wa'dika mastata't, a'udhu bika min sharri ma sana't, abu'u laka bi ni'matika 'alayy, wa abu'u bi dhanbi faghfir li, fa innahu la yaghfiru adh-dhunuba illa ant"</div>
-                                <div class="translation">(O Allah, You are my Lord, there is no god but You. You created me and I am Your servant. I am keeping my covenant to You as much as I can. I seek refuge in You from the evil I have done. I acknowledge Your blessings upon me, and I acknowledge my sins. So forgive me, for none can forgive sins except You) - Bukhari</div>
-                            </div>
-                            <div class="dhikr-box" style="margin-top: 12px;">
-                                <div class="dhikr-label">⭐ The Prophet's ﷺ Favorite Dua for Laylatul Qadr:</div>
-                                <div class="arabic-text">اللَّهُمَّ إِنَّكَ عَفُوٌّ كَرِيمٌ تُحِبُّ الْعَفْوَ فَاعْفُ عَنِّي</div>
-                                <div class="dhikr-text">"Allahumma innaka 'afuwwun kareemun tuhibbul-'afwa fa'fu 'anni"</div>
-                                <div class="translation">(O Allah, You are Most Forgiving, and You love forgiveness, so forgive me) - Tirmidhi</div>
-                            </div>
-                            <button class="complete-button" onclick="completeRoundNafil(this, 'tawaf', 1)">✓ Complete Round 1</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <div class="accordion-header" onclick="toggle(this)" data-round="tawaf-nafil" data-number="2">
-                        <span class="accordion-title"><span class="checkmark">✓</span>Round 2: Faith, Guidance, and Spiritual Strength</span>
-                        <span class="accordion-icon">▼</span>
-                    </div>
-                    <div class="accordion-content">
-                        <div class="accordion-body">
-                            <div class="theme">Theme: Strengthening Iman and Staying on the Straight Path</div>
-                            <ul class="dua-list">
-                                <li>Ask for strong, unwavering faith (iman)</li>
-                                <li>Request guidance to remain on the straight path</li>
-                                <li>Pray for consistency in prayers and worship</li>
-                                <li>Ask for a good ending (husn al-khatimah)</li>
-                                <li>Seek protection from deviation and misguidance</li>
-                            </ul>
-                            <div class="dhikr-box">
-                                <div class="dhikr-label">⭐ The Prophet's ﷺ Most Frequent Dua:</div>
-                                <div class="arabic-text">يَا مُقَلِّبَ الْقُلُوبِ ثَبِّتْ قَلْبِي عَلَى دِينِكَ</div>
-                                <div class="dhikr-text">"Ya muqallibal-quloob thabbit qalbi 'ala deenik"</div>
-                                <div class="translation">(O Turner of hearts, make my heart firm upon Your religion) - Tirmidhi</div>
-                            </div>
-                            <div class="dhikr-box" style="margin-top: 12px;">
-                                <div class="dhikr-label">⭐ Dua for Mercy and Guidance:</div>
-                                <div class="arabic-text">رَبَّنَا هَبْ لَنَا مِن لَّدُنكَ رَحْمَةً وَهَيِّئْ لَنَا مِنْ أَمْرِنَا رَشَدًا</div>
-                                <div class="dhikr-text">"Rabbana hab lana min ladunka rahmatan wa hayyi' lana min amrina rashada"</div>
-                                <div class="translation">(Our Lord, grant us from Yourself mercy and prepare for us from our affair right guidance) - Quran 18:10</div>
-                            </div>
-                            <div class="dhikr-box" style="margin-top: 12px;">
-                                <div class="arabic-text">رَبَّنَا لَا تُزِغْ قُلُوبَنَا بَعْدَ إِذْ هَدَيْتَنَا وَهَبْ لَنَا مِن لَّدُنكَ رَحْمَةً إِنَّكَ أَنتَ الْوَهَّابُ</div>
-                                <div class="dhikr-text">"Rabbana la tuzigh quloobana ba'da idh hadaytana wa hab lana min ladunka rahmah innaka anta al-wahhab"</div>
-                                <div class="translation">(Our Lord, let not our hearts deviate after You have guided us and grant us from Yourself mercy. Indeed, You are the Bestower) - Quran 3:8</div>
-                            </div>
-                            <button class="complete-button" onclick="completeRoundNafil(this, 'tawaf', 2)">✓ Complete Round 2</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <div class="accordion-header" onclick="toggle(this)" data-round="tawaf-nafil" data-number="3">
-                        <span class="accordion-title"><span class="checkmark">✓</span>Round 3: Sending Blessings Upon the Prophet ﷺ</span>
-                        <span class="accordion-icon">▼</span>
-                    </div>
-                    <div class="accordion-content">
-                        <div class="accordion-body" id="tawaf-nafil-round-3-body">
-                            <!-- Content populated dynamically by JavaScript -->
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <div class="accordion-header" onclick="toggle(this)" data-round="tawaf-nafil" data-number="4">
-                        <span class="accordion-title"><span class="checkmark">✓</span>Round 4: Knowledge, Wisdom, and Righteous Deeds</span>
-                        <span class="accordion-icon">▼</span>
-                    </div>
-                    <div class="accordion-content">
-                        <div class="accordion-body">
-                            <div class="theme">Theme: Seeking Beneficial Knowledge and Good Actions</div>
-                            <ul class="dua-list">
-                                <li>Ask for beneficial knowledge that brings you closer to Allah</li>
-                                <li>Request wisdom in all your affairs</li>
-                                <li>Pray for ability to perform righteous deeds consistently</li>
-                                <li>Seek understanding of the Quran and Sunnah</li>
-                                <li>Ask for sincerity in all your actions</li>
-                            </ul>
-                            <div class="dhikr-box">
-                                <div class="dhikr-label">⭐ The Prophet's ﷺ Daily Dua:</div>
-                                <div class="arabic-text">اللَّهُمَّ انْفَعْنِي بِمَا عَلَّمْتَنِي، وَعَلِّمْنِي مَا يَنْفَعُنِي، وَزِدْنِي عِلْمًا</div>
-                                <div class="dhikr-text">"Allahumma-nfa'ni bima 'allamtani, wa 'allimni ma yanfa'uni, wa zidni 'ilma"</div>
-                                <div class="translation">(O Allah, benefit me with what You have taught me, teach me what will benefit me, and increase me in knowledge) - Ibn Majah</div>
-                            </div>
-                            <div class="dhikr-box" style="margin-top: 12px;">
-                                <div class="dhikr-label">For Wisdom and Understanding:</div>
-                                <div class="arabic-text">رَبِّ زِدْنِي عِلْمًا</div>
-                                <div class="dhikr-text">"Rabbi zidni 'ilma"</div>
-                                <div class="translation">(My Lord, increase me in knowledge) - Quran 20:114</div>
-                            </div>
-                            <div class="dhikr-box" style="margin-top: 12px;">
-                                <div class="dhikr-label">For Acceptance of Good Deeds:</div>
-                                <div class="arabic-text">رَبَّنَا تَقَبَّلْ مِنَّا إِنَّكَ أَنتَ السَّمِيعُ الْعَلِيمُ</div>
-                                <div class="dhikr-text">"Rabbana taqabbal minna innaka anta as-samee'u al-'aleem"</div>
-                                <div class="translation">(Our Lord, accept this from us. Indeed, You are the Hearing, the Knowing) - Quran 2:127</div>
-                            </div>
-                            <button class="complete-button" onclick="completeRoundNafil(this, 'tawaf', 4)">✓ Complete Round 4</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <div class="accordion-header" onclick="toggle(this)" data-round="tawaf-nafil" data-number="5">
-                        <span class="accordion-title"><span class="checkmark">✓</span>Round 5: Health, Provision, and Worldly Needs</span>
-                        <span class="accordion-icon">▼</span>
-                    </div>
-                    <div class="accordion-content">
-                        <div class="accordion-body">
-                            <div class="theme">Theme: Comprehensive Worldly Needs</div>
-                            <ul class="dua-list">
-                                <li>Ask for health and well-being in this life and the next</li>
-                                <li>Request halal provision and financial stability</li>
-                                <li>Pray for success in your career and endeavors</li>
-                                <li>Seek blessings in your wealth and time</li>
-                                <li>Ask for protection from poverty and debt</li>
-                            </ul>
-                            <div class="dhikr-box">
-                                <div class="dhikr-label">⭐ The Prophet's ﷺ Comprehensive Request:</div>
-                                <div class="arabic-text">اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَافِيَةَ فِي الدُّنْيَا وَالْآخِرَةِ</div>
-                                <div class="dhikr-text">"Allahumma inni as'alukal-'afiyata fid-dunya wal-akhirah"</div>
-                                <div class="translation">(O Allah, I ask You for well-being in this world and the Hereafter) - Ibn Majah</div>
-                            </div>
-                            <div class="dhikr-box" style="margin-top: 12px;">
-                                <div class="dhikr-label">⭐ Most Comprehensive Dua:</div>
-                                <div class="arabic-text">رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ</div>
-                                <div class="dhikr-text">"Rabbana atina fid-dunya hasanatan wa fil-akhirati hasanatan wa qina adhaban-nar"</div>
-                                <div class="translation">(Our Lord, give us good in this world and good in the Hereafter, and protect us from the punishment of the Fire) - Quran 2:201</div>
-                            </div>
-                            <div class="dhikr-box" style="margin-top: 12px;">
-                                <div class="dhikr-label">For Provision and Blessings:</div>
-                                <div class="arabic-text">اللَّهُمَّ بَارِكْ لَنَا فِيمَا رَزَقْتَنَا وَقِنَا عَذَابَ النَّارِ</div>
-                                <div class="dhikr-text">"Allahumma barik lana fima razaqtana wa qina 'adhaban-nar"</div>
-                                <div class="translation">(O Allah, bless for us what You have provided us and protect us from the punishment of the Fire) - Muslim</div>
-                            </div>
-                            <button class="complete-button" onclick="completeRoundNafil(this, 'tawaf', 5)">✓ Complete Round 5</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <div class="accordion-header" onclick="toggle(this)" data-round="tawaf-nafil" data-number="6">
-                        <span class="accordion-title"><span class="checkmark">✓</span>Round 6: The Muslim Ummah</span>
-                        <span class="accordion-icon">▼</span>
-                    </div>
-                    <div class="accordion-content">
-                        <div class="accordion-body">
-                            <div class="theme">Theme: Unity and Help for Muslims Worldwide</div>
-                            <ul class="dua-list">
-                                <li>Make dua for Muslims suffering around the world</li>
-                                <li>Ask for unity and strength for the Ummah</li>
-                                <li>Pray for Muslim leaders to be just and righteous</li>
-                                <li>Request victory for oppressed Muslims</li>
-                                <li>Ask for peace in Muslim lands</li>
-                            </ul>
-                            <div class="dhikr-box">
-                                <div class="dhikr-label">Comprehensive Dua for the Ummah:</div>
-                                <div class="arabic-text">اللَّهُمَّ أَصْلِحْ أَحْوَالَ الْمُسْلِمِينَ فِي كُلِّ مَكَانٍ</div>
-                                <div class="dhikr-text">"Allahumma aslih ahwaal al-muslimeena fee kulli makan"</div>
-                                <div class="translation">(O Allah, rectify the affairs of the Muslims in every place)</div>
-                            </div>
-                            <div class="dhikr-box" style="margin-top: 12px;">
-                                <div class="dhikr-label">For Oppressed Muslims:</div>
-                                <div class="arabic-text">اللَّهُمَّ انْصُرِ الْمُسْتَضْعَفِينَ مِنَ الْمُؤْمِنِينَ</div>
-                                <div class="dhikr-text">"Allahumma-nsur al-mustadh'afeena minal-mu'mineen"</div>
-                                <div class="translation">(O Allah, grant victory to the oppressed among the believers)</div>
-                            </div>
-                            <div class="dhikr-box" style="margin-top: 12px;">
-                                <div class="dhikr-label">For Unity:</div>
-                                <div class="arabic-text">اللَّهُمَّ أَلِّفْ بَيْنَ قُلُوبِ الْمُسْلِمِينَ وَأَصْلِحْ ذَاتَ بَيْنِهِمْ</div>
-                                <div class="dhikr-text">"Allahumma allif bayna quloob al-muslimeena wa aslih dhata baynihim"</div>
-                                <div class="translation">(O Allah, unite the hearts of the Muslims and reconcile between them)</div>
-                            </div>
-                            <button class="complete-button" onclick="completeRoundNafil(this, 'tawaf', 6)">✓ Complete Round 6</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <div class="accordion-header" onclick="toggle(this)" data-round="tawaf-nafil" data-number="7">
-                        <span class="accordion-title"><span class="checkmark">✓</span>Round 7: Jannah and Protection</span>
-                        <span class="accordion-icon">▼</span>
-                    </div>
-                    <div class="accordion-content">
-                        <div class="accordion-body">
-                            <div class="theme">Theme: The Ultimate Goal - Paradise</div>
-                            <ul class="dua-list">
-                                <li>Ask Allah for entrance into Jannah without reckoning</li>
-                                <li>Request the highest levels of Paradise (Firdaws)</li>
-                                <li>Seek protection from Hellfire and its punishments</li>
-                                <li>Pray for protection from the trials of the grave</li>
-                                <li>Ask for protection from the trials of Dajjal</li>
-                            </ul>
-                            <div class="dhikr-box">
-                                <div class="dhikr-label">⭐ HIGH-VALUE: Protection from Four Great Harms</div>
-                                <div class="arabic-text">اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ عَذَابِ جَهَنَّمَ، وَمِنْ عَذَابِ الْقَبْرِ، وَمِنْ فِتْنَةِ الْمَحْيَا وَالْمَمَاتِ، وَمِنْ شَرِّ فِتْنَةِ الْمَسِيحِ الدَّجَّالِ</div>
-                                <div class="dhikr-text">"Allahumma inni a'udhu bika min 'adhabi jahannam, wa min 'adhabil-qabr, wa min fitnatil-mahya wal-mamat, wa min sharri fitnatil-masihid-dajjal"</div>
-                                <div class="translation">(O Allah, I seek refuge in You from the punishment of Hell, from the punishment of the grave, from the trials of life and death, and from the evil of the trial of the False Messiah) - Bukhari & Muslim</div>
-                            </div>
-                            <div class="dhikr-box" style="margin-top: 12px;">
-                                <div class="dhikr-label">For Jannah al-Firdaws:</div>
-                                <div class="arabic-text">اللَّهُمَّ إِنِّي أَسْأَلُكَ الْجَنَّةَ وَمَا قَرَّبَ إِلَيْهَا مِنْ قَوْلٍ أَوْ عَمَلٍ، وَأَعُوذُ بِكَ مِنَ النَّارِ وَمَا قَرَّبَ إِلَيْهَا مِنْ قَوْلٍ أَوْ عَمَلٍ</div>
-                                <div class="dhikr-text">"Allahumma inni as'alukal-jannata wa ma qarraba ilayha min qawlin aw 'amal, wa a'udhu bika minan-nar wa ma qarraba ilayha min qawlin aw 'amal"</div>
-                                <div class="translation">(O Allah, I ask You for Paradise and whatever brings one closer to it in word or deed, and I seek refuge in You from the Fire and whatever brings one closer to it in word or deed) - Ahmad</div>
-                            </div>
-                            <div class="dhikr-box" style="margin-top: 12px;">
-                                <div class="dhikr-label">Final Comprehensive Dua:</div>
-                                <div class="arabic-text">رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ</div>
-                                <div class="dhikr-text">"Rabbana atina fid-dunya hasanatan wa fil-akhirati hasanatan wa qina adhaban-nar"</div>
-                                <div class="translation">(Our Lord, give us good in this world and good in the Hereafter, and protect us from the punishment of the Fire) - Quran 2:201</div>
-                            </div>
-                            <button class="complete-button" onclick="completeRoundNafil(this, 'tawaf', 7)">✓ Complete Round 7</button>
-                        </div>
-                    </div>
-                </div>
+                <div id="tawaf-nafil-accordion"></div>
             </div>
 
             <!-- SA'I SECTION -->
@@ -1208,214 +807,10 @@
                         <div class="progress-count" id="sai-count">0/7</div>
                     </div>
                     <div class="progress-text" id="sai-text">Start your first lap</div>
-                    <button class="complete-button" onclick="resetProgress('sai')" style="background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%); margin-top: 10px; padding: 8px 16px; font-size: 12px;">Reset Sa'i Progress</button>
+                    <button class="complete-button btn-warning btn-compact" onclick="resetProgress('sai')">Reset Sa'i Progress</button>
                 </div>
 
-                <div class="accordion-item">
-                    <div class="accordion-header" onclick="toggle(this)" data-round="sai" data-number="1">
-                        <span class="accordion-title"><span class="checkmark">✓</span>Lap 1 (Safa → Marwah): Trust in Allah</span>
-                        <span class="accordion-icon">▼</span>
-                    </div>
-                    <div class="accordion-content">
-                        <div class="accordion-body">
-                            <div class="theme">Theme: Tawakkul (Reliance on Allah)</div>
-                            <ul class="dua-list">
-                                <li>Reflect on Hajar's trust in Allah when she ran between the hills</li>
-                                <li>Ask Allah to strengthen your reliance on Him alone</li>
-                                <li>Make dua for certainty (yaqeen) in Allah's promises</li>
-                            </ul>
-                            <div class="dhikr-box">
-                                <div class="dhikr-label">Authentic Duas:</div>
-                                <div class="arabic-text">حَسْبُنَا اللَّهُ وَنِعْمَ الْوَكِيلُ</div>
-                                <div class="dhikr-text">"Hasbunallahu wa ni'mal wakeel"</div>
-                                <div class="translation">(Sufficient for us is Allah, and He is the best Disposer of affairs) - Quran 3:173</div>
-                            </div>
-                            <div class="dhikr-box" style="margin-top: 12px;">
-                                <div class="arabic-text">رَبَّنَا عَلَيْكَ تَوَكَّلْنَا وَإِلَيْكَ أَنَبْنَا وَإِلَيْكَ الْمَصِيرُ</div>
-                                <div class="dhikr-text">"Rabbana 'alayka tawakkalna wa ilayka anabna wa ilaykal-maseer"</div>
-                                <div class="translation">(Our Lord, upon You we have relied, and to You we have returned, and to You is the destination) - Quran 60:4</div>
-                            </div>
-                            <button class="complete-button" onclick="completeRound(this, 'sai', 1)">✓ Complete Lap 1</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <div class="accordion-header" onclick="toggle(this)" data-round="sai" data-number="2">
-                        <span class="accordion-title"><span class="checkmark">✓</span>Lap 2 (Marwah → Safa): Patience and Perseverance</span>
-                        <span class="accordion-icon">▼</span>
-                    </div>
-                    <div class="accordion-content">
-                        <div class="accordion-body">
-                            <div class="theme">Theme: Sabr (Patience)</div>
-                            <ul class="dua-list">
-                                <li>Ask for sabr in facing life's trials</li>
-                                <li>Request strength to remain steadfast in worship</li>
-                                <li>Pray for patience in dealing with difficult people or situations</li>
-                            </ul>
-                            <div class="dhikr-box">
-                                <div class="dhikr-label">Authentic Duas:</div>
-                                <div class="arabic-text">رَبَّنَا أَفْرِغْ عَلَيْنَا صَبْرًا وَثَبِّتْ أَقْدَامَنَا</div>
-                                <div class="dhikr-text">"Rabbana afrigh 'alayna sabran wa thabbit aqdamana"</div>
-                                <div class="translation">(Our Lord, pour upon us patience and plant firmly our feet) - Quran 2:250</div>
-                            </div>
-                            <div class="dhikr-box" style="margin-top: 12px;">
-                                <div class="arabic-text">اللَّهُمَّ إِنِّي أَسْأَلُكَ الصَّبْرَ عِنْدَ الصَّدْمَةِ الْأُولَى</div>
-                                <div class="dhikr-text">"Allahumma inni as'aluka as-sabra 'inda as-sadmatil-oola"</div>
-                                <div class="translation">(O Allah, I ask You for patience at the first shock) - Sunnah, Bukhari</div>
-                            </div>
-                            <button class="complete-button" onclick="completeRound(this, 'sai', 2)">✓ Complete Lap 2</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <div class="accordion-header" onclick="toggle(this)" data-round="sai" data-number="3">
-                        <span class="accordion-title"><span class="checkmark">✓</span>Lap 3 (Safa → Marwah): Health and Well-being</span>
-                        <span class="accordion-icon">▼</span>
-                    </div>
-                    <div class="accordion-content">
-                        <div class="accordion-body">
-                            <div class="theme">Theme: Physical and Mental Wellness</div>
-                            <ul class="dua-list">
-                                <li>Make dua for physical and mental health for yourself and loved ones</li>
-                                <li>Ask for healing if you or someone you know is ill</li>
-                                <li>Request protection from diseases and calamities</li>
-                            </ul>
-                            <div class="dhikr-box">
-                                <div class="dhikr-label">⭐ The Prophet's ﷺ Comprehensive Request:</div>
-                                <div class="arabic-text">اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَافِيَةَ فِي الدُّنْيَا وَالْآخِرَةِ</div>
-                                <div class="dhikr-text">"Allahumma inni as'alukal-'afiyata fid-dunya wal-akhirah"</div>
-                                <div class="translation">(O Allah, I ask You for well-being in this world and the Hereafter) - Ibn Majah. The Prophet ﷺ said, "Ask Allah for well-being, for after certainty of faith, no one has been given anything better than well-being."</div>
-                            </div>
-                            <div class="dhikr-box" style="margin-top: 12px;">
-                                <div class="dhikr-label">Authentic Duas:</div>
-                                <div class="arabic-text">اللَّهُمَّ عَافِنِي فِي بَدَنِي، اللَّهُمَّ عَافِنِي فِي سَمْعِي، اللَّهُمَّ عَافِنِي فِي بَصَرِي</div>
-                                <div class="dhikr-text">"Allahumma 'afini fi badani, Allahumma 'afini fi sam'i, Allahumma 'afini fi basari"</div>
-                                <div class="translation">(O Allah, grant me health in my body, O Allah, grant me health in my hearing, O Allah, grant me health in my sight) - Sunnah, Abu Dawud</div>
-                            </div>
-                            <button class="complete-button" onclick="completeRound(this, 'sai', 3)">✓ Complete Lap 3</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <div class="accordion-header" onclick="toggle(this)" data-round="sai" data-number="4">
-                        <span class="accordion-title"><span class="checkmark">✓</span>Lap 4 (Marwah → Safa): Knowledge and Wisdom</span>
-                        <span class="accordion-icon">▼</span>
-                    </div>
-                    <div class="accordion-content">
-                        <div class="accordion-body">
-                            <div class="theme">Theme: 'Ilm (Knowledge)</div>
-                            <ul class="dua-list">
-                                <li>Ask for beneficial knowledge and understanding</li>
-                                <li>Pray for wisdom in decision-making</li>
-                                <li>Request guidance in your career or life path</li>
-                            </ul>
-                            <div class="dhikr-box">
-                                <div class="dhikr-label">Authentic Duas:</div>
-                                <div class="arabic-text">رَّبِّ زِدْنِي عِلْمًا</div>
-                                <div class="dhikr-text">"Rabbi zidni 'ilma"</div>
-                                <div class="translation">(My Lord, increase me in knowledge) - Quran 20:114</div>
-                            </div>
-                            <div class="dhikr-box" style="margin-top: 12px;">
-                                <div class="arabic-text">اللَّهُمَّ انْفَعْنِي بِمَا عَلَّمْتَنِي، وَعَلِّمْنِي مَا يَنْفَعُنِي، وَزِدْنِي عِلْمًا</div>
-                                <div class="dhikr-text">"Allahumma-nfa'ni bima 'allamtani, wa 'allimni ma yanfa'uni, wa zidni 'ilma"</div>
-                                <div class="translation">(O Allah, benefit me with what You have taught me, teach me what will benefit me, and increase me in knowledge) - Sunnah, Ibn Majah</div>
-                            </div>
-                            <button class="complete-button" onclick="completeRound(this, 'sai', 4)">✓ Complete Lap 4</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <div class="accordion-header" onclick="toggle(this)" data-round="sai" data-number="5">
-                        <span class="accordion-title"><span class="checkmark">✓</span>Lap 5 (Safa → Marwah): Righteous Deeds</span>
-                        <span class="accordion-icon">▼</span>
-                    </div>
-                    <div class="accordion-content">
-                        <div class="accordion-body">
-                            <div class="theme">Theme: Good Actions</div>
-                            <ul class="dua-list">
-                                <li>Ask Allah to accept your good deeds</li>
-                                <li>Pray for the ability to perform more acts of worship</li>
-                                <li>Request sincerity (ikhlas) in all your actions</li>
-                            </ul>
-                            <div class="dhikr-box">
-                                <div class="dhikr-label">Authentic Duas:</div>
-                                <div class="arabic-text">رَبَّنَا تَقَبَّلْ مِنَّا إِنَّكَ أَنتَ السَّمِيعُ الْعَلِيمُ</div>
-                                <div class="dhikr-text">"Rabbana taqabbal minna innaka anta as-samee'ul-'aleem"</div>
-                                <div class="translation">(Our Lord, accept this from us. Indeed You are the All-Hearing, the All-Knowing) - Quran 2:127</div>
-                            </div>
-                            <div class="dhikr-box" style="margin-top: 12px;">
-                                <div class="arabic-text">اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ عِلْمٍ لَا يَنْفَعُ، وَمِنْ عَمَلٍ لَا يُرْفَعُ</div>
-                                <div class="dhikr-text">"Allahumma inni a'udhu bika min 'ilmin la yanfa', wa min 'amalin la yurfa'"</div>
-                                <div class="translation">(O Allah, I seek refuge in You from knowledge that does not benefit and from deeds that are not raised up) - Sunnah, Muslim</div>
-                            </div>
-                            <button class="complete-button" onclick="completeRound(this, 'sai', 5)">✓ Complete Lap 5</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <div class="accordion-header" onclick="toggle(this)" data-round="sai" data-number="6">
-                        <span class="accordion-title"><span class="checkmark">✓</span>Lap 6 (Marwah → Safa): Protection and Safety</span>
-                        <span class="accordion-icon">▼</span>
-                    </div>
-                    <div class="accordion-content">
-                        <div class="accordion-body">
-                            <div class="theme">Theme: Allah's Protection</div>
-                            <ul class="dua-list">
-                                <li>Seek Allah's protection from all evil</li>
-                                <li>Ask for safety in travel and daily life</li>
-                                <li>Request protection from enemies, envy, and harmful influences</li>
-                            </ul>
-                            <div class="dhikr-box">
-                                <div class="dhikr-label">Authentic Duas:</div>
-                                <div class="arabic-text">اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْهَمِّ وَالْحَزَنِ، وَأَعُوذُ بِكَ مِنَ الْعَجْزِ وَالْكَسَلِ، وَأَعُوذُ بِكَ مِنَ الْجُبْنِ وَالْبُخْلِ، وَأَعُوذُ بِكَ مِنْ غَلَبَةِ الدَّيْنِ وَقَهْرِ الرِّجَالِ</div>
-                                <div class="dhikr-text">"Allahumma inni a'udhu bika min al-hammi wal-hazan, wa a'udhu bika min al-'ajzi wal-kasal, wa a'udhu bika min al-jubni wal-bukhl, wa a'udhu bika min ghalabati ad-dayni wa qahri ar-rijal"</div>
-                                <div class="translation">(O Allah, I seek refuge in You from worry and grief, from incapacity and laziness, from cowardice and miserliness, and from being overcome by debt and the oppression of men) - Sunnah, Bukhari</div>
-                            </div>
-                            <div class="dhikr-box" style="margin-top: 12px;">
-                                <div class="arabic-text">أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ</div>
-                                <div class="dhikr-text">"A'udhu bi kalimatillahi at-tammati min sharri ma khalaq"</div>
-                                <div class="translation">(I seek refuge in the perfect words of Allah from the evil of what He has created) - Sunnah, Muslim</div>
-                            </div>
-                            <button class="complete-button" onclick="completeRound(this, 'sai', 6)">✓ Complete Lap 6</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <div class="accordion-header" onclick="toggle(this)" data-round="sai" data-number="7">
-                        <span class="accordion-title"><span class="checkmark">✓</span>Lap 7 (Safa → Marwah): Comprehensive Final Dua</span>
-                        <span class="accordion-icon">▼</span>
-                    </div>
-                    <div class="accordion-content">
-                        <div class="accordion-body">
-                            <div class="theme">Theme: Bringing It All Together</div>
-                            <ul class="dua-list">
-                                <li>Combine all your most important requests</li>
-                                <li>Make dua for both dunya (this world) and akhirah (the Hereafter)</li>
-                                <li>End with salawat upon the Prophet Muhammad ﷺ</li>
-                                <li>Express gratitude for completing this blessed ritual</li>
-                            </ul>
-                            <div class="dhikr-box">
-                                <div class="dhikr-label">Authentic Duas:</div>
-                                <div class="arabic-text">رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ</div>
-                                <div class="dhikr-text">"Rabbana atina fid-dunya hasanatan wa fil-akhirati hasanatan wa qina adhaban-nar"</div>
-                                <div class="translation">(Our Lord, give us good in this world and good in the Hereafter, and protect us from the punishment of the Fire) - Quran 2:201</div>
-                            </div>
-                            <div class="dhikr-box" style="margin-top: 12px;">
-                                <div class="dhikr-label">Salawat upon the Prophet ﷺ:</div>
-                                <div class="arabic-text">اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ</div>
-                                <div class="dhikr-text">"Allahumma salli 'ala Muhammad wa 'ala ali Muhammad kama sallayta 'ala Ibrahim wa 'ala ali Ibrahim innaka hameedun majeed"</div>
-                                <div class="translation">(O Allah, send prayers upon Muhammad and the family of Muhammad, as You sent prayers upon Ibrahim and the family of Ibrahim, indeed You are Praiseworthy and Glorious) - Sunnah, Bukhari</div>
-                            </div>
-                            <button class="complete-button" onclick="completeRound(this, 'sai', 7)">✓ Complete Lap 7</button>
-                        </div>
-                    </div>
-                </div>
+                <div id="sai-umrah-accordion"></div>
             </div>
 
             <!-- TIPS SECTION -->
@@ -1493,7 +888,7 @@
                             </div>
 
                             <div style="margin-top: 20px;">
-                                <div style="background: linear-gradient(135deg, #2d2d44 0%, #3d3d5c 100%); padding: 15px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #667eea;">
+                                <div class="takbir-card">
                                     <div style="font-weight: 700; color: #b8c6ff; margin-bottom: 8px;">1️⃣ FIRST TAKBIR</div>
                                     <div style="color: #e0e0e0; font-size: 14px; margin-bottom: 8px;">Say "Allahu Akbar" and raise your hands, then fold them (right over left)</div>
                                     <div style="font-weight: 600; color: #ffb74d; margin-top: 10px;">First, seek refuge from Shaytan:</div>
@@ -1503,7 +898,7 @@
                                     <div class="arabic-text" style="margin-top: 8px;">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ<br>الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ<br>الرَّحْمَٰنِ الرَّحِيمِ<br>مَالِكِ يَوْمِ الدِّينِ<br>إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ<br>اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ<br>صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ</div>
                                 </div>
 
-                                <div style="background: linear-gradient(135deg, #2d2d44 0%, #3d3d5c 100%); padding: 15px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #667eea;">
+                                <div class="takbir-card">
                                     <div style="font-weight: 700; color: #b8c6ff; margin-bottom: 8px;">2️⃣ SECOND TAKBIR</div>
                                     <div style="color: #e0e0e0; font-size: 14px; margin-bottom: 8px;">Say "Allahu Akbar" (you may raise hands or keep them folded)</div>
                                     <div style="font-weight: 600; color: #ffb74d; margin-top: 10px;">Recite Salawat upon the Prophet ﷺ (as in regular prayer):</div>
@@ -1511,7 +906,7 @@
                                     <div class="translation">"Allahumma salli 'ala Muhammad... Allahumma barik 'ala Muhammad..."</div>
                                 </div>
 
-                                <div style="background: linear-gradient(135deg, #2d2d44 0%, #3d3d5c 100%); padding: 15px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #667eea;">
+                                <div class="takbir-card">
                                     <div style="font-weight: 700; color: #b8c6ff; margin-bottom: 8px;">3️⃣ THIRD TAKBIR</div>
                                     <div style="color: #e0e0e0; font-size: 14px; margin-bottom: 8px;">Say "Allahu Akbar" (hands remain folded)</div>
                                     <div style="font-weight: 600; color: #ffb74d; margin-top: 10px;">⭐ Comprehensive Dua (narrated from the Prophet ﷺ):</div>
@@ -1527,7 +922,7 @@
                                     </div>
                                 </div>
 
-                                <div style="background: linear-gradient(135deg, #2d2d44 0%, #3d3d5c 100%); padding: 15px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #667eea;">
+                                <div class="takbir-card">
                                     <div style="font-weight: 700; color: #b8c6ff; margin-bottom: 8px;">4️⃣ FOURTH TAKBIR</div>
                                     <div style="color: #e0e0e0; font-size: 14px; margin-bottom: 8px;">Say "Allahu Akbar" (hands remain folded)</div>
                                     <div style="font-weight: 600; color: #ffb74d; margin-top: 10px;">Pause briefly, then conclude:</div>
@@ -2809,46 +2204,82 @@
             }).join('\n');
         }
 
-        // Render a complete round with theme
-        function renderRound(roundConfig, mode) {
+        // Render round/lap content from JSON + selection engine
+        function renderRoundContent(roundConfig, type, mode) {
             const themeId = roundConfig.theme;
             const theme = THEMES[themeId];
             if (!theme) return '';
 
-            const roundId = `${mode}-round-${roundConfig.number}`;
-            const duaIds = selectDuasForTheme(themeId, roundId);
+            const roundKey = `${mode}-${type}-${roundConfig.number}`;
+            const duaIds = selectDuasForTheme(themeId, roundKey);
+            const suggestions = (theme.suggestions || []).map(s => `<li>${s}</li>`).join('');
+            const labelType = type === 'sai' ? 'Lap' : 'Round';
 
-            const suggestions = theme.suggestions.map(s => `<li>${s}</li>`).join('');
-            const functionName = mode === 'nafil' ? 'completeRoundNafil' : 'completeRound';
+            const completeCall = type === 'tawaf'
+                ? `completeRound(this, 'tawaf', ${roundConfig.number}${mode === 'nafil' ? ", 'nafil'" : ''})`
+                : `completeRound(this, 'sai', ${roundConfig.number})`;
 
             return `
-                <div class="theme">${theme.description}</div>
-                <ul class="dua-list">
-                    ${suggestions}
-                </ul>
+                <div class="theme">
+                    <div class="theme-title">${theme.title || 'Theme'}</div>
+                    <div class="theme-desc">${roundConfig.description || theme.description || ''}</div>
+                </div>
+                ${suggestions ? `<ul class="dua-list">${suggestions}</ul>` : ''}
                 ${renderDuasByIds(duaIds)}
-                <button class="complete-button" onclick="${functionName}(this, 'tawaf', ${roundConfig.number})">✓ Complete Round ${roundConfig.number}</button>
+                <button class="complete-button" onclick="${completeCall}">✓ Complete ${labelType} ${roundConfig.number}</button>
             `;
+        }
+
+        // Build one accordion item
+        function createAccordionItem(roundConfig, type, mode) {
+            const theme = THEMES[roundConfig.theme] || {};
+            const isSai = type === 'sai';
+            const roundLabel = isSai ? `Lap ${roundConfig.number}` : `Round ${roundConfig.number}`;
+            const title = roundConfig.title || theme.title || 'Theme';
+            const dataRound = type === 'tawaf' ? (mode === 'nafil' ? 'tawaf-nafil' : 'tawaf') : 'sai';
+
+            return `
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggle(this)" data-round="${dataRound}" data-number="${roundConfig.number}">
+                        <span class="accordion-title"><span class="checkmark">✓</span>${roundLabel}: ${title}</span>
+                        <span class="accordion-icon">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            ${renderRoundContent(roundConfig, type, mode)}
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function buildAccordion(targetId, rounds, type, mode) {
+            const container = document.getElementById(targetId);
+            if (!container || !rounds) return;
+            container.innerHTML = rounds.map(r => createAccordionItem(r, type, mode)).join('');
+
+            // auto-open first item
+            const first = container.querySelector('.accordion-item');
+            if (first) {
+                const header = first.querySelector('.accordion-header');
+                const content = first.querySelector('.accordion-content');
+                const icon = first.querySelector('.accordion-icon');
+                content.classList.add('open');
+                header.classList.add('active');
+                icon.classList.add('rotated');
+            }
         }
 
         // Initialize dynamic content on page load
         function initializeDynamicContent() {
-            // Populate Salawat round for Umrah Tawaf (Round 3)
-            const umrahSalawatBody = document.getElementById('tawaf-umrah-round-3-body');
-            if (umrahSalawatBody && ROUNDS && ROUNDS.tawaf && ROUNDS.tawaf.umrah) {
-                const round3Config = ROUNDS.tawaf.umrah.find(r => r.number === 3);
-                if (round3Config) {
-                    umrahSalawatBody.innerHTML = renderRound(round3Config, 'umrah');
-                }
+            if (ROUNDS?.tawaf?.umrah) {
+                buildAccordion('tawaf-umrah-accordion', ROUNDS.tawaf.umrah, 'tawaf', 'umrah');
             }
-
-            // Populate Salawat round for Nafil Tawaf (Round 3)
-            const nafilSalawatBody = document.getElementById('tawaf-nafil-round-3-body');
-            if (nafilSalawatBody && ROUNDS && ROUNDS.tawaf && ROUNDS.tawaf.nafil) {
-                const round3Config = ROUNDS.tawaf.nafil.find(r => r.number === 3);
-                if (round3Config) {
-                    nafilSalawatBody.innerHTML = renderRound(round3Config, 'nafil');
-                }
+            if (ROUNDS?.tawaf?.nafil) {
+                buildAccordion('tawaf-nafil-accordion', ROUNDS.tawaf.nafil, 'tawaf', 'nafil');
+            }
+            if (ROUNDS?.sai?.umrah) {
+                buildAccordion('sai-umrah-accordion', ROUNDS.sai.umrah, 'sai', 'umrah');
             }
         }
 
@@ -2977,8 +2408,9 @@
 
         // Load personal notes and config on page load
         window.addEventListener('DOMContentLoaded', function() {
-            initializeDynamicContent();
             loadConfig();
+            initializeDynamicContent();
+            restoreProgressUI();
             loadNotes();
         });
 
@@ -3152,6 +2584,37 @@
         // Backward compatibility wrapper for Nafil mode
         function updateProgressNafil(type, completed) {
             updateProgress(type, completed, 'nafil');
+        }
+
+        // Restore completed UI state after rebuilding accordions
+        function restoreProgressUI() {
+            completedTawaf.forEach(num => markCompleted('tawaf', num, 'umrah'));
+            completedSai.forEach(num => markCompleted('sai', num, 'umrah'));
+            completedTawafNafil.forEach(num => markCompleted('tawaf-nafil', num, 'nafil'));
+
+            updateProgress('tawaf', completedTawaf.size, 'umrah');
+            updateProgress('sai', completedSai.size, 'umrah');
+            updateProgress('tawaf', completedTawafNafil.size, 'nafil');
+        }
+
+        function markCompleted(dataRound, number, mode) {
+            const header = document.querySelector(`.accordion-header[data-round="${dataRound}"][data-number="${number}"]`);
+            if (!header) return;
+            header.classList.add('completed');
+            header.classList.remove('active');
+
+            const item = header.closest('.accordion-item');
+            const content = item?.querySelector('.accordion-content');
+            const icon = header.querySelector('.accordion-icon');
+            content?.classList.remove('open');
+            icon?.classList.remove('rotated');
+
+            const button = item?.querySelector('.complete-button');
+            if (button) {
+                button.classList.add('completed');
+                button.disabled = true;
+                button.textContent = '✓ Completed';
+            }
         }
 
         // Reset function
