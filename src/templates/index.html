@@ -699,20 +699,6 @@
         .pl-20 { padding-left: 20px; }
         .text-rose-soft { color: #e1bee7; }
         .opacity-80 { opacity: 0.8; }
-        .cite-row { margin-top: 6px; text-align: right; }
-        .cite-chip {
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-            padding: 4px 8px;
-            border-radius: 999px;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            font-size: 11px;
-            color: #9ea7c6;
-            text-decoration: none;
-            background: rgba(255, 255, 255, 0.04);
-        }
-        .cite-chip:hover { border-color: #b8c6ff; color: #b8c6ff; }
         .max-800 { max-width: 800px; }
 
         .section-title.personal {
@@ -1124,7 +1110,6 @@
         // Render a single dua item
         function renderDuaItem(item, index) {
             const marginClass = index > 0 ? ' mt-12' : '';
-            const citation = deriveCitation(item);
 
             if (item.type === 'simple') {
                 return `
@@ -1156,65 +1141,10 @@
                         ${arabic}
                         ${transliteration}
                         ${translation}
-                        ${citation ? citation : ''}
                     </div>
                 `;
             }
             return '';
-        }
-
-        // Derive citation URL and chip (Quran -> quran.com, hadith -> sunnah.com)
-        function deriveCitation(item) {
-            if (!item || !item.source) return '';
-            const src = item.source;
-
-            // Quran pattern e.g., "Quran 2:201"
-            const qMatch = src.match(/quran\\s+(\\d+):(\\d+)/i);
-            if (qMatch) {
-                const surah = qMatch[1], ayah = qMatch[2];
-                const url = `https://quran.com/${surah}/${ayah}`;
-                return citationChip(`Quran ${surah}:${ayah}`, url);
-            }
-
-            // Hadith collections mapping
-            const collectionMap = {
-                bukhari: 'bukhari',
-                muslim: 'muslim',
-                tirmidhi: 'tirmidhi',
-                'abu dawud': 'abudawud',
-                'abu dawūd': 'abudawud',
-                'abudawud': 'abudawud',
-                'ibn majah': 'ibnmajah',
-                'ibn mājah': 'ibnmajah',
-                'ibnmajah': 'ibnmajah',
-                'ahmad': 'ahmad'
-            };
-
-            const lower = src.toLowerCase();
-            const collection = Object.keys(collectionMap).find(key => lower.includes(key));
-            if (collection) {
-                const slug = collectionMap[collection];
-                // extract first number in source as reference if present
-                const numMatch = src.match(/(\\d+[.:]\\d+|\\d+)/);
-                const ref = numMatch ? numMatch[1].replace(':', '') : '';
-                const url = ref ? `https://sunnah.com/${slug}:${ref}` : `https://sunnah.com/${slug}`;
-                const label = collection.charAt(0).toUpperCase() + collection.slice(1) + (ref ? ` ${ref}` : '');
-                return citationChip(label, url);
-            }
-
-            // Fallback: no citation
-            return '';
-        }
-
-        function citationChip(label, url) {
-            return `
-                <div class="cite-row">
-                    <a class="cite-chip" href="${url}" target="_blank" rel="noopener noreferrer">
-                        <span>${label}</span>
-                        <span aria-hidden="true">↗</span>
-                    </a>
-                </div>
-            `;
         }
 
         // Render duas by IDs from DUA_LIBRARY
