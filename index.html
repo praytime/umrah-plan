@@ -2007,6 +2007,188 @@
       "protection",
       "hereafter"
     ]
+  },
+  "tawakkul": {
+    "id": "tawakkul",
+    "title": "Trust in Allah (Tawakkul)",
+    "description": "Theme: Reliance on Allah in all affairs",
+    "suggestions": [
+      "Reflect on Hajar's trust in Allah during her search for water",
+      "Ask Allah to strengthen your reliance on Him alone",
+      "Make dua for certainty (yaqeen) in Allah's promises"
+    ],
+    "duas": {
+      "required": [
+        "rabbi-inni-faqeer"
+      ],
+      "pool": [
+        "rabbana-hab-lana-rahmah",
+        "rabbana-atina-hasanah",
+        "subhan-allah-alhamdulillah"
+      ],
+      "count": 2
+    },
+    "tags": [
+      "tawakkul",
+      "reliance",
+      "trust"
+    ]
+  },
+  "patience": {
+    "id": "patience",
+    "title": "Patience and Perseverance (Sabr)",
+    "description": "Theme: Steadfastness through trials",
+    "suggestions": [
+      "Ask for sabr in life's tests",
+      "Pray for consistency in worship",
+      "Seek a calm heart when facing people and situations"
+    ],
+    "duas": {
+      "required": [
+        "ya-muqallib"
+      ],
+      "pool": [
+        "rabbana-la-tuzigh",
+        "sayyid-istighfar",
+        "rabbana-dhalamna"
+      ],
+      "count": 2
+    },
+    "tags": [
+      "patience",
+      "steadfastness",
+      "sabr"
+    ]
+  },
+  "health-wellbeing": {
+    "id": "health-wellbeing",
+    "title": "Health and Well-being",
+    "description": "Theme: Physical and spiritual wellness",
+    "suggestions": [
+      "Make dua for health for yourself and loved ones",
+      "Ask for healing and protection from illness",
+      "Pray for strength to worship with energy"
+    ],
+    "duas": {
+      "required": [
+        "rabbana-atina-hasanah"
+      ],
+      "pool": [
+        "allahumma-four-refuges",
+        "rabbi-inni-faqeer",
+        "rabbana-hab-lana-rahmah"
+      ],
+      "count": 2
+    },
+    "tags": [
+      "health",
+      "wellbeing",
+      "protection"
+    ]
+  },
+  "knowledge-wisdom": {
+    "id": "knowledge-wisdom",
+    "title": "Knowledge and Wisdom",
+    "description": "Theme: Beneficial knowledge and understanding",
+    "suggestions": [
+      "Ask for knowledge that benefits",
+      "Request wisdom in decisions",
+      "Seek deep understanding of Quran and Sunnah"
+    ],
+    "duas": {
+      "required": [
+        "allahumma-ilman-nafian",
+        "rabbi-shrah"
+      ],
+      "pool": [
+        "rabbana-hab-lana-rahmah",
+        "rabbana-la-tuzigh",
+        "ya-muqallib"
+      ],
+      "count": 2
+    },
+    "tags": [
+      "knowledge",
+      "wisdom"
+    ]
+  },
+  "righteous-deeds": {
+    "id": "righteous-deeds",
+    "title": "Righteous Deeds",
+    "description": "Theme: Consistency and acceptance of good actions",
+    "suggestions": [
+      "Ask Allah to accept your deeds",
+      "Pray for sincerity (ikhlas) in worship",
+      "Seek ability to keep up good habits"
+    ],
+    "duas": {
+      "required": [
+        "rabbana-atina-hasanah"
+      ],
+      "pool": [
+        "rabbana-dhalamna",
+        "subhan-allah-alhamdulillah",
+        "ya-muqallib"
+      ],
+      "count": 2
+    },
+    "tags": [
+      "deeds",
+      "ikhlas"
+    ]
+  },
+  "protection-safety": {
+    "id": "protection-safety",
+    "title": "Protection and Safety",
+    "description": "Theme: Seeking Allah's protection",
+    "suggestions": [
+      "Seek refuge from harm, envy, and evil whispers",
+      "Ask for safety in travel and daily life",
+      "Pray for protection of family and belongings"
+    ],
+    "duas": {
+      "required": [
+        "allahumma-four-refuges"
+      ],
+      "pool": [
+        "rabbana-hab-lana-rahmah",
+        "rabbana-la-tuzigh",
+        "rabbana-ghfir-ikhwanina"
+      ],
+      "count": 2
+    },
+    "tags": [
+      "protection",
+      "safety",
+      "refuge"
+    ]
+  },
+  "comprehensive-final": {
+    "id": "comprehensive-final",
+    "title": "Comprehensive Final Dua",
+    "description": "Theme: Closing supplications for dunya and akhirah",
+    "suggestions": [
+      "Combine your most important requests",
+      "Ask Allah to accept your worship",
+      "Remember family, Ummah, and those who asked for dua"
+    ],
+    "duas": {
+      "required": [
+        "rabbana-atina-hasanah",
+        "allahumma-jannah-comprehensive"
+      ],
+      "pool": [
+        "salawat-short",
+        "salawat-ibrahimiyyah",
+        "rabbana-ghfir-walidayya"
+      ],
+      "count": 2
+    },
+    "tags": [
+      "comprehensive",
+      "closing",
+      "acceptance"
+    ]
   }
 };
         const ROUNDS = {
@@ -2258,16 +2440,11 @@
         // Render round/lap content from JSON + selection engine
         function renderRoundContent(roundConfig, type, mode) {
             const themeId = roundConfig.theme;
-            const fallbackTheme = {
-                title: roundConfig.title || 'Theme',
-                description: roundConfig.description || '',
-                suggestions: roundConfig.suggestions || [],
-                duas: { required: [], pool: [], count: 0 }
-            };
-            const theme = THEMES[themeId] || fallbackTheme;
+            const theme = THEMES[themeId];
+            if (!theme) return '';
 
             const roundKey = `${mode}-${type}-${roundConfig.number}`;
-            const duaIds = (THEMES[themeId] && selectDuasForTheme(themeId, roundKey)) || [];
+            const duaIds = selectDuasForTheme(themeId, roundKey);
             const suggestions = (theme.suggestions || []).map(s => `<li>${s}</li>`).join('');
             const labelType = type === 'sai' ? 'Lap' : 'Round';
 

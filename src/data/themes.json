@@ -10,11 +10,27 @@
       "Recite abundant Alhamdulillah with a sincere heart"
     ],
     "duas": {
-      "required": ["shukr-nimah-kaaba", "rabbana-atina-hasanah", "dua-safe-arrival", "alhamdulillah-kathira"],
-      "pool": ["subhan-allah-alhamdulillah", "alhamdulillah-bi-nimatihi", "alhamdulillah-alaa-kulli-hal", "alhamdulillah-rabb-alamin", "dua-namah-blessing", "dua-after-eating"],
+      "required": [
+        "shukr-nimah-kaaba",
+        "rabbana-atina-hasanah",
+        "dua-safe-arrival",
+        "alhamdulillah-kathira"
+      ],
+      "pool": [
+        "subhan-allah-alhamdulillah",
+        "alhamdulillah-bi-nimatihi",
+        "alhamdulillah-alaa-kulli-hal",
+        "alhamdulillah-rabb-alamin",
+        "dua-namah-blessing",
+        "dua-after-eating"
+      ],
       "count": 4
     },
-    "tags": ["gratitude", "arrival", "shukr"]
+    "tags": [
+      "gratitude",
+      "arrival",
+      "shukr"
+    ]
   },
   "forgiveness": {
     "id": "forgiveness",
@@ -26,11 +42,22 @@
       "Seek forgiveness for your parents, family, and the Muslim Ummah"
     ],
     "duas": {
-      "required": ["sayyid-istighfar"],
-      "pool": ["astaghfirullah", "rabbana-dhalamna", "rabbi-ghfir", "afuwwun-karim"],
+      "required": [
+        "sayyid-istighfar"
+      ],
+      "pool": [
+        "astaghfirullah",
+        "rabbana-dhalamna",
+        "rabbi-ghfir",
+        "afuwwun-karim"
+      ],
       "count": 3
     },
-    "tags": ["forgiveness", "repentance", "istighfar"]
+    "tags": [
+      "forgiveness",
+      "repentance",
+      "istighfar"
+    ]
   },
   "salawat-prophet": {
     "id": "salawat-prophet",
@@ -43,11 +70,23 @@
       "Reflect on his intercession on the Day of Judgment"
     ],
     "duas": {
-      "required": ["salawat-virtue", "salawat-ibrahimiyyah"],
-      "pool": ["salawat-short", "salawat-intercession", "salawat-rank", "salawat-comprehensive"],
+      "required": [
+        "salawat-virtue",
+        "salawat-ibrahimiyyah"
+      ],
+      "pool": [
+        "salawat-short",
+        "salawat-intercession",
+        "salawat-rank",
+        "salawat-comprehensive"
+      ],
       "count": 4
     },
-    "tags": ["salawat", "prophet", "blessings"]
+    "tags": [
+      "salawat",
+      "prophet",
+      "blessings"
+    ]
   },
   "faith-guidance": {
     "id": "faith-guidance",
@@ -61,11 +100,21 @@
       "Seek protection from deviation and misguidance"
     ],
     "duas": {
-      "required": ["ya-muqallib"],
-      "pool": ["rabbana-hab-lana-rahmah", "rabbana-la-tuzigh", "rabbi-shrah"],
+      "required": [
+        "ya-muqallib"
+      ],
+      "pool": [
+        "rabbana-hab-lana-rahmah",
+        "rabbana-la-tuzigh",
+        "rabbi-shrah"
+      ],
       "count": 2
     },
-    "tags": ["faith", "guidance", "iman"]
+    "tags": [
+      "faith",
+      "guidance",
+      "iman"
+    ]
   },
   "personal-spiritual": {
     "id": "personal-spiritual",
@@ -78,11 +127,21 @@
       "Pray for a good ending (husn al-khatimah)"
     ],
     "duas": {
-      "required": ["rabbana-la-tuzigh", "rabbi-shrah"],
-      "pool": ["ya-muqallib", "rabbana-hab-lana-rahmah"],
+      "required": [
+        "rabbana-la-tuzigh",
+        "rabbi-shrah"
+      ],
+      "pool": [
+        "ya-muqallib",
+        "rabbana-hab-lana-rahmah"
+      ],
       "count": 2
     },
-    "tags": ["spiritual", "personal", "faith"]
+    "tags": [
+      "spiritual",
+      "personal",
+      "faith"
+    ]
   },
   "family-loved-ones": {
     "id": "family-loved-ones",
@@ -95,11 +154,21 @@
       "Request blessings for your loved ones"
     ],
     "duas": {
-      "required": ["rabbi-rhamhuma"],
-      "pool": ["rabbi-hab-dhurriyyah", "rabbana-hab-azwaj", "rabbana-ghfir-walidayya"],
+      "required": [
+        "rabbi-rhamhuma"
+      ],
+      "pool": [
+        "rabbi-hab-dhurriyyah",
+        "rabbana-hab-azwaj",
+        "rabbana-ghfir-walidayya"
+      ],
       "count": 2
     },
-    "tags": ["family", "parents", "children"]
+    "tags": [
+      "family",
+      "parents",
+      "children"
+    ]
   },
   "family-comprehensive": {
     "id": "family-comprehensive",
@@ -113,11 +182,21 @@
       "Pray for harmony, love, and unity in your family"
     ],
     "duas": {
-      "required": ["rabbi-rhamhuma"],
-      "pool": ["rabbi-hab-dhurriyyah", "rabbana-hab-azwaj", "rabbana-ghfir-walidayya"],
+      "required": [
+        "rabbi-rhamhuma"
+      ],
+      "pool": [
+        "rabbi-hab-dhurriyyah",
+        "rabbana-hab-azwaj",
+        "rabbana-ghfir-walidayya"
+      ],
       "count": 3
     },
-    "tags": ["family", "parents", "comprehensive"]
+    "tags": [
+      "family",
+      "parents",
+      "comprehensive"
+    ]
   },
   "worldly-needs": {
     "id": "worldly-needs",
@@ -130,11 +209,19 @@
       "Remember to recite the essential dua between Rukn Yamani and Hajar Aswad (see Quick Reference section)"
     ],
     "duas": {
-      "required": ["allahumma-ilman-nafian"],
-      "pool": ["rabbi-inni-faqeer"],
+      "required": [
+        "allahumma-ilman-nafian"
+      ],
+      "pool": [
+        "rabbi-inni-faqeer"
+      ],
       "count": 1
     },
-    "tags": ["provision", "worldly", "sustenance"]
+    "tags": [
+      "provision",
+      "worldly",
+      "sustenance"
+    ]
   },
   "knowledge-deeds": {
     "id": "knowledge-deeds",
@@ -148,11 +235,19 @@
       "Ask for sincerity in all your actions"
     ],
     "duas": {
-      "required": ["allahumma-ilman-nafian"],
-      "pool": ["rabbi-inni-faqeer"],
+      "required": [
+        "allahumma-ilman-nafian"
+      ],
+      "pool": [
+        "rabbi-inni-faqeer"
+      ],
       "count": 1
     },
-    "tags": ["knowledge", "deeds", "wisdom"]
+    "tags": [
+      "knowledge",
+      "deeds",
+      "wisdom"
+    ]
   },
   "health-provision": {
     "id": "health-provision",
@@ -166,11 +261,19 @@
       "Ask for protection from poverty and debt"
     ],
     "duas": {
-      "required": ["allahumma-ilman-nafian"],
-      "pool": ["rabbi-inni-faqeer"],
+      "required": [
+        "allahumma-ilman-nafian"
+      ],
+      "pool": [
+        "rabbi-inni-faqeer"
+      ],
       "count": 1
     },
-    "tags": ["health", "provision", "worldly"]
+    "tags": [
+      "health",
+      "provision",
+      "worldly"
+    ]
   },
   "muslim-ummah": {
     "id": "muslim-ummah",
@@ -183,11 +286,19 @@
       "Request guidance for Muslim leaders and scholars"
     ],
     "duas": {
-      "required": ["rabbana-ghfir-ikhwanina"],
-      "pool": ["allahumma-aslih-ummah"],
+      "required": [
+        "rabbana-ghfir-ikhwanina"
+      ],
+      "pool": [
+        "allahumma-aslih-ummah"
+      ],
       "count": 1
     },
-    "tags": ["ummah", "unity", "global"]
+    "tags": [
+      "ummah",
+      "unity",
+      "global"
+    ]
   },
   "jannah-protection": {
     "id": "jannah-protection",
@@ -200,10 +311,202 @@
       "End with abundant praise and gratitude"
     ],
     "duas": {
-      "required": ["allahumma-four-refuges", "allahumma-jannah-comprehensive"],
-      "pool": ["allahumma-jannah-simple"],
+      "required": [
+        "allahumma-four-refuges",
+        "allahumma-jannah-comprehensive"
+      ],
+      "pool": [
+        "allahumma-jannah-simple"
+      ],
       "count": 1
     },
-    "tags": ["jannah", "paradise", "protection", "hereafter"]
+    "tags": [
+      "jannah",
+      "paradise",
+      "protection",
+      "hereafter"
+    ]
+  },
+  "tawakkul": {
+    "id": "tawakkul",
+    "title": "Trust in Allah (Tawakkul)",
+    "description": "Theme: Reliance on Allah in all affairs",
+    "suggestions": [
+      "Reflect on Hajar's trust in Allah during her search for water",
+      "Ask Allah to strengthen your reliance on Him alone",
+      "Make dua for certainty (yaqeen) in Allah's promises"
+    ],
+    "duas": {
+      "required": [
+        "rabbi-inni-faqeer"
+      ],
+      "pool": [
+        "rabbana-hab-lana-rahmah",
+        "rabbana-atina-hasanah",
+        "subhan-allah-alhamdulillah"
+      ],
+      "count": 2
+    },
+    "tags": [
+      "tawakkul",
+      "reliance",
+      "trust"
+    ]
+  },
+  "patience": {
+    "id": "patience",
+    "title": "Patience and Perseverance (Sabr)",
+    "description": "Theme: Steadfastness through trials",
+    "suggestions": [
+      "Ask for sabr in life's tests",
+      "Pray for consistency in worship",
+      "Seek a calm heart when facing people and situations"
+    ],
+    "duas": {
+      "required": [
+        "ya-muqallib"
+      ],
+      "pool": [
+        "rabbana-la-tuzigh",
+        "sayyid-istighfar",
+        "rabbana-dhalamna"
+      ],
+      "count": 2
+    },
+    "tags": [
+      "patience",
+      "steadfastness",
+      "sabr"
+    ]
+  },
+  "health-wellbeing": {
+    "id": "health-wellbeing",
+    "title": "Health and Well-being",
+    "description": "Theme: Physical and spiritual wellness",
+    "suggestions": [
+      "Make dua for health for yourself and loved ones",
+      "Ask for healing and protection from illness",
+      "Pray for strength to worship with energy"
+    ],
+    "duas": {
+      "required": [
+        "rabbana-atina-hasanah"
+      ],
+      "pool": [
+        "allahumma-four-refuges",
+        "rabbi-inni-faqeer",
+        "rabbana-hab-lana-rahmah"
+      ],
+      "count": 2
+    },
+    "tags": [
+      "health",
+      "wellbeing",
+      "protection"
+    ]
+  },
+  "knowledge-wisdom": {
+    "id": "knowledge-wisdom",
+    "title": "Knowledge and Wisdom",
+    "description": "Theme: Beneficial knowledge and understanding",
+    "suggestions": [
+      "Ask for knowledge that benefits",
+      "Request wisdom in decisions",
+      "Seek deep understanding of Quran and Sunnah"
+    ],
+    "duas": {
+      "required": [
+        "allahumma-ilman-nafian",
+        "rabbi-shrah"
+      ],
+      "pool": [
+        "rabbana-hab-lana-rahmah",
+        "rabbana-la-tuzigh",
+        "ya-muqallib"
+      ],
+      "count": 2
+    },
+    "tags": [
+      "knowledge",
+      "wisdom"
+    ]
+  },
+  "righteous-deeds": {
+    "id": "righteous-deeds",
+    "title": "Righteous Deeds",
+    "description": "Theme: Consistency and acceptance of good actions",
+    "suggestions": [
+      "Ask Allah to accept your deeds",
+      "Pray for sincerity (ikhlas) in worship",
+      "Seek ability to keep up good habits"
+    ],
+    "duas": {
+      "required": [
+        "rabbana-atina-hasanah"
+      ],
+      "pool": [
+        "rabbana-dhalamna",
+        "subhan-allah-alhamdulillah",
+        "ya-muqallib"
+      ],
+      "count": 2
+    },
+    "tags": [
+      "deeds",
+      "ikhlas"
+    ]
+  },
+  "protection-safety": {
+    "id": "protection-safety",
+    "title": "Protection and Safety",
+    "description": "Theme: Seeking Allah's protection",
+    "suggestions": [
+      "Seek refuge from harm, envy, and evil whispers",
+      "Ask for safety in travel and daily life",
+      "Pray for protection of family and belongings"
+    ],
+    "duas": {
+      "required": [
+        "allahumma-four-refuges"
+      ],
+      "pool": [
+        "rabbana-hab-lana-rahmah",
+        "rabbana-la-tuzigh",
+        "rabbana-ghfir-ikhwanina"
+      ],
+      "count": 2
+    },
+    "tags": [
+      "protection",
+      "safety",
+      "refuge"
+    ]
+  },
+  "comprehensive-final": {
+    "id": "comprehensive-final",
+    "title": "Comprehensive Final Dua",
+    "description": "Theme: Closing supplications for dunya and akhirah",
+    "suggestions": [
+      "Combine your most important requests",
+      "Ask Allah to accept your worship",
+      "Remember family, Ummah, and those who asked for dua"
+    ],
+    "duas": {
+      "required": [
+        "rabbana-atina-hasanah",
+        "allahumma-jannah-comprehensive"
+      ],
+      "pool": [
+        "salawat-short",
+        "salawat-ibrahimiyyah",
+        "rabbana-ghfir-walidayya"
+      ],
+      "count": 2
+    },
+    "tags": [
+      "comprehensive",
+      "closing",
+      "acceptance"
+    ]
   }
 }
