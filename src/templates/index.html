@@ -1214,17 +1214,6 @@
             const container = document.getElementById(targetId);
             if (!container || !rounds) return;
             container.innerHTML = rounds.map(r => createAccordionItem(r, type, mode)).join('');
-
-            // auto-open first item
-            const first = container.querySelector('.accordion-item');
-            if (first) {
-                const header = first.querySelector('.accordion-header');
-                const content = first.querySelector('.accordion-content');
-                const icon = first.querySelector('.accordion-icon');
-                content.classList.add('open');
-                header.classList.add('active');
-                icon.classList.add('rotated');
-            }
         }
 
         // Initialize dynamic content on page load
