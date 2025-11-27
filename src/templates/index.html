@@ -705,6 +705,46 @@
             background: linear-gradient(135deg, #9c27b0 0%, #673ab7 100%);
         }
 
+        .citation-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 12px;
+        }
+        
+        .citation-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            padding: 4px 10px;
+            font-size: 11px;
+            color: #b0bec5;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .citation-badge:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.3);
+            color: white;
+        }
+
+        .citation-badge.quran {
+            border-color: rgba(102, 187, 106, 0.4);
+            color: #a5d6a7;
+        }
+
+        .citation-badge.hadith {
+            border-color: rgba(66, 165, 245, 0.4);
+            color: #90caf9;
+        }
+        
+        .citation-icon {
+            font-size: 12px;
+        }
+
         @media (max-width: 600px) {
             .settings-btn {
                 top: 10px;
@@ -1108,12 +1148,39 @@
         // Render a single dua item
         function renderDuaItem(item, index) {
             const marginClass = index > 0 ? ' mt-12' : '';
+            
+            // Generate Citation HTML
+            let citationHtml = '';
+            if (item.source) {
+                const isQuran = item.source.toLowerCase().includes('quran');
+                const badgeClass = isQuran ? 'citation-badge quran' : 'citation-badge hadith';
+                const icon = isQuran ? '📖' : '📜';
+                
+                if (item.ref_url) {
+                    citationHtml = `
+                        <div class="citation-container">
+                            <a href="${item.ref_url}" target="_blank" rel="noopener noreferrer" class="${badgeClass}">
+                                <span class="citation-icon">${icon}</span> ${item.source} <span class="citation-icon">↗</span>
+                            </a>
+                        </div>
+                    `;
+                } else {
+                     citationHtml = `
+                        <div class="citation-container">
+                            <span class="${badgeClass}">
+                                <span class="citation-icon">${icon}</span> ${item.source}
+                            </span>
+                        </div>
+                    `;
+                }
+            }
 
             if (item.type === 'simple') {
                 return `
                     <div class="dhikr-box${marginClass}">
                         <div class="dhikr-label">${item.label}</div>
                         <div class="dhikr-text">${item.text}</div>
+                        ${citationHtml}
                     </div>
                 `;
             } else if (item.type === 'info') {
@@ -1125,6 +1192,7 @@
                     <div class="dhikr-box${marginClass}">
                         <div class="dhikr-label">${item.label}</div>
                         ${content}
+                        ${citationHtml}
                     </div>
                 `;
             } else if (item.type === 'full') {
@@ -1139,6 +1207,7 @@
                         ${arabic}
                         ${transliteration}
                         ${translation}
+                        ${citationHtml}
                     </div>
                 `;
             }

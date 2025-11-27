@@ -705,6 +705,46 @@
             background: linear-gradient(135deg, #9c27b0 0%, #673ab7 100%);
         }
 
+        .citation-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 12px;
+        }
+        
+        .citation-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            padding: 4px 10px;
+            font-size: 11px;
+            color: #b0bec5;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .citation-badge:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.3);
+            color: white;
+        }
+
+        .citation-badge.quran {
+            border-color: rgba(102, 187, 106, 0.4);
+            color: #a5d6a7;
+        }
+
+        .citation-badge.hadith {
+            border-color: rgba(66, 165, 245, 0.4);
+            color: #90caf9;
+        }
+        
+        .citation-icon {
+            font-size: 12px;
+        }
+
         @media (max-width: 600px) {
             .settings-btn {
                 top: 10px;
@@ -1048,7 +1088,7 @@
     "label": "Authentic Duas:",
     "arabic": "الْحَمْدُ لِلَّهِ الَّذِي بِنِعْمَتِهِ تَتِمُّ الصَّالِحَاتُ",
     "transliteration": "\"Alhamdulillahi-lladhi bi ni'matihi tatimmu as-salihat\"",
-    "translation": "(All praise is due to Allah by Whose favor good works are accomplished) - Sunnah",
+    "translation": "(All praise is due to Allah by Whose favor good works are accomplished)",
     "source": "Sunnah",
     "tags": [
       "gratitude",
@@ -1065,7 +1105,7 @@
     "label": "Gratitude in All Circumstances:",
     "arabic": "الْحَمْدُ لِلَّهِ عَلَى كُلِّ حَالٍ",
     "transliteration": "\"Alhamdulillahi 'ala kulli hal\"",
-    "translation": "(All praise is due to Allah in all circumstances) - Common Islamic phrase",
+    "translation": "(All praise is due to Allah in all circumstances)",
     "source": "Common Islamic phrase",
     "tags": [
       "gratitude",
@@ -1084,8 +1124,9 @@
     "label": "⭐ HIGH-VALUE: The Most Comprehensive Dua",
     "arabic": "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ",
     "transliteration": "\"Rabbana atina fid-dunya hasanatan wa fil-akhirati hasanatan wa qina 'adhaban-nar\"",
-    "translation": "(Our Lord, give us in this world good and in the Hereafter good and protect us from the punishment of the Fire) - Quran 2:201. The Prophet ﷺ would frequently make this dua between the Rukn al-Yamani and the Black Stone during Tawaf.",
-    "source": "Quran 2:201, Sunnah",
+    "translation": "(Our Lord, give us in this world good and in the Hereafter good and protect us from the punishment of the Fire) - The Prophet ﷺ would frequently make this dua between the Rukn al-Yamani and the Black Stone during Tawaf.",
+    "source": "Quran 2:201 & Sunnah",
+    "ref_url": "https://quran.com/2/201",
     "tags": [
       "gratitude",
       "comprehensive",
@@ -1106,7 +1147,7 @@
     "label": "⭐ Upon Reaching Destination:",
     "arabic": "الْحَمْدُ لِلَّهِ الَّذِي سَلَّمَنِي وَعَافَانِي وَآوَانِي، فَكَمْ مِمَّنْ لَا كَافِيَ لَهُ وَلَا مُؤْوِيَ",
     "transliteration": "\"Alhamdulillahi-lladhi sallamani wa 'afani wa awani, fakam mimman la kafiya lahu wa la mu'wi\"",
-    "translation": "(All praise is for Allah Who has kept me safe, granted me health, and given me shelter, for how many are there who have none to suffice them and none to give them shelter) - Traditional Islamic dua for arrival",
+    "translation": "(All praise is for Allah Who has kept me safe, granted me health, and given me shelter, for how many are there who have none to suffice them and none to give them shelter)",
     "source": "Traditional Islamic dua",
     "tags": [
       "gratitude",
@@ -1125,7 +1166,7 @@
     "label": "Abundant Praise:",
     "arabic": "الْحَمْدُ لِلَّهِ حَمْدًا كَثِيرًا طَيِّبًا مُبَارَكًا فِيهِ",
     "transliteration": "\"Alhamdulillahi hamdan kathiran tayyiban mubarakan fih\"",
-    "translation": "(All praise is for Allah, an abundant, excellent, and blessed praise) - Sahih Bukhari & Muslim. This dhikr is so beloved that the angels competed to record it.",
+    "translation": "(All praise is for Allah, an abundant, excellent, and blessed praise) - This dhikr is so beloved that the angels competed to record it.",
     "source": "Sahih Bukhari & Muslim",
     "tags": [
       "gratitude",
@@ -1143,8 +1184,9 @@
     "label": "Praising the Lord of the Worlds:",
     "arabic": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
     "transliteration": "\"Alhamdulillahi rabbil-'alamin\"",
-    "translation": "(All praise is for Allah, Lord of all the worlds) - Quran 1:2. The opening verse of praise in Surah Al-Fatiha.",
+    "translation": "(All praise is for Allah, Lord of all the worlds) - The opening verse of praise in Surah Al-Fatiha.",
     "source": "Quran 1:2",
+    "ref_url": "https://quran.com/1/2",
     "tags": [
       "gratitude",
       "dhikr",
@@ -1161,7 +1203,7 @@
     ],
     "type": "info",
     "label": "⭐ Reflect on This Blessing:",
-    "text": "You are standing in the House of Allah, the most sacred place on Earth. Millions wish for this moment. The Prophet ﷺ said: \"Whoever performs Tawaf around the House seven times and prays two rak'ahs, it is as if he has freed a slave.\" - Ibn Majah\n\nTake this moment to deeply thank Allah for:\n• The blessing of Islam and faith\n• Your health that allowed you to travel\n• The means to afford this journey\n• Your safety and protection\n• Being chosen to stand in this blessed place",
+    "text": "You are standing in the House of Allah, the most sacred place on Earth. Millions wish for this moment. The Prophet ﷺ said: \"Whoever performs Tawaf around the House seven times and prays two rak'ahs, it is as if he has freed a slave.\"\n\nTake this moment to deeply thank Allah for:\n• The blessing of Islam and faith\n• Your health that allowed you to travel\n• The means to afford this journey\n• Your safety and protection\n• Being chosen to stand in this blessed place",
     "source": "Ibn Majah",
     "tags": [
       "gratitude",
@@ -1180,7 +1222,7 @@
     "label": "Gratitude for Provision:",
     "arabic": "اللَّهُمَّ بَارِكْ لَنَا فِيمَا رَزَقْتَنَا وَقِنَا عَذَابَ النَّارِ",
     "transliteration": "\"Allahumma barik lana fima razaqtana wa qina 'adhaban-nar\"",
-    "translation": "(O Allah, bless us in what You have provided us and protect us from the punishment of the Fire) - Abu Dawud",
+    "translation": "(O Allah, bless us in what You have provided us and protect us from the punishment of the Fire)",
     "source": "Abu Dawud",
     "tags": [
       "gratitude",
@@ -1197,7 +1239,7 @@
     "label": "General Gratitude:",
     "arabic": "الْحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنِي هَٰذَا وَرَزَقَنِيهِ مِنْ غَيْرِ حَوْلٍ مِنِّي وَلَا قُوَّةٍ",
     "transliteration": "\"Alhamdulillahi-lladhi at'amani hadha wa razaqanihi min ghayri hawlin minni wa la quwwah\"",
-    "translation": "(All praise is for Allah Who has fed me this and provided it for me without any might or power from myself) - Abu Dawud & Tirmidhi. This dua acknowledges that all provision is from Allah alone.",
+    "translation": "(All praise is for Allah Who has fed me this and provided it for me without any might or power from myself) - This dua acknowledges that all provision is from Allah alone.",
     "source": "Abu Dawud & Tirmidhi",
     "tags": [
       "gratitude",
@@ -1229,7 +1271,7 @@
     "label": "⭐ HIGH-VALUE: Sayyid al-Istighfar (Master of Seeking Forgiveness)",
     "arabic": "اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ بِذَنْبِي فَاغْفِرْ لِي، فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ",
     "transliteration": "\"Allahumma anta rabbi la ilaha illa ant, khalaqtani wa ana 'abduk, wa ana 'ala 'ahdika wa wa'dika mastata't, a'udhu bika min sharri ma sana't, abu'u laka bi ni'matika 'alayy, wa abu'u bi dhanbi faghfir li, fa innahu la yaghfiru adh-dhunuba illa ant\"",
-    "translation": "(O Allah, You are my Lord, there is no god but You. You created me and I am Your servant. I am keeping my covenant to You as much as I can. I seek refuge in You from the evil I have done. I acknowledge Your blessings upon me, and I acknowledge my sins. So forgive me, for none can forgive sins except You) - Bukhari. The Prophet ﷺ said whoever says this with conviction and dies that day will enter Paradise.",
+    "translation": "(O Allah, You are my Lord, there is no god but You. You created me and I am Your servant. I am keeping my covenant to You as much as I can. I seek refuge in You from the evil I have done. I acknowledge Your blessings upon me, and I acknowledge my sins. So forgive me, for none can forgive sins except You) - The Prophet ﷺ said whoever says this with conviction and dies that day will enter Paradise.",
     "source": "Sahih Bukhari",
     "tags": [
       "forgiveness",
@@ -1246,8 +1288,9 @@
     "label": "Authentic Duas:",
     "arabic": "رَبَّنَا ظَلَمْنَا أَنفُسَنَا وَإِن لَّمْ تَغْفِرْ لَنَا وَتَرْحَمْنَا لَنَكُونَنَّ مِنَ الْخَاسِرِينَ",
     "transliteration": "\"Rabbana dhalamna anfusana wa il-lam taghfir lana wa tarhamna lanakūnanna minal-khasireen\"",
-    "translation": "(Our Lord, we have wronged ourselves, and if You do not forgive us and have mercy upon us, we will surely be among the losers) - Quran 7:23",
+    "translation": "(Our Lord, we have wronged ourselves, and if You do not forgive us and have mercy upon us, we will surely be among the losers)",
     "source": "Quran 7:23",
+    "ref_url": "https://quran.com/7/23",
     "tags": [
       "forgiveness",
       "quran",
@@ -1262,8 +1305,9 @@
     "type": "full",
     "arabic": "رَبِّ اغْفِرْ وَارْحَمْ وَأَنتَ خَيْرُ الرَّاحِمِينَ",
     "transliteration": "\"Rabbi-ghfir warham wa anta khayru ar-rahimeen\"",
-    "translation": "(My Lord, forgive and have mercy, and You are the best of the merciful) - Quran 23:118",
+    "translation": "(My Lord, forgive and have mercy, and You are the best of the merciful)",
     "source": "Quran 23:118",
+    "ref_url": "https://quran.com/23/118",
     "tags": [
       "forgiveness",
       "quran",
@@ -1280,7 +1324,7 @@
     "label": "⭐ The Prophet's ﷺ Favorite Dua for Laylatul Qadr:",
     "arabic": "اللَّهُمَّ إِنَّكَ عَفُوٌّ كَرِيمٌ تُحِبُّ الْعَفْوَ فَاعْفُ عَنِّي",
     "transliteration": "\"Allahumma innaka 'afuwwun kareemun tuhibbul-'afwa fa'fu 'anni\"",
-    "translation": "(O Allah, You are Most Forgiving, and You love forgiveness, so forgive me) - Tirmidhi. When Aisha asked what dua she should say on Laylatul Qadr, the Prophet ﷺ taught her this.",
+    "translation": "(O Allah, You are Most Forgiving, and You love forgiveness, so forgive me) - When Aisha asked what dua she should say on Laylatul Qadr, the Prophet ﷺ taught her this.",
     "source": "Tirmidhi",
     "tags": [
       "forgiveness",
@@ -1296,8 +1340,9 @@
     ],
     "type": "info",
     "label": "⭐ HIGH-VALUE: The Virtue of Salawat",
-    "text": "The Prophet ﷺ said: \"Whoever sends blessings upon me once, Allah will send blessings upon him ten times, erase ten sins from him, and raise him ten degrees.\" - Sahih Muslim\n\n\"Indeed, Allah and His angels send blessings upon the Prophet. O you who have believed, ask Allah to confer blessing upon him and ask Allah to grant him peace.\" - Quran 33:56",
+    "text": "The Prophet ﷺ said: \"Whoever sends blessings upon me once, Allah will send blessings upon him ten times, erase ten sins from him, and raise him ten degrees.\" - Sahih Muslim\n\n\"Indeed, Allah and His angels send blessings upon the Prophet. O you who have believed, ask Allah to confer blessing upon him and ask Allah to grant him peace.\"",
     "source": "Sahih Muslim, Quran 33:56",
+    "ref_url": "https://quran.com/33/56",
     "tags": [
       "salawat",
       "virtue",
@@ -1314,7 +1359,7 @@
     "label": "⭐ HIGH-VALUE: Complete Salat al-Ibrahimiyyah",
     "arabic": "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
     "transliteration": "\"Allahumma salli 'ala Muhammadin wa 'ala ali Muhammadin kama sallayta 'ala Ibrahima wa 'ala ali Ibrahima innaka Hamidun Majid. Allahumma barik 'ala Muhammadin wa 'ala ali Muhammadin kama barakta 'ala Ibrahima wa 'ala ali Ibrahima innaka Hamidun Majid.\"",
-    "translation": "(O Allah, send Your blessings upon Muhammad and upon the family of Muhammad, as You sent blessings upon Ibrahim and upon the family of Ibrahim. Indeed, You are Praiseworthy and Glorious. O Allah, bless Muhammad and the family of Muhammad as You blessed Ibrahim and the family of Ibrahim. Indeed, You are Praiseworthy and Glorious) - Sahih Bukhari & Muslim. This is the complete Salawat taught by the Prophet ﷺ himself when the Companions asked how to send blessings upon him.",
+    "translation": "(O Allah, send Your blessings upon Muhammad and upon the family of Muhammad, as You sent blessings upon Ibrahim and upon the family of Ibrahim. Indeed, You are Praiseworthy and Glorious. O Allah, bless Muhammad and the family of Muhammad as You blessed Ibrahim and the family of Ibrahim. Indeed, You are Praiseworthy and Glorious) - This is the complete Salawat taught by the Prophet ﷺ himself when the Companions asked how to send blessings upon him.",
     "source": "Sahih Bukhari & Muslim",
     "tags": [
       "salawat",
@@ -1399,8 +1444,9 @@
     "label": "Authentic Duas:",
     "arabic": "رَبَّنَا لَا تُزِغْ قُلُوبَنَا بَعْدَ إِذْ هَدَيْتَنَا وَهَبْ لَنَا مِن لَّدُنكَ رَحْمَةً إِنَّكَ أَنتَ الْوَهَّابُ",
     "transliteration": "\"Rabbana la tuzigh quloobana ba'da idh hadaytana wa hab lana min ladunka rahmah innaka anta al-wahhab\"",
-    "translation": "(Our Lord, let not our hearts deviate after You have guided us and grant us from Yourself mercy. Indeed, You are the Bestower) - Quran 3:8",
+    "translation": "(Our Lord, let not our hearts deviate after You have guided us and grant us from Yourself mercy. Indeed, You are the Bestower)",
     "source": "Quran 3:8",
+    "ref_url": "https://quran.com/3/8",
     "tags": [
       "faith",
       "guidance",
@@ -1416,8 +1462,9 @@
     "type": "full",
     "arabic": "رَبِّ اشْرَحْ لِي صَدْرِي وَيَسِّرْ لِي أَمْرِي",
     "transliteration": "\"Rabbi-shrah li sadri wa yassir li amri\"",
-    "translation": "(My Lord, expand for me my breast and ease for me my task) - Quran 20:25-26",
+    "translation": "(My Lord, expand for me my breast and ease for me my task)",
     "source": "Quran 20:25-26",
+    "ref_url": "https://quran.com/20/25-26",
     "tags": [
       "ease",
       "expansion",
@@ -1434,7 +1481,7 @@
     "label": "⭐ The Prophet's ﷺ Most Frequent Dua:",
     "arabic": "يَا مُقَلِّبَ الْقُلُوبِ ثَبِّتْ قَلْبِي عَلَى دِينِكَ",
     "transliteration": "\"Ya muqallibal-quloob thabbit qalbi 'ala deenik\"",
-    "translation": "(O Turner of hearts, make my heart firm upon Your religion) - Tirmidhi. The Prophet ﷺ would frequently make this dua, and when asked why, he said \"The hearts are between two of the fingers of the Most Merciful, He turns them as He wills.\"",
+    "translation": "(O Turner of hearts, make my heart firm upon Your religion) - The Prophet ﷺ would frequently make this dua, and when asked why, he said \"The hearts are between two of the fingers of the Most Merciful, He turns them as He wills.\"",
     "source": "Tirmidhi",
     "tags": [
       "faith",
@@ -1453,8 +1500,9 @@
     "label": "⭐ Dua for Mercy and Guidance:",
     "arabic": "رَبَّنَا هَبْ لَنَا مِن لَّدُنكَ رَحْمَةً وَهَيِّئْ لَنَا مِنْ أَمْرِنَا رَشَدًا",
     "transliteration": "\"Rabbana hab lana min ladunka rahmatan wa hayyi' lana min amrina rashada\"",
-    "translation": "(Our Lord, grant us from Yourself mercy and prepare for us from our affair right guidance) - Quran 18:10. The dua of the People of the Cave, beloved by the Prophet ﷺ.",
+    "translation": "(Our Lord, grant us from Yourself mercy and prepare for us from our affair right guidance) - The dua of the People of the Cave, beloved by the Prophet ﷺ.",
     "source": "Quran 18:10",
+    "ref_url": "https://quran.com/18/10",
     "tags": [
       "mercy",
       "guidance",
@@ -1473,8 +1521,9 @@
     "label": "⭐ HIGH-VALUE: For Your Parents",
     "arabic": "رَبِّ ارْحَمْهُمَا كَمَا رَبَّيَانِي صَغِيرًا",
     "transliteration": "\"Rabbi-rhamhuma kama rabbayani saghira\"",
-    "translation": "(My Lord, have mercy upon them as they brought me up when I was small) - Quran 17:24",
+    "translation": "(My Lord, have mercy upon them as they brought me up when I was small)",
     "source": "Quran 17:24",
+    "ref_url": "https://quran.com/17/24",
     "tags": [
       "parents",
       "family",
@@ -1492,8 +1541,9 @@
     "label": "For Righteous Offspring:",
     "arabic": "رَبِّ هَبْ لِي مِن لَّدُنكَ ذُرِّيَّةً طَيِّبَةً إِنَّكَ سَمِيعُ الدُّعَاءِ",
     "transliteration": "\"Rabbi hab li min ladunka dhurriyyatan tayyibatan innaka samee'u ad-du'a\"",
-    "translation": "(My Lord, grant me from Yourself a good offspring. Indeed, You are the Hearer of supplication) - Quran 3:38",
+    "translation": "(My Lord, grant me from Yourself a good offspring. Indeed, You are the Hearer of supplication)",
     "source": "Quran 3:38",
+    "ref_url": "https://quran.com/3/38",
     "tags": [
       "children",
       "offspring",
@@ -1512,8 +1562,9 @@
     "label": "For Your Spouse and Children:",
     "arabic": "رَبَّنَا هَبْ لَنَا مِنْ أَزْوَاجِنَا وَذُرِّيَّاتِنَا قُرَّةَ أَعْيُنٍ وَاجْعَلْنَا لِلْمُتَّقِينَ إِمَامًا",
     "transliteration": "\"Rabbana hab lana min azwajina wa dhurriyyatina qurrata a'yunin waj'alna lil-muttaqeena imama\"",
-    "translation": "(Our Lord, grant us from among our spouses and offspring comfort to our eyes and make us a leader for the righteous) - Quran 25:74",
+    "translation": "(Our Lord, grant us from among our spouses and offspring comfort to our eyes and make us a leader for the righteous)",
     "source": "Quran 25:74",
+    "ref_url": "https://quran.com/25/74",
     "tags": [
       "family",
       "spouse",
@@ -1532,8 +1583,9 @@
     "type": "full",
     "arabic": "رَبَّنَا اغْفِرْ لِي وَلِوَالِدَيَّ وَلِلْمُؤْمِنِينَ يَوْمَ يَقُومُ الْحِسَابُ",
     "transliteration": "\"Rabbana-ghfir li wa li-walidayya wa lil-mu'mineena yawma yaqoumu al-hisab\"",
-    "translation": "(Our Lord, forgive me and my parents and the believers the Day the account is established) - Quran 14:41",
+    "translation": "(Our Lord, forgive me and my parents and the believers the Day the account is established)",
     "source": "Quran 14:41",
+    "ref_url": "https://quran.com/14/41",
     "tags": [
       "parents",
       "believers",
@@ -1552,9 +1604,9 @@
     "type": "full",
     "label": "Authentic Duas:",
     "arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْمًا نَافِعًا، وَرِزْقًا طَيِّبًا، وَعَمَلًا مُتَقَبَّلًا",
-    "transliteration": "\"Allahumma inni as'aluka 'ilman nafi'a, wa rizqan tayyiba, wa 'amalan mutaqabbala\"",
-    "translation": "(O Allah, I ask You for beneficial knowledge, goodly provision, and accepted deeds) - Sunnah, Ibn Majah",
-    "source": "Ibn Majah",
+    "transliteration": "\"Allahumma inni as'alukal 'ilman nafi'a, wa rizqan tayyiba, wa 'amalan mutaqabbala\"",
+    "translation": "(O Allah, I ask You for beneficial knowledge, goodly provision, and accepted deeds)",
+    "source": "Sunnah, Ibn Majah",
     "tags": [
       "knowledge",
       "provision",
@@ -1570,8 +1622,9 @@
     "type": "full",
     "arabic": "رَبِّ إِنِّي لِمَا أَنزَلْتَ إِلَيَّ مِنْ خَيْرٍ فَقِيرٌ",
     "transliteration": "\"Rabbi inni lima anzalta ilayya min khayrin faqeer\"",
-    "translation": "(My Lord, indeed I am, for whatever good You would send down to me, in need) - Quran 28:24",
+    "translation": "(My Lord, indeed I am, for whatever good You would send down to me, in need)",
     "source": "Quran 28:24",
+    "ref_url": "https://quran.com/28/24",
     "tags": [
       "provision",
       "need",
@@ -1590,8 +1643,9 @@
     "label": "Authentic Duas:",
     "arabic": "رَبَّنَا اغْفِرْ لَنَا وَلِإِخْوَانِنَا الَّذِينَ سَبَقُونَا بِالْإِيمَانِ وَلَا تَجْعَلْ فِي قُلُوبِنَا غِلًّا لِّلَّذِينَ آمَنُوا رَبَّنَا إِنَّكَ رَءُوفٌ رَّحِيمٌ",
     "transliteration": "\"Rabbana-ghfir lana wa li-ikhwanina alladheena sabaqoona bil-iman wa la taj'al fi quloobina ghillan lilladheena amanu rabbana innaka ra'oofun raheem\"",
-    "translation": "(Our Lord, forgive us and our brothers who preceded us in faith and put not in our hearts resentment toward those who have believed. Our Lord, indeed You are Kind and Merciful) - Quran 59:10",
+    "translation": "(Our Lord, forgive us and our brothers who preceded us in faith and put not in our hearts resentment toward those who have believed. Our Lord, indeed You are Kind and Merciful)",
     "source": "Quran 59:10",
+    "ref_url": "https://quran.com/59/10",
     "tags": [
       "ummah",
       "unity",
@@ -1608,7 +1662,7 @@
     "type": "full",
     "arabic": "اللَّهُمَّ أَصْلِحْ أُمَّةَ مُحَمَّدٍ، اللَّهُمَّ فَرِّجْ عَنْ أُمَّةِ مُحَمَّدٍ، اللَّهُمَّ ارْحَمْ أُمَّةَ مُحَمَّدٍ",
     "transliteration": "\"Allahumma aslih ummata Muhammad, Allahumma farrij 'an ummati Muhammad, Allahumma-rham ummata Muhammad\"",
-    "translation": "(O Allah, rectify the Ummah of Muhammad, O Allah, relieve the Ummah of Muhammad, O Allah, have mercy on the Ummah of Muhammad) - Sunnah, Ahmad",
+    "translation": "(O Allah, rectify the Ummah of Muhammad, O Allah, relieve the Ummah of Muhammad, O Allah, have mercy on the Ummah of Muhammad)",
     "source": "Ahmad",
     "tags": [
       "ummah",
@@ -1627,7 +1681,7 @@
     "label": "⭐ HIGH-VALUE: Protection from Four Great Harms",
     "arabic": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ عَذَابِ جَهَنَّمَ، وَمِنْ عَذَابِ الْقَبْرِ، وَمِنْ فِتْنَةِ الْمَحْيَا وَالْمَمَاتِ، وَمِنْ شَرِّ فِتْنَةِ الْمَسِيحِ الدَّجَّالِ",
     "transliteration": "\"Allahumma inni a'udhu bika min 'adhabi jahannam, wa min 'adhabil-qabr, wa min fitnatil-mahya wal-mamat, wa min sharri fitnatil-masihid-dajjal\"",
-    "translation": "(O Allah, I seek refuge in You from the punishment of Hell, from the punishment of the grave, from the trials of life and death, and from the evil of the trial of the False Messiah) - Muslim. The Prophet ﷺ used to seek refuge in these four after every prayer.",
+    "translation": "(O Allah, I seek refuge in You from the punishment of Hell, from the punishment of the grave, from the trials of life and death, and from the evil of the trial of the False Messiah) - The Prophet ﷺ used to seek refuge in these four after every prayer.",
     "source": "Sahih Muslim",
     "tags": [
       "protection",
@@ -1648,7 +1702,7 @@
     "label": "⭐ HIGH-VALUE: Dua for Jannah Without Account",
     "arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ الْجَنَّةَ وَمَا قَرَّبَ إِلَيْهَا مِنْ قَوْلٍ أَوْ عَمَلٍ، وَأَعُوذُ بِكَ مِنَ النَّارِ وَمَا قَرَّبَ إِلَيْهَا مِنْ قَوْلٍ أَوْ عَمَلٍ",
     "transliteration": "\"Allahumma inni as'alukal-jannata wa ma qarraba ilayha min qawlin aw 'amal, wa a'udhu bika min an-nari wa ma qarraba ilayha min qawlin aw 'amal\"",
-    "translation": "(O Allah, I ask You for Paradise and whatever brings one closer to it of word or deed, and I seek refuge in You from the Fire and whatever brings one closer to it of word or deed) - Ibn Majah. Comprehensive dua covering this life and the next.",
+    "translation": "(O Allah, I ask You for Paradise and whatever brings one closer to it of word or deed, and I seek refuge in You from the Fire and whatever brings one closer to it of word or deed) - Comprehensive dua covering this life and the next.",
     "source": "Ibn Majah",
     "tags": [
       "jannah",
@@ -1667,7 +1721,7 @@
     "label": "Authentic Duas:",
     "arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ الْجَنَّةَ وَأَعُوذُ بِكَ مِنَ النَّارِ",
     "transliteration": "\"Allahumma inni as'aluka al-jannah wa a'udhu bika min an-nar\"",
-    "translation": "(O Allah, I ask You for Paradise and I seek refuge in You from the Fire) - Simple yet powerful dua",
+    "translation": "(O Allah, I ask You for Paradise and I seek refuge in You from the Fire)",
     "source": "Common Islamic dua",
     "tags": [
       "jannah",
@@ -2389,12 +2443,39 @@
         // Render a single dua item
         function renderDuaItem(item, index) {
             const marginClass = index > 0 ? ' mt-12' : '';
+            
+            // Generate Citation HTML
+            let citationHtml = '';
+            if (item.source) {
+                const isQuran = item.source.toLowerCase().includes('quran');
+                const badgeClass = isQuran ? 'citation-badge quran' : 'citation-badge hadith';
+                const icon = isQuran ? '📖' : '📜';
+                
+                if (item.ref_url) {
+                    citationHtml = `
+                        <div class="citation-container">
+                            <a href="${item.ref_url}" target="_blank" rel="noopener noreferrer" class="${badgeClass}">
+                                <span class="citation-icon">${icon}</span> ${item.source} <span class="citation-icon">↗</span>
+                            </a>
+                        </div>
+                    `;
+                } else {
+                     citationHtml = `
+                        <div class="citation-container">
+                            <span class="${badgeClass}">
+                                <span class="citation-icon">${icon}</span> ${item.source}
+                            </span>
+                        </div>
+                    `;
+                }
+            }
 
             if (item.type === 'simple') {
                 return `
                     <div class="dhikr-box${marginClass}">
                         <div class="dhikr-label">${item.label}</div>
                         <div class="dhikr-text">${item.text}</div>
+                        ${citationHtml}
                     </div>
                 `;
             } else if (item.type === 'info') {
@@ -2406,6 +2487,7 @@
                     <div class="dhikr-box${marginClass}">
                         <div class="dhikr-label">${item.label}</div>
                         ${content}
+                        ${citationHtml}
                     </div>
                 `;
             } else if (item.type === 'full') {
@@ -2420,6 +2502,7 @@
                         ${arabic}
                         ${transliteration}
                         ${translation}
+                        ${citationHtml}
                     </div>
                 `;
             }
