@@ -131,6 +131,7 @@ function renderPage({ fileKey, status, error }) {
     .status.success { background: #0f3d2e; border: 1px solid #22c55e33; color: #bbf7d0; }
     .status.error { background: #3d0f16; border: 1px solid #f8717133; color: #fecdd3; white-space: pre-wrap; }
     .footer { margin-top: 12px; font-size: 12px; color: #94a3b8; }
+    .schema-view { background:#0b1220;border:1px solid #334155;border-radius:10px;padding:12px;overflow:auto;font-size:12px; }
   </style>
 </head>
 <body>
@@ -153,7 +154,12 @@ function renderPage({ fileKey, status, error }) {
     </div>
   </form>
 
-  <div class="footer">Runs on Node built-ins (no deps). Validates JSON before writing back to src/data/*.json.</div>
+  <details style="margin-top:16px;" ${fileKey ? 'open' : ''}>
+    <summary style="cursor:pointer;">View schema (${fileKey ? FILES[fileKey] : 'pick a file'})</summary>
+    <pre class="schema-view">${fileKey ? esc(readFileSafe(path.join('schemas', SCHEMAS[fileKey]))) : 'Select a file to load its schema.'}</pre>
+  </details>
+
+  <div class="footer">Runs on Node built-ins; uses Ajv + local schemas for validation before saving.</div>
 </body>
 </html>`;
 }
