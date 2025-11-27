@@ -43,7 +43,7 @@ The Prophet's ﷺ most beloved duas are integrated into the appropriate thematic
 ### TAWAF - 7 Rounds
 1. **Gratitude and Arrival** - Shukr (Thankfulness)
 2. **Seeking Forgiveness** - Istighfar (Repentance)
-3. **Personal and Spiritual Needs** - Strengthening Faith
+3. **Sending Blessings Upon the Prophet ﷺ** - Salawat
 4. **Family and Loved Ones** - Family Bonds
 5. **Worldly Needs and Livelihood** - Sustenance and Success
 6. **The Muslim Ummah** - Unity and Global Concerns
@@ -67,20 +67,20 @@ The Prophet's ﷺ most beloved duas are integrated into the appropriate thematic
 
 ## 🛠️ Development & Build Process
 
-This project uses a **data-driven architecture** with a simple build process:
+This project uses a **data-driven, single-file build**:
 
 ### Project Structure
 ```
 umrah-plan/
 ├── src/
 │   ├── data/
-│   │   ├── duas.json         # 28+ duas with translations
-│   │   ├── themes.json        # Theme configurations
-│   │   └── rounds.json        # Round/lap configurations
+│   │   ├── duas.json          # 36 duas with full metadata
+│   │   ├── themes.json        # 19 themes with selection rules
+│   │   └── rounds.json        # Tawaf/Sa'i configurations
 │   └── templates/
 │       └── index.html         # HTML template
 ├── build.js                   # Build script
-├── index.html                 # Generated output (deployed)
+├── index.html                 # Generated output (~110 KB, deployed)
 └── package.json
 ```
 
@@ -97,13 +97,21 @@ npm run watch
 
 # Serve locally for testing
 npm run serve
+
+# Launch the JSON data editor (see below)
+npm run edit:data
 ```
 
 ### How It Works
-1. JSON files contain all duas, themes, and configurations
-2. `build.js` embeds the JSON data into the HTML template
-3. Result: Single self-contained `index.html` file
-4. Perfect for GitHub Pages deployment
+1. JSON files contain all duas, themes, and configurations (validated against schemas in `src/data/schemas/`).
+2. `build.js` embeds that data into `src/templates/index.html`, producing a single self-contained `index.html`.
+3. No runtime dependencies; great for GitHub Pages and offline use.
+
+### Data Editor (schema-validated)
+Run `npm run edit:data` to open a local SPA for editing `duas.json`, `themes.json`, and `rounds.json`.
+- Default URL: http://127.0.0.1:4000/app
+- Uses Ajv 8 in both browser (bundled locally from `node_modules/ajv/dist/ajv.js`) and server for live + save-time validation.
+- Writes directly to the JSON files under `src/data/`.
 
 ### Adding New Duas
 1. Add dua to `src/data/duas.json`:
@@ -139,7 +147,7 @@ npm run serve
 
 ## 🚀 How to Use
 
-1. **Online:** Visit the live site at [YOUR-GITHUB-USERNAME.github.io/umrah-dua-guide](https://YOUR-GITHUB-USERNAME.github.io/umrah-dua-guide)
+1. **Online:** Visit the live site at [praytime.github.io/umrah-plan](https://praytime.github.io/umrah-plan)
 2. **Offline:** After visiting once, the page works without internet
 3. **Mobile Home Screen:** Add to your phone's home screen for app-like experience
 4. **During Umrah:**
