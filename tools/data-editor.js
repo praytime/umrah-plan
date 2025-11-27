@@ -11,15 +11,42 @@ const fs = require('fs');
 const path = require('path');
 const { URL } = require('url');
 const querystring = require('querystring');
+const Ajv = require('ajv');
 
 const projectRoot = path.join(__dirname, '..');
 const dataDir = path.join(projectRoot, 'src', 'data');
+const schemaDir = path.join(dataDir, 'schemas');
 
 const FILES = {
   duas: 'duas.json',
   themes: 'themes.json',
   rounds: 'rounds.json',
 };
+
+const SCHEMAS = {
+  duas: 'duas.schema.json',
+  themes: 'themes.schema.json',
+  rounds: 'rounds.schema.json',
+};
+
+const ajv = new Ajv({ allErrors: true, strict: false });
+const validators = {};
+
+function loadSchema(key) {
+  const filename = SCHEMAS[key];
+  if (!filename) return null;
+  const filePath = path.join(schemaDir, filename);
+  const raw = fs.readFileSync(filePath, 'utf8');
+  return JSON.parse(raw);
+}
+
+function getValidator(key) {
+  if (validators[key]) return validators[key];
+  const schema = loadSchema(key);
+  if (!schema) return null;
+  validators[key] = ajv.compile(schema);
+  return validators[key];
+}
 
 function parseArgs() {
   const opts = { host: '127.0.0.1', port: 4000 };
@@ -56,6 +83,16 @@ function saveFile(key, content) {
   const filePath = path.join(dataDir, filename);
   // Validate JSON before writing
   const parsed = JSON.parse(content);
+  const validate = getValidator(key);
+  if (validate) {
+    const ok = validate(parsed);
+    if (!ok) {
+      const msg = validate.errors
+        .map(e => `${e.instancePath || '/'} ${e.message}`)
+        .join('; ');
+      throw new Error(`Schema validation failed: ${msg}`);
+    }
+  }
   const pretty = JSON.stringify(parsed, null, 2);
   fs.writeFileSync(filePath, pretty + '\n', 'utf8');
 }

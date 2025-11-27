@@ -1,0 +1,59 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Rounds Configuration",
+  "type": "object",
+  "required": ["tawaf", "sai"],
+  "properties": {
+    "tawaf": {
+      "type": "object",
+      "required": ["umrah", "nafil"],
+      "properties": {
+        "umrah": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["number", "theme"],
+            "properties": {
+              "number": { "type": "integer", "minimum": 1 },
+              "theme": { "type": "string" }
+            },
+            "additionalProperties": false
+          }
+        },
+        "nafil": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["number", "theme"],
+            "properties": {
+              "number": { "type": "integer", "minimum": 1 },
+              "theme": { "type": "string" }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "sai": {
+      "type": "object",
+      "required": ["umrah"],
+      "properties": {
+        "umrah": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["number", "theme"],
+            "properties": {
+              "number": { "type": "integer", "minimum": 1 },
+              "theme": { "type": "string" }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
