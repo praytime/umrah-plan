@@ -700,6 +700,7 @@
         .text-rose-soft { color: #e1bee7; }
         .opacity-80 { opacity: 0.8; }
         .max-800 { max-width: 800px; }
+        .justify-end { justify-content: flex-end; }
 
         .section-title.personal {
             background: linear-gradient(135deg, #9c27b0 0%, #673ab7 100%);
@@ -2474,7 +2475,7 @@
 
                 // If no label, just right-align the citation
                 if (!labelText) {
-                    return `<div class="dhikr-header" style="justify-content: flex-end;">${citationHtml}</div>`;
+                    return `<div class="dhikr-header justify-end">${citationHtml}</div>`;
                 }
 
                 return `
