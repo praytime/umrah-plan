@@ -22,7 +22,7 @@ umrah-plan/
 │   └── templates/
 │       └── index.html         # HTML template with placeholders
 ├── build.js                   # Build script (embeds JSON into template)
-├── index.html                 # Generated output (~106KB today, deployed to GitHub Pages)
+├── index.html                 # Generated output (~108KB today, deployed to GitHub Pages)
 ├── package.json               # npm scripts and metadata
 └── .gitignore
 ```
@@ -32,15 +32,20 @@ umrah-plan/
 The build script (`build.js`) performs these steps:
 1. Loads JSON data files (duas, themes, rounds)
 2. Reads HTML template from `src/templates/index.html`
-3. Replaces `/*DATA_PLACEHOLDER*/` with embedded JavaScript data
-4. Writes final `index.html` (single self-contained file)
-   - No minification/validation yet (consider adding size + citation checks)
+3. Precomputes `infoHtml` for `type: "info"` duas (bullet parsing) during build
+4. Replaces `/*DATA_PLACEHOLDER*/` with embedded JavaScript data
+5. Writes final `index.html` (single self-contained file)
+   - JSON schema validation happens before embed (Ajv)
 
 **Commands:**
 ```bash
 npm run build   # Generate index.html from sources
 npm run watch   # Auto-rebuild on file changes (requires nodemon)
 npm run serve   # Serve locally for testing (Python)
+npm run edit:data # Launch data editor (local Ajv bundle)
+# Quality gates
+npm run lint       # JS + HTML + data validation
+npm test           # Vitest unit tests
 ```
 
 ### Why This Architecture?
@@ -61,6 +66,7 @@ npm run serve   # Serve locally for testing (Python)
 - No runtime dependencies
 - Offline-capable after first load
 - Mobile-first PWA capabilities
+- Config modal auto-opens only on first visit (`localStorage: umrah_config_seen`); afterward use Settings to switch Umrah/Nafil.
 
 ## Key Features Implementation
 
@@ -242,7 +248,17 @@ npm run watch  # Requires: npm install
 
 # Manual build
 npm run build
+
+# Lint + data validation + unit tests
+npm run lint
+npm test
 ```
+
+### Quality Gates (run before PR/commit)
+- `npm run lint:js` — eslint over build.js and tools
+- `npm run lint:html` — html-validate over the template (rules tuned to current markup)
+- `npm run lint:data` — Ajv validation of JSON against schemas
+- `npm test` — Vitest (renderInfoHtml now; add more cases here)
 
 ### Deployment
 
