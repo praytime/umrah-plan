@@ -151,7 +151,7 @@ function renderAppHtml() {
     .actions { display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap; }
     .disabled { opacity: 0.6; pointer-events: none; }
   </style>
-  <script src="https://unpkg.com/ajv@8.17.1/dist/ajv7.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/ajv@8.17.1/dist/ajv7.min.js"></script>
 </head>
 <body>
   <h1>Data Editor</h1>
