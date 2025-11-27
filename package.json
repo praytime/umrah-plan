@@ -7,7 +7,13 @@
     "build": "node build.js",
     "watch": "nodemon --watch src -e html,json,js,css --exec npm run build",
     "serve": "python3 -m http.server 8000",
-    "edit:data": "node tools/data-editor.js"
+    "edit:data": "node tools/data-editor.js",
+    "lint:js": "eslint build.js tools/render-info.js tools/validate-data.js",
+    "lint:html": "html-validate src/templates/index.html",
+    "lint:data": "node tools/validate-data.js",
+    "lint": "npm run lint:js && npm run lint:html && npm run lint:data",
+    "format": "prettier --check \"src/**/*.{js,html,json}\" tools/**/*.js build.js",
+    "test": "vitest run"
   },
   "repository": {
     "type": "git",
@@ -26,6 +32,13 @@
   "devDependencies": {
     "ajv": "^8.17.1",
     "esbuild": "^0.24.0",
-    "nodemon": "^3.0.0"
+    "eslint": "^8.57.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^16.6.2",
+    "html-validate": "^8.15.0",
+    "nodemon": "^3.0.0",
+    "prettier": "^3.2.5",
+    "vitest": "^1.6.1"
   }
 }

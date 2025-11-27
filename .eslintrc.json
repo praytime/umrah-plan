@@ -1,0 +1,23 @@
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2020": true
+  },
+  "extends": ["eslint:recommended"],
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType": "module"
+  },
+  "rules": {
+    "no-unused-vars": ["warn", { "args": "after-used", "argsIgnorePattern": "^_" }],
+    "prefer-const": "warn",
+    "eqeqeq": ["error", "smart"],
+    "no-console": "off",
+    "consistent-return": "warn",
+    "semi": ["error", "always"],
+    "no-extra-semi": "off",
+    "quotes": ["warn", "single", { "avoidEscape": true }]
+  },
+  "ignorePatterns": ["index.html", "node_modules/"]
+}
