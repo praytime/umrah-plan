@@ -18,10 +18,13 @@ const path = require('path');
 const { URL } = require('url');
 const Ajv = require('ajv');
 
+const https = require('https');
+
 const projectRoot = path.join(__dirname, '..');
 const dataDir = path.join(projectRoot, 'src', 'data');
 const schemaDir = path.join(dataDir, 'schemas');
-const ajvBrowserPath = require.resolve('ajv/dist/ajv7.min.js');
+const AJV_CDN = 'https://cdn.jsdelivr.net/npm/ajv@8.17.1/dist/ajv7.min.js';
+let ajvBundle = '';
 
 const FILES = {
   duas: 'duas.json',
@@ -414,14 +417,27 @@ function startServer() {
   const { host, port } = parseArgs();
   const appHtml = renderAppHtml();
 
+  // Prefetch AJV browser bundle from CDN
+  https.get(AJV_CDN, resp => {
+    let data = '';
+    resp.on('data', chunk => data += chunk);
+    resp.on('end', () => { ajvBundle = data; console.log('Fetched AJV bundle from CDN'); });
+  }).on('error', err => {
+    console.warn('Failed to fetch AJV bundle:', err.message);
+  });
+
   const server = http.createServer((req, res) => {
     const urlObj = new URL(req.url, `http://${req.headers.host}`);
     if (urlObj.pathname.startsWith('/api/')) {
       return handleApi(req, res, urlObj);
     }
     if (urlObj.pathname === '/static/ajv7.min.js') {
+      if (!ajvBundle) {
+        res.writeHead(503, { 'Content-Type': 'text/plain' });
+        return res.end('AJV bundle not loaded yet');
+      }
       res.writeHead(200, { 'Content-Type': 'application/javascript; charset=utf-8' });
-      return fs.createReadStream(ajvBrowserPath).pipe(res);
+      return res.end(ajvBundle);
     }
     if (urlObj.pathname === '/' || urlObj.pathname === '/app') {
       res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
