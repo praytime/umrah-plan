@@ -1,17 +1,19 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Themes",
+  "description": "Schema for themed groupings of duas used in rounds.",
   "type": "object",
   "additionalProperties": {
     "type": "object",
     "required": ["id", "title", "description", "duas"],
     "properties": {
-      "id": { "type": "string" },
-      "title": { "type": "string" },
-      "description": { "type": "string" },
+      "id": { "type": "string", "description": "Unique theme ID referenced by rounds." },
+      "title": { "type": "string", "description": "Display title shown in the UI." },
+      "description": { "type": "string", "description": "Short description shown in the round header." },
       "suggestions": {
         "type": "array",
-        "items": { "type": "string" }
+        "items": { "type": "string" },
+        "description": "Optional bullet suggestions displayed with the theme."
       },
       "duas": {
         "type": "object",
@@ -19,19 +21,22 @@
         "properties": {
           "required": {
             "type": "array",
-            "items": { "type": "string" }
+            "items": { "type": "string" },
+            "description": "Dua IDs always included for this theme."
           },
           "pool": {
             "type": "array",
-            "items": { "type": "string" }
+            "items": { "type": "string" },
+            "description": "Dua IDs randomly selected from when randomization is enabled."
           },
-          "count": { "type": "integer", "minimum": 0 }
+          "count": { "type": "integer", "minimum": 0, "description": "Number of items to pull from pool." }
         },
         "additionalProperties": false
       },
       "tags": {
         "type": "array",
-        "items": { "type": "string" }
+        "items": { "type": "string" },
+        "description": "Theme tags for filtering/search."
       }
     },
     "additionalProperties": false

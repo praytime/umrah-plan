@@ -136,74 +136,12 @@ renderDuaItem(dua, index)           // Renders individual dua with formatting
 
 ## Data Structure Reference
 
-### duas.json
+Authoritative definitions live in JSON Schemas at `src/data/schemas/`:
+- `duas.schema.json` — dua entries (types, labels, source, ref_url, citation.type, tags)
+- `themes.schema.json` — theme composition (required/pool/count, suggestions, tags)
+- `rounds.schema.json` — mapping of tawaf/sa'i rounds/laps to theme IDs
 
-Each dua has:
-```json
-{
-  "dua-id": {
-    "id": "unique-identifier",
-    "category": ["forgiveness", "high-value"],
-    "type": "full",  // "simple", "full", or "info"
-    "label": "⭐ HIGH-VALUE: Display Label",
-    "arabic": "Arabic text",
-    "transliteration": "Transliteration",
-    "translation": "(Translation)",
-    "source": "Sahih Bukhari",      // keep source out of translation text
-    "ref_url": "https://sunnah.com/... or https://quran.com/...", // optional but preferred
-    "citation": { "type": "hadith" } // 'quran' or 'hadith' to drive UI styling
-    "tags": ["forgiveness", "paradise"]
-  }
-}
-```
-
-**Dua Types:**
-- `simple`: Label + text only (for basic dhikr)
-- `full`: Complete with arabic, transliteration, translation
-- `info`: Informational text (for virtues/context)
-
-### themes.json
-
-Each theme defines:
-```json
-{
-  "theme-id": {
-    "id": "unique-identifier",
-    "title": "Display Title",
-    "description": "Theme description shown in round",
-    "suggestions": [
-      "Bullet point suggestion 1",
-      "Bullet point suggestion 2"
-    ],
-    "duas": {
-      "required": ["dua-id-1", "dua-id-2"],  // Always shown
-      "pool": ["dua-id-3", "dua-id-4"],      // Randomly selected from
-      "count": 2                              // How many from pool
-    },
-    "tags": ["forgiveness", "istighfar"]
-  }
-}
-```
-
-### rounds.json
-
-Defines round configurations:
-```json
-{
-  "tawaf": {
-    "umrah": [
-      { "number": 1, "theme": "gratitude-arrival" },
-      { "number": 2, "theme": "forgiveness" },
-      { "number": 3, "theme": "salawat-prophet" }
-    ],
-    "nafil": [
-      { "number": 1, "theme": "forgiveness" },
-      { "number": 2, "theme": "faith-guidance" }
-    ]
-  },
-  "sai": { ... }
-}
-```
+Use these schemas for validation (the data editor already enforces them).
 
 ## Development Workflow
 

@@ -1,33 +1,40 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Duas Library",
+  "description": "Schema for dua entries used by the Umrah Dua Guide.",
   "type": "object",
   "additionalProperties": {
     "type": "object",
     "required": ["id", "type", "translation", "source", "tags"],
     "properties": {
-      "id": { "type": "string" },
+      "id": { "type": "string", "description": "Unique ID for this dua (referenced by themes/rounds)." },
       "category": {
         "type": "array",
-        "items": { "type": "string" }
+        "items": { "type": "string" },
+        "description": "Free-form categories (e.g., gratitude, forgiveness) for future filtering."
       },
-      "type": { "type": "string", "enum": ["simple", "full", "info"] },
-      "label": { "type": "string" },
-      "arabic": { "type": "string" },
-      "transliteration": { "type": "string" },
-      "translation": { "type": "string" },
-      "text": { "type": "string" },
-      "source": { "type": "string" },
-      "ref_url": { "type": "string", "format": "uri" },
+      "type": {
+        "type": "string",
+        "enum": ["simple", "full", "info"],
+        "description": "Rendering type: simple (label + text), full (label + arabic + transliteration + translation), info (label + text informational)."
+      },
+      "label": { "type": "string", "description": "Display label shown above the dua block; can include ⭐ HIGH-VALUE prefix." },
+      "arabic": { "type": "string", "description": "Arabic text of the dua (for full type)." },
+      "transliteration": { "type": "string", "description": "Transliteration of the dua (for full type)." },
+      "translation": { "type": "string", "description": "English meaning; do not include source notes here." },
+      "text": { "type": "string", "description": "Body text for info/simple types." },
+      "source": { "type": "string", "description": "Source citation text (e.g., Quran 2:201, Sahih Bukhari). Keep concise." },
+      "ref_url": { "type": "string", "format": "uri", "description": "Deep link to the source (quran.com or sunnah.com preferred)." },
       "tags": {
         "type": "array",
-        "items": { "type": "string" }
+        "items": { "type": "string" },
+        "description": "Search/filter tags (e.g., forgiveness, tawaf, high-value)."
       },
       "citation": {
         "type": "object",
         "required": ["type"],
         "properties": {
-          "type": { "type": "string", "enum": ["quran", "hadith"] }
+          "type": { "type": "string", "enum": ["quran", "hadith"], "description": "Used by UI for styling the citation chip." }
         },
         "additionalProperties": false
       }

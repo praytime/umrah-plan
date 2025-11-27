@@ -1,6 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Rounds Configuration",
+  "description": "Schema for mapping ritual rounds/laps to themes.",
   "type": "object",
   "required": ["tawaf", "sai"],
   "properties": {
@@ -14,8 +15,8 @@
             "type": "object",
             "required": ["number", "theme"],
             "properties": {
-              "number": { "type": "integer", "minimum": 1 },
-              "theme": { "type": "string" }
+              "number": { "type": "integer", "minimum": 1, "description": "Round number (1-7)." },
+              "theme": { "type": "string", "description": "Theme ID from themes.json." }
             },
             "additionalProperties": false
           }
@@ -26,8 +27,8 @@
             "type": "object",
             "required": ["number", "theme"],
             "properties": {
-              "number": { "type": "integer", "minimum": 1 },
-              "theme": { "type": "string" }
+              "number": { "type": "integer", "minimum": 1, "description": "Round number (1-7)." },
+              "theme": { "type": "string", "description": "Theme ID from themes.json." }
             },
             "additionalProperties": false
           }
@@ -45,8 +46,8 @@
             "type": "object",
             "required": ["number", "theme"],
             "properties": {
-              "number": { "type": "integer", "minimum": 1 },
-              "theme": { "type": "string" }
+              "number": { "type": "integer", "minimum": 1, "description": "Lap number (1-7)." },
+              "theme": { "type": "string", "description": "Theme ID from themes.json." }
             },
             "additionalProperties": false
           }
