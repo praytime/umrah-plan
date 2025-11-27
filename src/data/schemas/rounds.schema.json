@@ -16,7 +16,9 @@
             "required": ["number", "theme"],
             "properties": {
               "number": { "type": "integer", "minimum": 1, "description": "Round number (1-7)." },
-              "theme": { "type": "string", "description": "Theme ID from themes.json." }
+              "theme": { "type": "string", "description": "Theme ID from themes.json." },
+              "title": { "type": "string", "description": "Optional display title override for this round." },
+              "description": { "type": "string", "description": "Optional description for this round." }
             },
             "additionalProperties": false
           }
@@ -28,7 +30,9 @@
             "required": ["number", "theme"],
             "properties": {
               "number": { "type": "integer", "minimum": 1, "description": "Round number (1-7)." },
-              "theme": { "type": "string", "description": "Theme ID from themes.json." }
+              "theme": { "type": "string", "description": "Theme ID from themes.json." },
+              "title": { "type": "string", "description": "Optional display title override for this round." },
+              "description": { "type": "string", "description": "Optional description for this round." }
             },
             "additionalProperties": false
           }
@@ -47,7 +51,9 @@
             "required": ["number", "theme"],
             "properties": {
               "number": { "type": "integer", "minimum": 1, "description": "Lap number (1-7)." },
-              "theme": { "type": "string", "description": "Theme ID from themes.json." }
+              "theme": { "type": "string", "description": "Theme ID from themes.json." },
+              "title": { "type": "string", "description": "Optional display title override for this lap." },
+              "description": { "type": "string", "description": "Optional description for this lap." }
             },
             "additionalProperties": false
           }
