@@ -16,15 +16,12 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 const { URL } = require('url');
+const esbuild = require('esbuild');
 const Ajv = require('ajv');
-
-const https = require('https');
 
 const projectRoot = path.join(__dirname, '..');
 const dataDir = path.join(projectRoot, 'src', 'data');
 const schemaDir = path.join(dataDir, 'schemas');
-const AJV_CDN = 'https://cdn.jsdelivr.net/npm/ajv@8.17.1/dist/ajv7.min.js';
-let ajvBundle = '';
 
 const FILES = {
   duas: 'duas.json',
@@ -38,8 +35,29 @@ const SCHEMAS = {
   rounds: 'rounds.schema.json',
 };
 
+const ajvBrowserEntry = path.join(projectRoot, 'node_modules', 'ajv', 'dist', 'ajv.js');
+let ajvBundle = null;
+
 const ajv = new Ajv({ allErrors: true, strict: false });
 const validators = {};
+
+function buildAjvBundle() {
+  try {
+    const result = esbuild.buildSync({
+      entryPoints: [ajvBrowserEntry],
+      bundle: true,
+      format: 'iife',
+      globalName: 'Ajv7',
+      platform: 'browser',
+      target: ['es2018'],
+      write: false,
+    });
+    ajvBundle = result.outputFiles[0].text;
+  } catch (err) {
+    console.error('Failed to build Ajv browser bundle:', err.message);
+    ajvBundle = null;
+  }
+}
 
 function parseArgs() {
   const opts = { host: '127.0.0.1', port: 4000 };
@@ -155,7 +173,7 @@ function renderAppHtml() {
     .actions { display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap; }
     .disabled { opacity: 0.6; pointer-events: none; }
   </style>
-  <script src="/static/ajv7.min.js"></script>
+  <script src="/static/ajv.js"></script>
 </head>
 <body>
   <h1>Data Editor</h1>
@@ -416,22 +434,14 @@ function renderAppHtml() {
 function startServer() {
   const { host, port } = parseArgs();
   const appHtml = renderAppHtml();
-
-  // Prefetch AJV browser bundle from CDN
-  https.get(AJV_CDN, resp => {
-    let data = '';
-    resp.on('data', chunk => data += chunk);
-    resp.on('end', () => { ajvBundle = data; console.log('Fetched AJV bundle from CDN'); });
-  }).on('error', err => {
-    console.warn('Failed to fetch AJV bundle:', err.message);
-  });
+  buildAjvBundle();
 
   const server = http.createServer((req, res) => {
     const urlObj = new URL(req.url, `http://${req.headers.host}`);
     if (urlObj.pathname.startsWith('/api/')) {
       return handleApi(req, res, urlObj);
     }
-    if (urlObj.pathname === '/static/ajv7.min.js') {
+    if (urlObj.pathname === '/static/ajv.js') {
       if (!ajvBundle) {
         res.writeHead(503, { 'Content-Type': 'text/plain' });
         return res.end('AJV bundle not loaded yet');
