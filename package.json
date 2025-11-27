@@ -6,7 +6,8 @@
   "scripts": {
     "build": "node build.js",
     "watch": "nodemon --watch src -e html,json,js,css --exec npm run build",
-    "serve": "python3 -m http.server 8000"
+    "serve": "python3 -m http.server 8000",
+    "edit:data": "node tools/data-editor.js"
   },
   "repository": {
     "type": "git",
