@@ -1234,7 +1234,8 @@
     ],
     "citation": {
       "type": "hadith"
-    }
+    },
+    "infoHtml": "<div class=\"translation text-accent mb-10\">You are standing in the House of Allah, the most sacred place on Earth. Millions wish for this moment. The Prophet ﷺ said: &quot;Whoever performs Tawaf around the House seven times and prays two rak&#39;ahs, it is as if he has freed a slave.&quot;</div><div class=\"translation text-accent mb-10\">Take this moment to deeply thank Allah for:</div><ul class=\"dua-list\"><li>The blessing of Islam and faith</li><li>Your health that allowed you to travel</li><li>The means to afford this journey</li><li>Your safety and protection</li><li>Being chosen to stand in this blessed place</li></ul>"
   },
   "dua-namah-blessing": {
     "id": "dua-namah-blessing",
@@ -1392,7 +1393,8 @@
     ],
     "citation": {
       "type": "quran"
-    }
+    },
+    "infoHtml": "<div class=\"translation text-accent mb-10\">The Prophet ﷺ said: &quot;Whoever sends blessings upon me once, Allah will send blessings upon him ten times, erase ten sins from him, and raise him ten degrees.&quot; - Sahih Muslim</div><div class=\"translation text-accent mb-10\">&quot;Indeed, Allah and His angels send blessings upon the Prophet. O you who have believed, ask Allah to confer blessing upon him and ask Allah to grant him peace.&quot;</div>"
   },
   "salawat-ibrahimiyyah": {
     "id": "salawat-ibrahimiyyah",
@@ -2584,10 +2586,11 @@
                     </div>
                 `;
             } else if (item.type === 'info') {
-                const lines = item.text.split('\n\n');
-                const content = lines.map(line =>
-                    `<div class="translation text-accent mb-10">${line}</div>`
-                ).join('');
+                const content = item.infoHtml
+                    ? item.infoHtml
+                    : item.text.split('\n\n').map(line =>
+                        `<div class="translation text-accent mb-10">${line}</div>`
+                      ).join('');
                 return `
                     <div class="dhikr-box${marginClass}">
                         ${headerHtml}

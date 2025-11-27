@@ -1207,10 +1207,11 @@
                     </div>
                 `;
             } else if (item.type === 'info') {
-                const lines = item.text.split('\n\n');
-                const content = lines.map(line =>
-                    `<div class="translation text-accent mb-10">${line}</div>`
-                ).join('');
+                const content = item.infoHtml
+                    ? item.infoHtml
+                    : item.text.split('\n\n').map(line =>
+                        `<div class="translation text-accent mb-10">${line}</div>`
+                      ).join('');
                 return `
                     <div class="dhikr-box${marginClass}">
                         ${headerHtml}
