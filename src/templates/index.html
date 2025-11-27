@@ -1166,7 +1166,13 @@
 
                 let citationHtml = '';
                 if (sourceText) {
-                    const isQuran = sourceText.toLowerCase().includes('quran');
+                    const explicitType = (item.citation && item.citation.type) ? item.citation.type.toLowerCase() : null;
+                    let isQuran = explicitType === 'quran';
+                    let isHadith = explicitType === 'hadith';
+                    if (!explicitType) {
+                        isQuran = sourceText.toLowerCase().includes('quran');
+                        isHadith = !isQuran; // fallback heuristic
+                    }
                     const styleClass = isQuran ? 'citation-compact quran' : 'citation-compact hadith';
                     const icon = isQuran ? '📖' : '📜';
                     const content = `${icon} ${sourceText}`;
