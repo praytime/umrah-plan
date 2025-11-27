@@ -158,7 +158,7 @@ function renderAppHtml() {
     h1 { margin: 0 0 8px; }
     .row { display: flex; gap: 16px; flex-wrap: wrap; }
     select, button, input, textarea { background: #1e293b; color: #e2e8f0; border: 1px solid #334155; border-radius: 8px; padding: 8px 10px; font-size: 14px; }
-    textarea { width: 100%; min-height: 140px; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+    textarea { width: 100%; min-width: 80ch; min-height: 140px; box-sizing: border-box; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
     .card { background: #0b1220; border: 1px solid #1f2937; border-radius: 12px; padding: 14px; }
     .columns { display: grid; grid-template-columns: 260px 1fr; gap: 16px; }
     .list { max-height: 70vh; overflow: auto; }
@@ -211,6 +211,10 @@ function renderAppHtml() {
   </div>
 
   <script>
+    function esc(str) {
+      return String(str ?? '').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    }
+
     const state = {
       file: '',
       data: null,
@@ -291,7 +295,7 @@ function renderAppHtml() {
       const desc = propSchema.description || '';
 
       if (propSchema.enum) {
-        const options = propSchema.enum.map(v => '<option '+(v===value?'selected':'')+'>'+v+'</option>').join('');
+        const options = propSchema.enum.map(v => '<option '+(v===value?'selected':'')+'>'+esc(v)+'</option>').join('');
         return \`
           <label>\${label}<small>\${desc}</small></label>
           <select data-key=\"\${key}\">\${options}</select>
@@ -302,7 +306,7 @@ function renderAppHtml() {
         const text = Array.isArray(value) ? value.join('\\n') : '';
         return \`
           <label>\${label}<small>\${desc}</small></label>
-          <textarea data-key=\"\${key}\" data-type=\"array\" placeholder=\"One per line\">\${text}</textarea>
+          <textarea data-key=\"\${key}\" data-type=\"array\" placeholder=\"One per line\">\${esc(text)}</textarea>
         \`;
       }
 
@@ -310,9 +314,9 @@ function renderAppHtml() {
         const inner = Object.entries(propSchema.properties).map(([k,p]) => {
           const val = value && value[k] !== undefined ? value[k] : '';
           if (p.enum) {
-            return '<div style=\"margin-top:6px;\"><span class=\"chip\">'+k+'</span> <select data-sub=\"'+k+'\">'+p.enum.map(v=>'<option '+(v===val?'selected':'')+'>'+v+'</option>').join('')+'</select></div>';
+            return '<div style=\"margin-top:6px;\"><span class=\"chip\">'+k+'</span> <select data-sub=\"'+k+'\">'+p.enum.map(v=>'<option '+(v===val?'selected':'')+'>'+esc(v)+'</option>').join('')+'</select></div>';
           }
-          return '<div style=\"margin-top:6px;\"><span class=\"chip\">'+k+'</span> <input data-sub=\"'+k+'\" value=\"'+(val||'')+'\" /></div>';
+          return '<div style=\"margin-top:6px;\"><span class=\"chip\">'+k+'</span> <input data-sub=\"'+k+'\" value=\"'+esc(val||'')+'\" /></div>';
         }).join('');
         return \`
           <label>\${label}<small>\${desc}</small></label>
@@ -323,7 +327,7 @@ function renderAppHtml() {
       const inputType = propSchema.type === 'integer' ? 'number' : 'text';
       return \`
         <label>\${label}<small>\${desc}</small></label>
-        <input data-key=\"\${key}\" type=\"\${inputType}\" value=\"\${value ?? ''}\" />
+        <input data-key=\"\${key}\" type=\"\${inputType}\" value=\"\${esc(value ?? '')}\" />
       \`;
     }
 
