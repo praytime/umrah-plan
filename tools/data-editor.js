@@ -21,6 +21,7 @@ const Ajv = require('ajv');
 const projectRoot = path.join(__dirname, '..');
 const dataDir = path.join(projectRoot, 'src', 'data');
 const schemaDir = path.join(dataDir, 'schemas');
+const ajvBrowserPath = require.resolve('ajv/dist/ajv7.min.js');
 
 const FILES = {
   duas: 'duas.json',
@@ -151,7 +152,7 @@ function renderAppHtml() {
     .actions { display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap; }
     .disabled { opacity: 0.6; pointer-events: none; }
   </style>
-  <script src="https://cdn.jsdelivr.net/npm/ajv@8.17.1/dist/ajv7.min.js"></script>
+  <script src="/static/ajv7.min.js"></script>
 </head>
 <body>
   <h1>Data Editor</h1>
@@ -417,6 +418,10 @@ function startServer() {
     const urlObj = new URL(req.url, `http://${req.headers.host}`);
     if (urlObj.pathname.startsWith('/api/')) {
       return handleApi(req, res, urlObj);
+    }
+    if (urlObj.pathname === '/static/ajv7.min.js') {
+      res.writeHead(200, { 'Content-Type': 'application/javascript; charset=utf-8' });
+      return fs.createReadStream(ajvBrowserPath).pipe(res);
     }
     if (urlObj.pathname === '/' || urlObj.pathname === '/app') {
       res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
