@@ -151,6 +151,7 @@ Each dua has:
     "translation": "(Translation)",
     "source": "Sahih Bukhari",      // keep source out of translation text
     "ref_url": "https://sunnah.com/... or https://quran.com/...", // optional but preferred
+    "citation": { "type": "hadith" } // 'quran' or 'hadith' to drive UI styling
     "tags": ["forgiveness", "paradise"]
   }
 }
