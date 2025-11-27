@@ -1,6 +1,6 @@
-# CLAUDE.md
+# AGENTS.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance to coding agents when working with code in this repository.
 
 ## Project Overview
 
@@ -16,13 +16,13 @@ The project uses a **JSON + Build Process** architecture that separates content 
 umrah-plan/
 ├── src/
 │   ├── data/
-│   │   ├── duas.json         # 28+ duas with full metadata
-│   │   ├── themes.json        # 12 themes with selection rules
+│   │   ├── duas.json         # ~36 duas with full metadata
+│   │   ├── themes.json        # 19 themes with selection rules
 │   │   └── rounds.json        # Tawaf/Sa'i configurations
 │   └── templates/
 │       └── index.html         # HTML template with placeholders
 ├── build.js                   # Build script (embeds JSON into template)
-├── index.html                 # Generated output (145KB, deployed to GitHub Pages)
+├── index.html                 # Generated output (~106KB today, deployed to GitHub Pages)
 ├── package.json               # npm scripts and metadata
 └── .gitignore
 ```
@@ -34,6 +34,7 @@ The build script (`build.js`) performs these steps:
 2. Reads HTML template from `src/templates/index.html`
 3. Replaces `/*DATA_PLACEHOLDER*/` with embedded JavaScript data
 4. Writes final `index.html` (single self-contained file)
+   - No minification/validation yet (consider adding size + citation checks)
 
 **Commands:**
 ```bash
@@ -125,10 +126,10 @@ Result: Always shows 2 required + 2 random from pool = 4 total duas.
 
 ### 4. Dynamic Rendering
 
-Content is rendered dynamically from JSON data:
+Content is rendered dynamically from JSON data. All accordions (Tawaf + Sa'i) are generated in JS and stay collapsed by default; completion toggles happen via state.
 
 ```javascript
-renderRound(roundConfig, mode)      // Renders complete round with theme
+renderRound(roundConfig, mode)      // Renders round with theme + duas
 renderDuasByIds(duaIds)             // Renders duas from DUA_LIBRARY
 renderDuaItem(dua, index)           // Renders individual dua with formatting
 ```
@@ -147,8 +148,9 @@ Each dua has:
     "label": "⭐ HIGH-VALUE: Display Label",
     "arabic": "Arabic text",
     "transliteration": "Transliteration",
-    "translation": "(Translation) - Source",
-    "source": "Sahih Bukhari",
+    "translation": "(Translation)",
+    "source": "Sahih Bukhari",      // keep source out of translation text
+    "ref_url": "https://sunnah.com/... or https://quran.com/...", // optional but preferred
     "tags": ["forgiveness", "paradise"]
   }
 }
@@ -344,6 +346,8 @@ git push origin main
 6. Protection and Safety
 7. Comprehensive Final Dua
 
+Note: these Sa'i theme IDs are referenced in `src/data/rounds.json` but not yet defined in `src/data/themes.json`. Add them to avoid fallback/empty content.
+
 ### Additional Sections
 - Personal notes textarea (localStorage: `umrah_personal_notes`)
 - Special positions for dua
@@ -371,6 +375,7 @@ git push origin main
 
 - Maintain dark theme color scheme (primary gradient: #667eea to #764ba2)
 - Keep mobile-first approach (max-width not min-width)
+- Accordions are collapsed by default; avoid auto-expanding on render
 - Test touch interactions (44x44px minimum touch targets)
 - Preserve accessibility (color contrast, semantic HTML)
 - Test on actual mobile devices
@@ -382,6 +387,8 @@ git push origin main
 - Save state after progress updates: `STATE.save()`
 - Test dua selection engine with different configurations
 - Preserve auto-navigation and progress tracking
+- Accordions: render via JS helpers; keep header/content classes consistent
+- Citations: if adding Qur'an/Hadith refs, prefer `ref_url` pointing to quran.com or sunnah.com; avoid embedding source text inside translations
 
 ## Important Considerations
 
@@ -461,16 +468,3 @@ STATE.save();
 ```
 
 Or user can use "Reset Progress" buttons in UI.
-
-## Version History
-
-- **v2.0.0** - Phase 2: JSON + Build Process architecture
-  - Data-driven system with JSON files
-  - Comprehensive state management
-  - Dua selection engine with randomization
-  - Build process for maintainability
-
-- **v1.0.0** - Initial release
-  - Single-file HTML application
-  - Manual content updates
-  - Basic localStorage for notes and config
