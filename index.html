@@ -2702,6 +2702,8 @@
         let completedTawafNafil = STATE.progress.tawafNafil;
         let saveTimeout;
 
+        const CONFIG_SEEN_KEY = 'umrah_config_seen';
+
         // Legacy config object - now points to STATE.config
         let userConfig = STATE.config;
 
@@ -2718,7 +2720,8 @@
 
             // Check if first time
             const saved = localStorage.getItem('umrah_state');
-            if (!saved) {
+            const configSeen = localStorage.getItem(CONFIG_SEEN_KEY);
+            if (!configSeen) {
                 // First time - show modal
                 showConfigModal();
             } else {
@@ -2774,6 +2777,7 @@
             userConfig.ritualType = selected.value;
             saveConfig();
             applyConfig();
+            localStorage.setItem(CONFIG_SEEN_KEY, '1');
 
             // Hide modal
             document.getElementById('configOverlay').classList.add('hidden');
