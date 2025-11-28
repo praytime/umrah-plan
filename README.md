@@ -111,7 +111,7 @@ npm run edit:data
 
 ### Data Editor (schema-validated)
 Run `npm run edit:data` to open a local SPA for editing `duas.json`, `themes.json`, and `rounds.json`.
-- Default URL: http://127.0.0.1:4000/app
+- Default URL: http://127.0.0.1:4000/
 - Uses Ajv 8 in both browser (bundled locally from `node_modules/ajv/dist/ajv.js`) and server for live + save-time validation.
 - Writes directly to the JSON files under `src/data/`.
 
@@ -160,20 +160,6 @@ Run `npm run edit:data` to open a local SPA for editing `duas.json`, `themes.jso
    - The next section automatically opens
    - Track your progress with the visual progress bar
 
-## 📱 Add to Home Screen
-
-### iPhone (Safari)
-1. Open the website in Safari
-2. Tap the Share button (square with arrow)
-3. Scroll down and tap "Add to Home Screen"
-4. Name it "Umrah Duas" and tap "Add"
-
-### Android (Chrome)
-1. Open the website in Chrome
-2. Tap the three dots menu
-3. Tap "Add to Home screen"
-4. Name it and tap "Add"
-
 ## 🌙 Best Practices
 
 - **Quality over Quantity** - Don't rush through duas
@@ -182,13 +168,6 @@ Run `npm run edit:data` to open a local SPA for editing `duas.json`, `themes.jso
 - **Stay Present** - Focus on meanings with conviction
 - **For Others** - Remember the entire Ummah in your duas
 - **Use the Progress Tracker** - It helps you stay focused in crowds
-
-## 📚 Sources
-
-All duas are sourced from:
-- **The Holy Quran**
-- **Authentic Hadith** (Bukhari, Muslim, Abu Dawud, Tirmidhi, Ibn Majah, Ahmad)
-- **Verified by scholars** to ensure authenticity
 
 ## 🤲 Dua for Acceptance
 
