@@ -194,6 +194,7 @@
     "transliteration": "\"Alhamdulillahi-lladhi at'amani hadha wa razaqanihi min ghayri hawlin minni wa la quwwah\"",
     "translation": "(All praise is for Allah Who has fed me this and provided it for me without any might or power from myself)",
     "source": "Abu Dawud & Tirmidhi",
+    "ref_url": "https://sunnah.com/mishkat:4343",
     "tags": [
       "gratitude",
       "provision",
@@ -229,6 +230,7 @@
     "transliteration": "\"Allahumma anta rabbi la ilaha illa ant, khalaqtani wa ana 'abduk, wa ana 'ala 'ahdika wa wa'dika mastata't, a'udhu bika min sharri ma sana't, abu'u laka bi ni'matika 'alayy, wa abu'u bi dhanbi faghfir li, fa innahu la yaghfiru adh-dhunuba illa ant\"",
     "translation": "(O Allah, You are my Lord, there is no god but You. You created me and I am Your servant. I am keeping my covenant to You as much as I can. I seek refuge in You from the evil I have done. I acknowledge Your blessings upon me, and I acknowledge my sins. So forgive me, for none can forgive sins except You)",
     "source": "Sahih Bukhari",
+    "ref_url": "https://sunnah.com/bukhari:6306",
     "tags": [
       "forgiveness",
       "master-dua",
@@ -291,6 +293,7 @@
     "transliteration": "\"Allahumma innaka 'afuwwun kareemun tuhibbul-'afwa fa'fu 'anni\"",
     "translation": "(O Allah, You are Most Forgiving, and You love forgiveness, so forgive me)",
     "source": "Tirmidhi",
+    "ref_url": "https://sunnah.com/tirmidhi:3513",
     "tags": [
       "forgiveness",
       "laylatul-qadr",
@@ -605,6 +608,7 @@
     "transliteration": "\"Allahumma inni as'alukal 'ilman nafi'a, wa rizqan tayyiba, wa 'amalan mutaqabbala\"",
     "translation": "(O Allah, I ask You for beneficial knowledge, goodly provision, and accepted deeds)",
     "source": "Sunnah, Ibn Majah",
+    "ref_url": "https://sunnah.com/hisn:95",
     "tags": [
       "knowledge",
       "provision",
@@ -689,10 +693,11 @@
     ],
     "type": "full",
     "label": "⭐ HIGH-VALUE: Protection from Four Great Harms",
-    "arabic": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ عَذَابِ جَهَنَّمَ، وَمِنْ عَذَابِ الْقَبْرِ، وَمِنْ فِتْنَةِ الْمَحْيَا وَالْمَمَاتِ، وَمِنْ شَرِّ فِتْنَةِ الْمَسِيحِ الدَّجَّالِ",
+    "arabic": "اللّهُـمَّ إِنِّـي أَعـوذُ بِكَ مِـنْ عَذابِ القَـبْر، وَمِـنْ عَذابِ جَهَـنَّم، وَمِـنْ فِتْـنَةِ المَحْـيا وَالمَمـات، وَمِـنْ شَـرِّ فِتْـنَةِ المَسيحِ الدَّجّال",
     "transliteration": "\"Allahumma inni a'udhu bika min 'adhabi jahannam, wa min 'adhabil-qabr, wa min fitnatil-mahya wal-mamat, wa min sharri fitnatil-masihid-dajjal\"",
     "translation": "(O Allah, I seek refuge in You from the punishment of Hell, from the punishment of the grave, from the trials of life and death, and from the evil of the trial of the False Messiah)",
     "source": "Sahih Muslim",
+    "ref_url": "https://sunnah.com/hisn:55",
     "tags": [
       "protection",
       "hell",
@@ -717,6 +722,7 @@
     "transliteration": "\"Allahumma inni as'alukal-jannata wa ma qarraba ilayha min qawlin aw 'amal, wa a'udhu bika min an-nari wa ma qarraba ilayha min qawlin aw 'amal\"",
     "translation": "(O Allah, I ask You for Paradise and whatever brings one closer to it of word or deed, and I seek refuge in You from the Fire and whatever brings one closer to it of word or deed)",
     "source": "Ibn Majah",
+    "ref_url": "https://sunnah.com/ibnmajah:3846",
     "tags": [
       "jannah",
       "paradise",
