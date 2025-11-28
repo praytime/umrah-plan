@@ -1,3 +1,5 @@
+> "Tawaf is an opportunity to focus on Allah’s remembrance. As you circle, recite any dhikr or dua that is easy to recall (e.g., the shahadah, surahs of the Holy Quran, salawat on the Prophet صلى الله عليه وسلم). There is no assigned dhikr for tawaf. At the same time, it is important to plan what you will recite and to maintain a proper mindset throughout it." — Sheikh Hussain Abdul Sattar, [Sacred Learning](https://www.sacredlearning.org/hajj-and-umrah/)
+
 # 🕋 Umrah Dua Guide
 
 A comprehensive, mobile-optimized interactive guide for duas and adhkar during Tawaf and Sa'i of Umrah.
